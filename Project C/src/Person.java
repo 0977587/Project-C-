@@ -4,9 +4,6 @@ public class Person {
 	int age;
 	String adres;
 	String gender;
-	public Person()	 {
-		// TODO Auto-generated constructor stub
-	}
 	public Person(String name, int age, String adres, String gender) {
 		super();
 		this.name = name;
@@ -38,5 +35,5 @@ public class Person {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
+		
 }
