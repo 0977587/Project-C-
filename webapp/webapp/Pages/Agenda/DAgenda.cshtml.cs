@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Test_webapp.Pages
 {
-    public class VakkenModel : PageModel
+    public class DAgendaModel : PageModel
     {
         public void OnGet()
         {
