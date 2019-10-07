@@ -129,3 +129,13 @@ C:\Users\laure\source\repos\RazorPagesQuestions\RazorPagesQuestions\obj\Debug\ne
 C:\Users\laure\source\repos\RazorPagesQuestions\RazorPagesQuestions\obj\Debug\netcoreapp3.0\Razor\Pages\Questions\Details.cshtml.g.cs
 C:\Users\laure\source\repos\RazorPagesQuestions\RazorPagesQuestions\obj\Debug\netcoreapp3.0\Razor\Pages\Questions\Edit.cshtml.g.cs
 C:\Users\laure\source\repos\RazorPagesQuestions\RazorPagesQuestions\obj\Debug\netcoreapp3.0\Razor\Pages\Questions\Index.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.csprojAssemblyReference.cache
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\staticwebassets\RazorPagesQuestions.StaticWebAssets.Manifest.cache
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\staticwebassets\RazorPagesQuestions.StaticWebAssets.xml
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.RazorAssemblyInfo.cache
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.RazorAssemblyInfo.cs
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.AssemblyInfoInputs.cache
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.AssemblyInfo.cs
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.dll
+C:\Users\laure\Documents\GitHub\Project-C-\RazorPagesQuestions\obj\Debug\netcoreapp3.0\RazorPagesQuestions.pdb

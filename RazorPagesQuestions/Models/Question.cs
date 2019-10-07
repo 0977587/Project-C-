@@ -7,7 +7,7 @@ namespace RazorPagesQuestions.Models
 {
     public class Question
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Naam { get; set; }
 
         public string Vraag { get; set; }
