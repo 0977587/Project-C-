@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Peercoach app Peercoach</h1>
+</div>
+
+
+<a asp-page="../Vakken/PVakken">
+    <button>Vakken</button>
+</a>
+
+<a asp-page="../Vragen/PVragen">
+    <button>Vragen</button>
+</a>
+
+<a asp-page="../Agenda/PAgenda">
+    <button>Agenda</button>
+</a>
+
+
+<button> Log uit</button>
