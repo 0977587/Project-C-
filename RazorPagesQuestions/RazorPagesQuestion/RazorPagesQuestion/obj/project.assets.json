@@ -8128,11 +8128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laure\\source\\repos\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\RazorPagesQuestion.csproj",
+      "projectUniqueName": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\RazorPagesQuestion.csproj",
       "projectName": "RazorPagesQuestion",
-      "projectPath": "C:\\Users\\laure\\source\\repos\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\RazorPagesQuestion.csproj",
+      "projectPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\RazorPagesQuestion.csproj",
       "packagesPath": "C:\\Users\\laure\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laure\\source\\repos\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\obj\\",
+      "outputPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\RazorPagesQuestions\\RazorPagesQuestion\\RazorPagesQuestion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

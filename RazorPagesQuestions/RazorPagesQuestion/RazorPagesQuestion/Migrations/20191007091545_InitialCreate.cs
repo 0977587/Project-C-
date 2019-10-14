@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RazorPagesQuestion.Migrations
 {
@@ -10,11 +11,12 @@ namespace RazorPagesQuestion.Migrations
                 name: "Question",
                 columns: table => new
                 {
-                    ID = table.Column<string>(nullable: false),
+                    ID = table.Column<int>(nullable: false).Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Naam = table.Column<string>(nullable: true),
                     Vraag = table.Column<string>(nullable: true),
                     Vak = table.Column<string>(nullable: true),
-                    Lokaal = table.Column<string>(nullable: true)
+                    Lokaal = table.Column<string>(nullable: true),
+                    Time = table.Column<System.DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {

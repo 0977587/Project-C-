@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesQuestions.Models;
+using RazorPagesQuestion.Models;
 
 namespace RazorPagesQuestion.Data
 {
@@ -15,5 +16,9 @@ namespace RazorPagesQuestion.Data
         }
 
         public DbSet<RazorPagesQuestions.Models.Question> Question { get; set; }
+
+        public DbSet<RazorPagesQuestion.Models.Waitinglist> Waitinglist { get; set; }
+            
+    
     }
 }

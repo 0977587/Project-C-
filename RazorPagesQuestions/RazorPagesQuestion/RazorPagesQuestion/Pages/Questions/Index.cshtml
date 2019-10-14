@@ -29,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Question)
+        @foreach (var item in Model.Question.OrderByDescending(Question => Question.ID))
         {
 
             <tr>
