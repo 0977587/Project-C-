@@ -14,6 +14,9 @@ namespace webapp.Models
         public string Vraag { get; set; }
         public string Vak { get; set; }
         public string Lokaal { get; set; }
+
+        
+        public DateTime Date  { get; set; }
     }
 
 }

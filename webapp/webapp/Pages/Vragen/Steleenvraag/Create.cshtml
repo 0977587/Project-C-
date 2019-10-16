@@ -2,7 +2,9 @@
 @model webapp.Pages.Vragen.Steleenvraag.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Stel een vraag";
+    var time = DateTime.Now;
+
 }
 
 <h1>Create</h1>
@@ -33,11 +35,12 @@
                 <input asp-for="Question.Lokaal" class="form-control" />
                 <span asp-validation-for="Question.Lokaal" class="text-danger"></span>
             </div>
+            <input asp-for="Question.Date" type="hidden" value=@time>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
-    </div>
+</div>
 </div>
 
 <div>

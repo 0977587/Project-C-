@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace webapp.Migrations
 {
@@ -14,7 +15,8 @@ namespace webapp.Migrations
                     Naam = table.Column<string>(nullable: true),
                     Vraag = table.Column<string>(nullable: true),
                     Vak = table.Column<string>(nullable: true),
-                    Lokaal = table.Column<string>(nullable: true)
+                    Lokaal = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
