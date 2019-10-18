@@ -1,0 +1,44 @@
+﻿@page
+@model webapp.Pages.Wachtrij.Openeenwachtrij.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Wachtrij</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Wachtrij.Peercoach" class="control-label"></label>
+                <input asp-for="Wachtrij.Peercoach" class="form-control" />
+                <span asp-validation-for="Wachtrij.Peercoach" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wachtrij.Lokaal" class="control-label"></label>
+                <input asp-for="Wachtrij.Lokaal" class="form-control" />
+                <span asp-validation-for="Wachtrij.Lokaal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wachtrij.Tijdvak" class="control-label"></label>
+                <input asp-for="Wachtrij.Tijdvak" class="form-control" />
+                <span asp-validation-for="Wachtrij.Tijdvak" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
