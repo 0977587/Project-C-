@@ -17,13 +17,15 @@ namespace webapp.Migrations
             },
         constraints: table =>
         {
-            table.PrimaryKey("PK_Question", x => x.ID);
+            table.PrimaryKey("PK_Wachtrij", x => x.ID);
         });
 
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+            name: "Wachtrij");
 
         }
     }

@@ -12947,11 +12947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthijs\\Desktop\\webapp\\webapp\\webapp.csproj",
+      "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
       "projectName": "webapp",
-      "projectPath": "C:\\Users\\Matthijs\\Desktop\\webapp\\webapp\\webapp.csproj",
+      "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
       "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthijs\\Desktop\\webapp\\webapp\\obj\\",
+      "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
