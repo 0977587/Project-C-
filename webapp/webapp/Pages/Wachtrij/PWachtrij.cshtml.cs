@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Test_webapp.Pages
 {
-    public class PAgendaModel : PageModel
+    public class PWachtrijModel : PageModel
     {
         public void OnGet()
         {

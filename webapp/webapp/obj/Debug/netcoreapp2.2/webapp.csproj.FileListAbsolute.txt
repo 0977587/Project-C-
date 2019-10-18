@@ -105,9 +105,6 @@ C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\DAgenda.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\PAgenda.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\SAgenda.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\DMenu.cshtml.g.cs
@@ -131,3 +128,6 @@ C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\SVragen.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\DAgenda.cshtml.g.cs
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\PWachtrij.cshtml.g.cs
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\SWachtrij.cshtml.g.cs
