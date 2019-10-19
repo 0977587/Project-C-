@@ -17,5 +17,7 @@ namespace webapp.Data
         public DbSet<webapp.Models.Question> Question { get; set; }
 
         public DbSet<webapp.Models.Wachtrij> Wachtrij { get; set; }
+
+        public DbSet<webapp.Models.Queue> Queue { get; set; }
     }
 }
