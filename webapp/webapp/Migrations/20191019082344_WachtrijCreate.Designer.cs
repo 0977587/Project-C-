@@ -20,26 +20,21 @@ namespace webapp.Migrations
                 .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            modelBuilder.Entity("webapp.Models.Queue", b =>
+            {
+                b.Property<string>("ID")
+                    .ValueGeneratedOnAdd();
 
-            modelBuilder.Entity("webapp.Models.Question", b =>
-                {
-                    b.Property<string>("ID")
-                        .ValueGeneratedOnAdd();
+                b.Property<string>("Peercoach");
 
-                    b.Property<DateTime>("Date");
+                b.Property<string>("Lokaal");
 
-                    b.Property<string>("Lokaal");
+                b.Property<string>("Tijdvak");
 
-                    b.Property<string>("Naam");
+                b.HasKey("ID");
 
-                    b.Property<string>("Vak");
-
-                    b.Property<string>("Vraag");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Question");
-                });
+                b.ToTable("Queue");
+            });
 #pragma warning restore 612, 618
         }
     }

@@ -38,6 +38,22 @@ namespace webapp.Migrations
 
                     b.ToTable("Question");
                 });
+
+            modelBuilder.Entity("webapp.Models.Queue", b =>
+            {
+                b.Property<string>("ID")
+                    .ValueGeneratedOnAdd();
+
+                b.Property<string>("Peercoach");
+
+                b.Property<string>("Lokaal");
+
+                b.Property<string>("Tijdvak");
+
+                b.HasKey("ID");
+
+                b.ToTable("Queue");
+            });
 #pragma warning restore 612, 618
         }
     }

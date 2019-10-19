@@ -7,19 +7,18 @@ namespace webapp.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Wachtrij",
+                name: "Queue",
                 columns: table => new
                 {
-                ID = table.Column<string>(nullable: false),
-                Peercoach = table.Column<string>(nullable: false),
-                Lokaal = table.Column<string>(nullable: true),
-                Tijdvak = table.Column<string>(nullable: false)
+                    ID = table.Column<string>(nullable: false),
+                    Peercoach = table.Column<string>(nullable: false),
+                    Lokaal = table.Column<string>(nullable: true),
+                    Tijdvak = table.Column<string>(nullable: false)
                 },
-        constraints: table =>
-        {
-        table.PrimaryKey("PK_Wachtrij", x => x.ID);
-        });
-
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Queue", x => x.ID);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
