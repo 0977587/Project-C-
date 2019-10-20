@@ -125,9 +125,6 @@ C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\SVragen.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\DAgenda.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\PWachtrij.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Wachtrij\SWachtrij.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\MakeQueue\Create.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\MakeQueue\Delete.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\MakeQueue\Details.cshtml.g.cs
