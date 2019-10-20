@@ -107,7 +107,6 @@ C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\DMenu.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\PMenu.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\SMenu.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Privacy.cshtml.g.cs
@@ -115,10 +114,8 @@ C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\test\test.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vakken\DVakken.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vakken\PVakken.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vakken\SVakken.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\DVragen.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\PVragen.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Create.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Delete.cshtml.g.cs
