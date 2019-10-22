@@ -34,6 +34,10 @@ namespace webapp.Pages.Vragen.Steleenvraag
                 return Page();
             }
 
+
+            //Question is eigenlijk al gemaakt en wil ik naar de locale databse versturen
+
+
             _context.Question.Add(Question);
             await _context.SaveChangesAsync();
 

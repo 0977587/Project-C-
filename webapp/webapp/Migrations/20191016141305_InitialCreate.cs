@@ -22,6 +22,8 @@ namespace webapp.Migrations
                 {
                     table.PrimaryKey("PK_Question", x => x.ID);
                 });
+
+            //table naar jurriaan versturen
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -29,5 +31,6 @@ namespace webapp.Migrations
             migrationBuilder.DropTable(
                 name: "Question");
         }
+            //drop table
     }
 }
