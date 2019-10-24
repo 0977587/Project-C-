@@ -22,7 +22,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
         [BindProperty]
         public Question Question { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
@@ -38,7 +38,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string id)
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)
             {

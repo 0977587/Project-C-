@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Vak1;
+using Uurvak1;
 
-namespace ConsoleApp1
+namespace Roosterdag
 {
     class RoosterDag
     {

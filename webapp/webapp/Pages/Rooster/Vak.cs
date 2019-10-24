@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp1
+
+namespace Vak1
 {
     class Vak
     {
@@ -42,9 +43,6 @@ namespace ConsoleApp1
                 {
                     this.Discriptie = info[4].Replace("\r\n", "").Replace("\r", "").Replace("\n", "");
                  }
-
-
-
             }
             else
             {
@@ -64,11 +62,6 @@ namespace ConsoleApp1
                 DBConnection DBC = new DBConnection();
                 new DBConnection().Send("INSERT INTO `projectcdb`.`vak` (`VakID`, `Docent`, `Locaal`, `Naam`, `Discriptie`, `Isleeg`) VALUES ('" + klasnumber + weeknummer.ToString() + dagnummer.ToString() +uurnummer.ToString()+ "', '"+this.Docent+"', '"+this.Locaal+"', '"+this.Naam+"', '"+this.Discriptie+"', '0');");
             }
-
         }
-
-
-
-
     }
 }

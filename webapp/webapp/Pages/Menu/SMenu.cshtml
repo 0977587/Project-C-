@@ -1,7 +1,27 @@
-﻿@page
+﻿@using Vak1;
+@using Roosterzoeker;
+@using Roosterdag;
+@using Roosterdag
+@using DBConnection;
+
 @model IndexModel
 @{
+    <a href="C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Menu\SMenu.cshtml">C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Menu\SMenu.cshtml</a>
     ViewData["Title"] = "Home page";
+    List<List<string>> test = new DBConnection().Send("SELECT * FROM projectcdb.vak;");
+    if (test.isconnect())
+    {
+        then(dothis());
+        if (lets(havethis()))
+        {
+            makethis()
+        }
+    }
+    else
+    {
+
+    }
+
 }
 
 <div class="text-center">
@@ -16,6 +36,8 @@
 <a asp-page="../Vragen/Steleenvraag/Create">
     <button>Vragen</button>
 </a>
+
+
 
 <a asp-page="../Agenda/SAgenda">
     <button>Agenda</button>

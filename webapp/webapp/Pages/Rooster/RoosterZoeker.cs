@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.Net;
 using DatabaseController;
+using Uurvak1;
+using Roosterdag;
+using Vak1;
 
-namespace ConsoleApp1
+namespace Roosterzoeker
 {
     class RoosterZoeker
     {
@@ -152,12 +154,6 @@ namespace ConsoleApp1
                     }
 
                 }
-
-
-
-
-
-
                 count2++;
             }
             RoosterDag r1 = new RoosterDag("Maandag",44);
@@ -177,13 +173,7 @@ namespace ConsoleApp1
             }
 
             int weeknummer = week - 37;
-
-
-
-
             new DBConnection().Send("INSERT INTO `projectcdb`.`roosterweek` (`RoosterWeekID`, `WeekNummer`, `KlasID`) VALUES ('" + klasnumber + week + "', '" + weeknummer + "', '" + klasnumber + "');");
-
-
             new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "1', '" + week + "11', '" + week + "12', '" + week + "13', '" + week + "14', '" + week + "15', '" + week + "16', '" + week + "17', '" + week + "18', '" + week + "19', '" + week + "110', '" + week + "111', '" + week + "112', '" + week + "113', '" + week + "113', '" + week + "115', '" + week + "', 'Maandag');");
             new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "2', '" + week + "21', '" + week + "22', '" + week + "23', '" + week + "24', '" + week + "25', '" + week + "26', '" + week + "27', '" + week + "28', '" + week + "29', '" + week + "210', '" + week + "211', '" + week + "212', '" + week + "213', '" + week + "213', '" + week + "215', '" + week + "', 'Dinsdag');");
             new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "3', '" + week + "31', '" + week + "32', '" + week + "33', '" + week + "34', '" + week + "35', '" + week + "36', '" + week + "37', '" + week + "38', '" + week + "39', '" + week + "310', '" + week + "311', '" + week + "312', '" + week + "313', '" + week + "313', '" + week + "315', '" + week + "', 'Woensdag');");

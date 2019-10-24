@@ -25,14 +25,24 @@
                 <span asp-validation-for="Question.Vraag" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Question.Vak" class="control-label"></label>
-                <input asp-for="Question.Vak" class="form-control" />
-                <span asp-validation-for="Question.Vak" class="text-danger"></span>
+                <label asp-for="Question.VakID" class="control-label"></label>
+                <input asp-for="Question.VakID" class="form-control" />
+                <span asp-validation-for="Question.VakID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Question.Lokaal" class="control-label"></label>
-                <input asp-for="Question.Lokaal" class="form-control" />
-                <span asp-validation-for="Question.Lokaal" class="text-danger"></span>
+                <label asp-for="Question.VraagText" class="control-label"></label>
+                <input asp-for="Question.VraagText" class="form-control" />
+                <span asp-validation-for="Question.VraagText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question.AndwoordText" class="control-label"></label>
+                <input asp-for="Question.AndwoordText" class="form-control" />
+                <span asp-validation-for="Question.AndwoordText" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Question.IsFAQ" /> @Html.DisplayNameFor(model => model.Question.IsFAQ)
+                </label>
             </div>
             <div class="form-group">
                 <label asp-for="Question.Date" class="control-label"></label>

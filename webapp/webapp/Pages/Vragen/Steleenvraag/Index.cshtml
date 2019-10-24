@@ -20,10 +20,16 @@
                 @Html.DisplayNameFor(model => model.Question[0].Vraag)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Question[0].Vak)
+                @Html.DisplayNameFor(model => model.Question[0].VakID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Question[0].Lokaal)
+                @Html.DisplayNameFor(model => model.Question[0].VraagText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question[0].AndwoordText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question[0].IsFAQ)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Question[0].Date)
@@ -41,10 +47,16 @@
                 @Html.DisplayFor(modelItem => item.Vraag)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vak)
+                @Html.DisplayFor(modelItem => item.VakID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lokaal)
+                @Html.DisplayFor(modelItem => item.VraagText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AndwoordText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFAQ)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)

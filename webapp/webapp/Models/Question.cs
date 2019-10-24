@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using System;
 
 namespace webapp.Models
 {
     //info over vragen 
     public class Question
     {
-        public string ID { get; set; }
-        public string Naam { get; set; }
+        public int ID { get; set; }
+        public int Naam { get; set; }
 
         public string Vraag { get; set; }
-        public string Vak { get; set; }
-        public string Lokaal { get; set; }
+        public string VakID { get; set; }
+        public string VraagText { get; set; }
 
-        
-        public DateTime Date  { get; set; }
+        public string AndwoordText { get; set; }
+
+        public bool IsFAQ { get; set; }
+        public DateTime Date { get; set; }
     }
 
 }

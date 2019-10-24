@@ -15,7 +15,6 @@ namespace DatabaseController
         {
             List<string> Stringlist = new List<string>();
             List<List<string>> Stringlist2 = new List<List<string>>();
-            int count;
 
             this.DatabaseName = "projectcdb";
             if (this.IsConnect())
@@ -27,7 +26,6 @@ namespace DatabaseController
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    count = reader.FieldCount;
                     Stringlist = new List<string>();
                     for (int i = 0; i < reader.FieldCount ; i++)
                     {
@@ -37,8 +35,7 @@ namespace DatabaseController
 
                     
                 }
-
-                this.Close();
+                this.Close( );
             }
 
             return Stringlist2;

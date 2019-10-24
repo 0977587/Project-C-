@@ -21,7 +21,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
         public Question Question { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
