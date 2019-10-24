@@ -1,0 +1,147 @@
+﻿@model LoginenregistratieProjectC.Models.Gebruiker
+
+@{
+    ViewBag.Title = "Registratie";
+}
+
+<h2>Registratie</h2>
+
+<!--Ik schrijf hier een conditie bericht als de registratie succesvol is. Anders een errorbericht-->
+<!--ALs de velden van de registratie niet leeg zijn en de status true is-->
+@if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+{
+    if(ViewBag.Message != null)
+    {
+        <div class="alert alert-success">
+            <strong>Succes!</strong>@ViewBag.Message
+        </div>
+    }
+}
+
+else
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <!---<h4>Gebruiker</h4>-->
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Voornaam, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Voornaam, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Voornaam, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Achternaam, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Achternaam, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Achternaam, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Emailadres, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Emailadres, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Emailadres, "", new { @class = "text-danger" })
+                    <!--Errorbericht als email al bestaat met de variabele bestaatEmail dat verwijst naar GebruikerController-->
+                    @Html.ValidationMessage("bestaatEmail", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Wachtwoord, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Wachtwoord, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Wachtwoord, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Klas, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+
+                    @Html.DropDownListFor(model => model.Klas,
+                      new List<SelectListItem> {
+                           new SelectListItem { Text = "1A" },
+                           new SelectListItem { Text = "1B" },
+                           new SelectListItem { Text = "1C" },
+                           new SelectListItem { Text = "1D"},
+                           new SelectListItem { Text = "1E"},
+                           new SelectListItem { Text = "1F"},
+                           new SelectListItem { Text = "1H"},
+                           new SelectListItem { Text = "1I"},
+                           new SelectListItem { Text = "1J"},
+                           new SelectListItem { Text = "1K"},
+                        },
+                      new { @class = "Klas" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Rol, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Rol,
+                new List<SelectListItem> {
+                     new SelectListItem { Text = "peercoach" },
+                     new SelectListItem { Text = "student" },
+                  },
+                new { @class = "Klas" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BevestigWachtwoord, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BevestigWachtwoord, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BevestigWachtwoord, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+
+        if(ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>Error!</strong>@ViewBag.Message
+            </div>
+        } 
+    }
+    
+
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+<div>
+    @Html.ActionLink("Login", "Login")
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.Validate.min.js"></script>
+    <script src="~/Scripts/jquery.Validate.unobtrusive.min.js"></script>
+
+}

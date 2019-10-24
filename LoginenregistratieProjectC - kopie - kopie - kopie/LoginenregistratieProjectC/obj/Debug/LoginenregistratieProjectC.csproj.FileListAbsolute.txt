@@ -1,0 +1,292 @@
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csi.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csi.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\csi.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.AppContext.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Console.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.IO.Compression.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Claims.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.ValueTuple.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\vbc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\vbc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\vbc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\EntityFramework.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Helpers.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Mvc.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\EntityFramework.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Helpers.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\System.Web.Mvc.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csprojAssemblyReference.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CoreCompileInputs.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CopyComplete
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\csi.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.AppContext.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Console.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Compression.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Claims.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.ValueTuple.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\EntityFramework.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\EntityFramework.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csprojAssemblyReference.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CoreCompileInputs.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CopyComplete
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.AppContext.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Console.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Compression.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Claims.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.ValueTuple.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csprojAssemblyReference.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CoreCompileInputs.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CopyComplete
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\LoginenregistratieProjectC.pdb
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\csi.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.AppContext.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Console.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Compression.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Claims.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.ValueTuple.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\vbc.rsp
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\EntityFramework.SqlServer.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Webpages.Razor.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Helpers.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\System.Web.Mvc.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csprojAssemblyReference.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CoreCompileInputs.cache
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.csproj.CopyComplete
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.dll
+C:\Users\marni\OneDrive\Bureaublad\LoginenregistratieProjectC - kopie - kopie - kopie\LoginenregistratieProjectC\obj\Debug\LoginenregistratieProjectC.pdb

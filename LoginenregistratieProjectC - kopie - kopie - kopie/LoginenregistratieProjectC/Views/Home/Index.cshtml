@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+Welkom @HttpContext.Current.User.Identity.Name
+
+@if(Request.IsAuthenticated)
+{
+    using(Html.BeginForm("Loguit","Gebruiker",FormMethod.Post, new { id="logoutForm"}))
+    {
+        <a href="javascript:document.getElementById('logoutForm').submit()">Log uit</a>
+    }
+}

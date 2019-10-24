@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MijnDatabaseModelStoreContainer" CdmEntityContainer="MijnDatabaseEntities">
+    <EntitySetMapping Name="Gebruikers">
+      <EntityTypeMapping TypeName="MijnDatabaseModel.Gebruiker">
+        <MappingFragment StoreEntitySet="Gebruikers">
+          <ScalarProperty Name="ResetWachtwoordCode" ColumnName="ResetWachtwoordCode" />
+          <ScalarProperty Name="GebruikerID" ColumnName="GebruikerID" />
+          <ScalarProperty Name="Voornaam" ColumnName="Voornaam" />
+          <ScalarProperty Name="Achternaam" ColumnName="Achternaam" />
+          <ScalarProperty Name="Emailadres" ColumnName="Emailadres" />
+          <ScalarProperty Name="Wachtwoord" ColumnName="Wachtwoord" />
+          <ScalarProperty Name="IsEmailGeverifieerd" ColumnName="IsEmailGeverifieerd" />
+          <ScalarProperty Name="ActivatieCode" ColumnName="ActivatieCode" />
+          <ScalarProperty Name="Klas" ColumnName="Klas" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
