@@ -78,6 +78,10 @@ namespace Identity3._0.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("IsPeercoach");
+
+                    b.Property<bool>("EmailConfirmed");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
