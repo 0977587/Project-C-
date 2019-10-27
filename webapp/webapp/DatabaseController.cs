@@ -7,8 +7,6 @@ using MySql.Data.MySqlClient;
 namespace DatabaseController
 {
         //Install-Package MySql.Data -Version 8.0.18
-
-
     public class DBConnection
     {
         public List<List<string>> Send(string queri)

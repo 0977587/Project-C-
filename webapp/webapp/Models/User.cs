@@ -5,7 +5,7 @@ using System.Text;
 
 namespace webapp.Models
 {
-    class User
+    public class User
     {
         public int UserID { get; set; }
         public string Rol { get; set; }
@@ -37,7 +37,7 @@ namespace webapp.Models
 
         }
         //constructor zonder resetWachtwoordcode
-        public User(int userID, string rol, int klasID, string voornaam,  string email, string wachtwoord, string achternaam, bool isEmailGeverifieerd, string activatieCode)
+        public User(int userID, string rol, int klasID, string voornaam, string email, string wachtwoord, string achternaam, bool isEmailGeverifieerd, string activatieCode)
         {
             UserID = userID;
             Rol = rol;
@@ -154,38 +154,5 @@ namespace webapp.Models
             }
             new DBConnection().Send("INSERT `projectcdb`.`user` SET `UserID` = '" + UserID + "',`Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "',`IsEmailGeverifieerd` = '" + IsLeegbool + "',`ActivatieCode` = '" + ActivatieCode + "',`ResetWachtwoordCode` = '" + ResetWachtwoordCode + "'");
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

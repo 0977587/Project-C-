@@ -1,19 +1,30 @@
 ﻿@page
 @model webapp.Pages.Vragen.Steleenvraag.CreateModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using DatabaseController
+@using webapp.Models
 
 @{
     ViewData["Title"] = "Create";
     var time = DateTime.Now;
+    User mark = new User(1, "student", 1, "mark", "markus", "laurensmaas9702@gmail.com", "12345", true, "12345", "123456");
+    Vak vak = new Vak(1, "Marijke", "wd1204", "analyse", "analyse", true);
 
-}
-@functions{
-    public static List<string> krijgvakken()
-    {
-        var result = new List<string>();
+    List<Vak> temp = new List<Vak>();
+    temp.Add(vak);
 
-        return result;
-    }
+
+
+
+    IngeschrevenVakken vakken = new IngeschrevenVakken(vak, mark);
+
+    var TempData = new List<IngeschrevenVakken>();
+    TempData.Add(vakken);
+    TotaalingeschrevenVakken totVakken = new TotaalingeschrevenVakken(TempData);
+    //todo: eerst student aanmaken
+    //todo: vak  aanmaken
+    //todo ingeschreven vak met student aanmaken
+
 }
 <h1>Stel een vraag!</h1>
 <h4>Vraag</h4>
@@ -22,11 +33,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Vraag.UserID" class="control-label"></label>
-                <input asp-for="Vraag.UserID" class="form-control" />
-                <span asp-validation-for="Vraag.UserID" class="text-danger"></span>
-            </div>
+            <input asp-for="Vraag.UserID" type="hidden" value=@mark.UserID>
             <div class="form-group">
                 <label asp-for="Vraag.VakID" class="control-label"></label>
                 <input asp-for="Vraag.VakID" class="form-control" />
@@ -35,22 +42,17 @@
             <div class="form-group">
                 <label asp-for="Vraag.VraagText" class="control-label"></label>
                 <input asp-for="Vraag.VraagText" class="form-control" />
-                <span asp-validation-for="Vraag.VraagText" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vraag.AndwoordText" class="control-label"></label>
-                <input asp-for="Vraag.AndwoordText" class="form-control" />
-                <span asp-validation-for="Vraag.AndwoordText" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Vraag.DateAdded" class="control-label"></label>
-                <input asp-for="Vraag.DateAdded" class="form-control" />
-            </div>
+            <select id="selectNumber">
+                <option>Kies het vak</option>
+            </select>
+
             <input asp-for="Vraag.DateAdded" type="hidden" value=@time>
-            <div class="form-group">
 
-                <input type="submit" onclick="myFunction()" value="Create" class="btn btn-primary" />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -60,3 +62,16 @@
     <a asp-page="Index">Back to List</a>
 </div>
 
+
+<script>
+    var totaalingeschrevenVakken = @temp,
+            select = document.getElementById("selectNumber");
+
+
+         totaalingeschrevenVakken.forEach(function (element) {
+             select.add(new Option(totaalingeschrevenVakken[element].Naam));
+        }
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

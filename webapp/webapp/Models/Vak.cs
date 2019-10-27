@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Vakken
+namespace webapp.Models
 {
-    class Vak
+    public class Vak
     {
         public int VakID { get; set; }
         public string Docent { get; set; }
