@@ -1,0 +1,64 @@
+﻿@page
+@model webapp.Pages.Vragen.Steleenvraag.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vraag</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.UserID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.UserID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.VakID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.VakID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.VraagText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.VraagText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.AndwoordText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.AndwoordText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.IsFAQ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.IsFAQ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.DateAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.DateAdded)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.EndDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Vraag.VraagID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

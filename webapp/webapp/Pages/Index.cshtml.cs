@@ -10,7 +10,7 @@ namespace webapp.Pages
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
+        public static void OnGet()
         {
         }
     }

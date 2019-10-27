@@ -74,7 +74,6 @@ C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\DMenu.g.cshtml.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\PMenu.g.cshtml.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Menu\SMenu.g.cshtml.cs
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csprojAssemblyReference.cache
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.RazorAssemblyInfo.cache
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.RazorAssemblyInfo.cs
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.AssemblyInfoInputs.cache
@@ -119,3 +118,8 @@ C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\webapp.Views.pdb
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.Views.pdb
 C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csproj.CopyComplete
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Create.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Delete.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Details.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Edit.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Index.cshtml.g.cs

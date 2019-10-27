@@ -1,6 +1,7 @@
 ﻿using DatabaseController;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,9 @@ namespace webapp.Models
     //info over vragen 
     public class Vraag
     {
+      
         public int VraagID { get; set; }
+       
         public int UserID { get; set; }
         public int VakID { get; set; }
         public string VraagText { get; set; }
@@ -79,7 +82,7 @@ namespace webapp.Models
                 EndDate = Convert.ToDateTime(returnstatement[0][7]);
 
         }
-        public List<Vraag> SelectAll()
+        public static List<Vraag> SelectAll()
         {
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();

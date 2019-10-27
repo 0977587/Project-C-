@@ -1,0 +1,61 @@
+﻿@page
+@model webapp.Pages.Vragen.Steleenvraag.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vraag</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.UserID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.UserID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.VakID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.VakID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.VraagText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.VraagText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.AndwoordText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.AndwoordText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.IsFAQ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.IsFAQ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.DateAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.DateAdded)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vraag.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vraag.EndDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vraag.VraagID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

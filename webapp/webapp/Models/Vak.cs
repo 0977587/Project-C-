@@ -103,7 +103,7 @@ namespace Vakken
             }
             new DBConnection().Send("UPDATE `projectcdb`.`vak` SET `Docent` = '" + Docent + "', `Locaal` = '" + Locaal + "', `Naam` = '" + Naam + "', `Discriptie` = '" + Discriptie + "', `Isleeg` = '" + IsLeegbool + "'WHERE (`VakID` = '" + VakID + "');");
         }
-        public void insert()
+        public void Insert()
         {
             int IsLeegbool;
             if (Isleeg == true)
