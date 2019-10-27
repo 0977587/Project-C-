@@ -1,4 +1,5 @@
 ﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -8,16 +9,12 @@
     <h1 class="display-4">Peercoach app</h1>
 </div>
 
-
-<a asp-page="/Menu/SMenu">
-    <button>Student Menu</button>
-</a>
-
-<a asp-page="/Menu/DMenu">
-    <button>Dev menu</button>
-</a>
-
-<a asp-page="/Menu/PMenu">
+<form style="display: inline" action="/Menu/SMenu" method="get">
+    <button>Student menu</button>
+</form>
+<form style="display: inline" action="/Menu/PMenu" method="get">
     <button>Peercoach menu</button>
-</a>
-
+</form>
+<form style="display: inline" action="/Menu/DMenu" method="get">
+    <button>Developper menu</button>
+</form>

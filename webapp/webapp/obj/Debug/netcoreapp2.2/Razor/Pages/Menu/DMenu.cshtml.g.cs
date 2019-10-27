@@ -22,28 +22,6 @@ using webapp;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5569a73cf905216bed2b6e1222f91d848aa1d31c", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Menu_DMenu : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-page", "../Vakken/DVakken", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-page", "../Vragen/DVragen", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-page", "../Agenda/DAgenda", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        #line hidden
-        #pragma warning disable 0169
-        private string __tagHelperStringValueBuffer;
-        #pragma warning restore 0169
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner __tagHelperRunner = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner();
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __tagHelperScopeManager
-        {
-            get
-            {
-                if (__backed__tagHelperScopeManager == null)
-                {
-                    __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
-                }
-                return __backed__tagHelperScopeManager;
-            }
-        }
-        private global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -53,74 +31,27 @@ using webapp;
 
 #line default
 #line hidden
-            BeginContext(71, 97, true);
-            WriteLiteral("\r\n<div class=\"text-center\">\r\n    <h1 class=\"display-4\">Peercoach app Developer</h1>\r\n</div>\r\n\r\n\r\n");
-            EndContext();
-            BeginContext(168, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7286c47ba8c0f1241954125763dcfd4a2cef89774258", async() => {
-                BeginContext(200, 31, true);
-                WriteLiteral("\r\n    <button>Vakken</button>\r\n");
-                EndContext();
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Page = (string)__tagHelperAttribute_0.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            EndContext();
-            BeginContext(235, 4, true);
-            WriteLiteral("\r\n\r\n");
-            EndContext();
-            BeginContext(239, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7286c47ba8c0f1241954125763dcfd4a2cef89775659", async() => {
-                BeginContext(271, 31, true);
-                WriteLiteral("\r\n    <button>Vragen</button>\r\n");
-                EndContext();
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Page = (string)__tagHelperAttribute_1.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            EndContext();
-            BeginContext(306, 4, true);
-            WriteLiteral("\r\n\r\n");
-            EndContext();
-            BeginContext(310, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7286c47ba8c0f1241954125763dcfd4a2cef89777060", async() => {
-                BeginContext(342, 31, true);
-                WriteLiteral("\r\n    <button>Agenda</button>\r\n");
-                EndContext();
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Page = (string)__tagHelperAttribute_2.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_2);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            EndContext();
-            BeginContext(377, 31, true);
-            WriteLiteral("\r\n\r\n<button> Log uit</button>\r\n");
+            BeginContext(71, 337, true);
+            WriteLiteral(@"
+<div class=""text-center"">
+    <h1 class=""display-4"">Peercoach app Developer</h1>
+</div>
+
+
+<a asp-page=""../Vakken/DVakken"">
+    <button>Vakken</button>
+</a>
+
+<a asp-page=""../Vragen/DVragen"">
+    <button>Vragen</button>
+</a>
+
+<a asp-page=""../Agenda/DAgenda"">
+    <button>Agenda</button>
+</a>
+
+<button> Log uit</button>
+");
             EndContext();
         }
         #pragma warning restore 1998

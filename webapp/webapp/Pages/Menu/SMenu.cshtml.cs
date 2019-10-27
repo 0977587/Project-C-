@@ -9,7 +9,7 @@ namespace webapp.Pages
 {
     public class SMenuModel : PageModel
     {
-        public void OnGet()
+        public static void OnGet()
         {
 
         }

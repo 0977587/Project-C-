@@ -1,46 +1,22 @@
-﻿@using Vak1;
-@using Roosterzoeker;
-@using Roosterdag;
-@using Roosterdag
-@using DBConnection;
-
+﻿@page
 @model IndexModel
 @{
-    <a href="C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Menu\SMenu.cshtml">C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Menu\SMenu.cshtml</a>
-    ViewData["Title"] = "Home page";
-    List<List<string>> test = new DBConnection().Send("SELECT * FROM projectcdb.vak;");
-    if (test.isconnect())
-    {
-        then(dothis());
-        if (lets(havethis()))
-        {
-            makethis()
-        }
-    }
-    else
-    {
-
-    }
-
+    ViewData["Title"] = "Studenten Menu";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Peercoach app Student</h1>
+    <h1 class="display-4">student menu</h1>
 </div>
 
+<form style="display: inline" action="../Vakken/SVakken" method="get">
+    <button>vakken</button>
+</form>
+<form style="display: inline" action="../Vragen/SVragen" method="get">
 
-<a asp-page="../Vakken/SVakken">
-    <button>Vakken</button>
-</a>
-
-<a asp-page="../Vragen/Steleenvraag/Create">
     <button>Vragen</button>
-</a>
-
-
-
-<a asp-page="../Agenda/SAgenda">
-    <button>Agenda</button>
-</a>
+</form>
+<form style="display: inline" action="../Agenda/SAgenda" method="get">
+    <button>agenda</button>
+</form>
 
 <button> Log uit</button>

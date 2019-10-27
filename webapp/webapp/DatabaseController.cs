@@ -13,7 +13,7 @@ namespace DatabaseController
     {
         public List<List<string>> Send(string queri)
         {
-            List<string> Stringlist = new List<string>();
+            List<string> Stringlist;
             List<List<string>> Stringlist2 = new List<List<string>>();
 
             this.DatabaseName = "projectcdb";
@@ -22,7 +22,7 @@ namespace DatabaseController
                 Console.WriteLine(queri);
 
 
-                var cmd = new MySqlCommand(queri, this.Connection);
+                var cmd = new MySqlCommand(queri, Connection);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -33,9 +33,11 @@ namespace DatabaseController
                     }
                     Stringlist2.Add(Stringlist);
 
-                    
+
                 }
-                this.Close( );
+
+                reader.Close();
+               
             }
 
             return Stringlist2;

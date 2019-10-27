@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "MySql.Data": "8.0.18"
@@ -67,6 +68,7 @@
           "lib/netstandard1.0/Google.Protobuf.dll": {}
         }
       },
+      "Microsoft.CodeAnalysis.Analyzers/2.9.6": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -1808,12 +1810,9 @@
         },
         "compileOnly": true
       },
-      "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-        "compileOnly": true
-      },
       "Microsoft.CodeAnalysis.Common/2.8.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "1.1.0",
+          "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
           "System.AppContext": "4.3.0",
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
@@ -3780,6 +3779,13 @@
       "path": "google.protobuf/3.6.1",
       "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
     },
+    "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kmms3TxGQMNb95Cu/3K+0bIcMnV4qf/phZBLAB0HUi65rBPxP4JO3aM2LoAcb+DFS600RQJMZ7ZLyYDTbLwJOQ==",
+      "path": "microsoft.codeanalysis.analyzers/2.9.6",
+      "hashPath": "microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -4661,13 +4667,6 @@
       "sha512": "sha512-9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
-      "path": "microsoft.codeanalysis.analyzers/1.1.0",
-      "hashPath": "microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/2.8.0": {
       "type": "package",

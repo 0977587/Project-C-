@@ -12,7 +12,6 @@ namespace webapp.Pages
     {
         public void OnGet()
         {
-            List<List<string>> test = new DBConnection().Send("SELECT * FROM projectcdb.vak;");
         }
     }
 }

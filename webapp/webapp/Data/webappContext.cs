@@ -13,7 +13,5 @@ namespace webapp.Data
             : base(options)
         {
         }
-
-        public DbSet<webapp.Models.Question> Question { get; set; }
     }
 }
