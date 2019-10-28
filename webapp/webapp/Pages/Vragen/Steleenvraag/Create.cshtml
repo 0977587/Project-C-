@@ -25,14 +25,16 @@
     </head>
 
     <body>
-        <form method="post" style="display: inline" action="../../Menu/SMenu">
+        <form method="post" style="display: inline">
             <input asp-for="VraagText" />
             <br />
             <select id="selectNumber" asp-for="VakID">
                 <option>Kies het vak</option>
             </select>
             <br />
-            <input type="submit" />
+        </form>
+        <form style="display: inline" action="../../Menu/SMenu" method="get">
+            <button>Submit</button>
         </form>
     </body>
 </html>
