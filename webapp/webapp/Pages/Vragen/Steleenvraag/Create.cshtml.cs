@@ -1,6 +1,7 @@
 ﻿using DatabaseController;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using webapp.Models;
 
@@ -28,15 +29,23 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
         public void OnPost()
         {
+
+
             VraagID = 1;
             UserID = 1;
-            VakID = 1; //todo add this Request.Form[VakID];
+
+
+            List<List<string>> connect = new DBConnection().Send("");
+            
+
             VraagText = Request.Form[nameof(VraagText)];
 
             AndwoordText = "";
             DateAdded = DateTime.UtcNow;
             EndDate = DateTime.MinValue;
-            Vraag temp = new Vraag(VraagID, UserID, VakID, VraagText, AndwoordText,false, DateAdded, EndDate);
+
+
+            Vraag temp = new Vraag(VraagID, UserID, 1, VraagText, AndwoordText,false, DateAdded, EndDate);
             temp.Insert();
             //VraagID = int(New DBConnection().Send(temp)); //todo fix jurriaans query
             

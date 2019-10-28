@@ -3,10 +3,14 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using DatabaseController
 @using webapp.Models
+@using System;
+@using System;
+@using System.Collections.Generic;
 
 @{
     ViewData["Title"] = "Create";
     var time = DateTime.Now;
+    /*
     User mark = new User(1, "student", 1, "mark", "markus", "laurensmaas9702@gmail.com", "12345", true, "12345", "123456");
     Vak vak = new Vak(1, "Marijke", "wd1204", "analyse", "analyse", true);
 
@@ -15,37 +19,47 @@
     var TempData = new List<IngeschrevenVakken>();
     TempData.Add(vakken);
     TotaalingeschrevenVakken totVakken = new TotaalingeschrevenVakken(TempData);
+    */
+
+
+    List<Vak> vakken = new List<Vak>();
+
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = 1");
+    foreach (List<string> temp in connect)
+    {
+        Vak a = new Vak();
+        a.SelectOne(Convert.ToInt32(temp[0]));
+        vakken.Add(a);
+    }
 
 }
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Stel een vraag</title>
-    </head>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Stel een vraag</title>
+</head>
 
-    <body>
-        <form method="post" style="display: inline">
-            <input asp-for="VraagText" />
-            <br />
-            <select id="selectNumber" asp-for="VakID">
-                <option>Kies het vak</option>
-            </select>
-            <br />
-        </form>
-        <form style="display: inline" action="../../Menu/SMenu" method="get">
-            <button>Submit</button>
-        </form>
-    </body>
+<body>
+    <form method="post" style="display: inline">
+        <input asp-for="VraagText" />
+        <br />
+        <select id="selectNumber">
+            <option>Kies het vak</option>
+        </select>
+        <br />
+    </form>
+    <form style="display: inline" action="../../Menu/SMenu" method="get">
+        <button>Submit</button>
+    </form>
+</body>
 </html>
 
 <script>
-    //todo jurriaans vakken weergeven invoegen
-    //todo add a fucntionality
-
-    var vakkenweergeven = ["Analyse", "Development", "Skills", "Project A"];
-    for (i = 0; i < vakkenweergeven.length; i++) {
+    var count = 0;
+    for i in @vakken{ 
         var opt = document.createElement("option");
-        document.getElementById("selectNumber").innerHTML += '<option id="' + i + '">' + vakkenweergeven[i] + '</option>';
+        document.getElementById("selectNumber").innerHTML += '<option id="' + count + '">' + i.Naam + '</option>';
+        count++;
     }
 </script>
