@@ -7,9 +7,9 @@ using webapp.Models;
 
 namespace webapp.Data
 {
-    public class webappContext : DbContext
+    public class WebappContext : DbContext
     {
-        public webappContext (DbContextOptions<webappContext> options)
+        public WebappContext (DbContextOptions<WebappContext> options)
             : base(options)
         {
         }

@@ -36,7 +36,7 @@ namespace webapp.Models
         }
 
         //constructor zonder andwoordtext
-        public Vraag(int vraagID, int userID, int vakID, string vraagText, bool isFAQ, DateTime dateAdded, DateTime endDate)
+        public Vraag(int vraagID, int userID, int vakID, string vraagText, bool isFAQ, string andwoordText, DateTime dateAdded, DateTime endDate)
         {
             VraagID = vraagID;
             UserID = userID;
@@ -47,10 +47,15 @@ namespace webapp.Models
             EndDate = endDate;
         }
         //lege constructor
-        public Vraag()
+        public Vraag(string v)
         {
 
         }
+
+        public Vraag()
+        {
+        }
+
         public void SelectOne(int input)
         {
             //geef vraagID mee

@@ -1,43 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using DatabaseController;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using webapp.Data;
+using System;
+using System.ComponentModel.DataAnnotations;
 using webapp.Models;
+
 
 namespace webapp.Pages.Vragen.Steleenvraag
 {
-    public class CreateModel : PageModel
+    public class IndexModel : PageModel
     {
-        private readonly webapp.Data.webappContext _context;
+        public int VraagID { get; set; }
+        public int UserID { get; set; }
+        public int VakID { get; set; }
 
-        public CreateModel(webapp.Data.webappContext context)
+        [StringLength(400, MinimumLength = 3)]
+        [Required]
+        public string VraagText { get; set; }
+        public string AndwoordText { get; set; }
+        public Boolean IsFAQ { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime EndDate { get; set; }
+
+        public void OnGet()
         {
-            _context = context;
+            VraagText = "voer hier je vraag in";
         }
 
-        public IActionResult OnGet()
+        public void OnPost()
         {
-            return Page();
-        }
+            VraagID = 1;
+            UserID = 1;
+            VakID = 1; //todo add this Request.Form[VakID];
+            VraagText = Request.Form[nameof(VraagText)];
 
-        [BindProperty]
-        public Vraag Vraag { get; set; }
-
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            _context.Vraag.Add(Vraag);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            AndwoordText = "";
+            DateAdded = DateTime.UtcNow;
+            EndDate = DateTime.MinValue;
+            Vraag temp = new Vraag(VraagID, UserID, VakID, VraagText, AndwoordText,false, DateAdded, EndDate);
+            //VraagID = int(New DBConnection().Send(temp)); //todo fix jurriaans query
+            
         }
     }
 }

@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\webapp",
-    "\\webapp\\Pages"
+    "\\webapp\\Models",
+    "\\webapp\\Pages",
+    "\\webapp\\Pages\\Vragen",
+    "\\webapp\\Pages\\Vragen\\Steleenvraag"
   ],
-  "SelectedNode": "\\webapp\\Pages\\Vakken.cshtml.cs",
+  "SelectedNode": "\\webapp.sln",
   "PreviewInSolutionExplorer": false
 }

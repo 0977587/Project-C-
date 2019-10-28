@@ -31,7 +31,7 @@ namespace webapp
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<webappContext>(options =>
+            services.AddDbContext<WebappContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("webappContext")));
 
           
