@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {}
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
-        "packagesPath": "C:\\Users\\laure\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\laure\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
