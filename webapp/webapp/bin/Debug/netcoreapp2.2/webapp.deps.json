@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "webapp/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.Razor": "3.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
           "Microsoft.NETCore.App": "2.2.0",
@@ -66,6 +67,17 @@
         },
         "compile": {
           "lib/netstandard1.0/Google.Protobuf.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/3.0.0": {
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.11001.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/2.9.6": {},
@@ -3792,6 +3804,13 @@
       "sha512": "sha512-741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
       "path": "google.protobuf/3.6.1",
       "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Razor/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mU1W0PRd1uQAb+triRGp51YYkw26RQ9q1tWPX57eHqxDqjx1smRHhejQhhnoAGr3bZDkl8AoUxegGR3tNM+YKA==",
+      "path": "microsoft.aspnet.razor/3.0.0",
+      "hashPath": "microsoft.aspnet.razor.3.0.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
       "type": "package",

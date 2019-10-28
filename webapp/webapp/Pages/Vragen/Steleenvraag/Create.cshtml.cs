@@ -37,6 +37,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
             DateAdded = DateTime.UtcNow;
             EndDate = DateTime.MinValue;
             Vraag temp = new Vraag(VraagID, UserID, VakID, VraagText, AndwoordText,false, DateAdded, EndDate);
+            temp.Insert();
             //VraagID = int(New DBConnection().Send(temp)); //todo fix jurriaans query
             
         }
