@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Developper Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Peercoach app Developper</h1>
+</div>
+
+<form style="display: inline" action="../Vakken/DVakken" method="get">
+    <button>vakken</button>
+</form>
+<form style="display: inline" action="../Vragen/DVragen" method="get">
+
+    <button>Vragen</button>
+</form>
+<form style="display: inline" action="../Agenda/DAgenda" method="get">
+    <button>agenda</button>
+</form>
+
+<button> Log uit</button>
