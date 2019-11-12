@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using webapp.Models;
 
 
+
 namespace webapp.Pages.Vragen.Steleenvraag
 {
     public class IndexModel : PageModel
@@ -25,6 +26,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public void OnGet()
         {
             VraagText = "voer hier je vraag in";
+
         }
 
         public void OnPost()
@@ -47,7 +49,6 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
             Vraag temp = new Vraag(VraagID, UserID, 1, VraagText, AndwoordText,false, DateAdded, EndDate);
             temp.Insert();
-            //VraagID = int(New DBConnection().Send(temp)); //todo fix jurriaans query
             
         }
     }

@@ -4,24 +4,14 @@
 @using DatabaseController
 @using webapp.Models
 @using System;
-@using System;
 @using System.Collections.Generic;
 
 @{
     ViewData["Title"] = "Create";
     var time = DateTime.Now;
-    /*
-    User mark = new User(1, "student", 1, "mark", "markus", "laurensmaas9702@gmail.com", "12345", true, "12345", "123456");
-    Vak vak = new Vak(1, "Marijke", "wd1204", "analyse", "analyse", true);
+  
 
-    IngeschrevenVakken vakken = new IngeschrevenVakken(vak, mark);
-
-    var TempData = new List<IngeschrevenVakken>();
-    TempData.Add(vakken);
-    TotaalingeschrevenVakken totVakken = new TotaalingeschrevenVakken(TempData);
-    */
-
-
+    
     List<Vak> vakken = new List<Vak>();
 
     List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = 1");
@@ -32,34 +22,46 @@
         vakken.Add(a);
     }
 
+   
+    
 }
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Stel een vraag</title>
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Voer hier je vraag in</title>
+    
+    </head>
 
-<body>
-    <form method="post" style="display: inline">
-        <input asp-for="VraagText" />
-        <br />
-        <select id="selectNumber">
-            <option>Kies het vak</option>
-        </select>
-        <br />
-    </form>
-    <form style="display: inline" action="../../Menu/SMenu" method="get">
-        <button>Submit</button>
-    </form>
-</body>
+    <body>
+        <form method="post" style="display: inline">
+            <input asp-for="VraagText" />
+            <br />
+            <select id="selectNumber" placeholder="kies je vak">
+
+                @foreach (var item in vakken)
+                {
+                    <option>@item.Naam</option>;
+                }
+            </select>
+
+            <br />
+        </form>
+
+        <form style="display: inline" action="../../Menu/SMenu" method="get">
+            <button>Submit</button>
+        </form>
+    </body>
 </html>
 
 <script>
+    
     var count = 0;
-    for i in @vakken{ 
+    for (var x in @vakken) {
         var opt = document.createElement("option");
-        document.getElementById("selectNumber").innerHTML += '<option id="' + count + '">' + i.Naam + '</option>';
-        count++;
+        document.getElementById("selectNumber").innerHTML += '<option id="' + count + '">' + x.Naam + '</option>';
+        count = count + 1;
     }
+    
+
 </script>
