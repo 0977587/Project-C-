@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace webapp.Models
 {
-    public class Queue
+    public class Wachtrij
     {
         public int WachtrijID { get; set; }
         public DateTime DateAdded { get; set; }
