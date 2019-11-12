@@ -12,15 +12,17 @@
   
 
     
+    int UserID = Sessie.GetInstance.getLoginUserID();
     List<Vak> vakken = new List<Vak>();
 
-    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = 1");
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " +UserID.ToString()+   ";");
     foreach (List<string> temp in connect)
     {
         Vak a = new Vak();
         a.SelectOne(Convert.ToInt32(temp[0]));
         vakken.Add(a);
     }
+
 
    
     
@@ -35,9 +37,9 @@
 
     <body>
         <form method="post" style="display: inline">
-            <input asp-for="VraagText" />
+            <input asp-for="VraagText" placeholder="kies je vraag" />
             <br />
-            <select id="selectNumber" placeholder="kies je vak">
+            <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">
 
                 @foreach (var item in vakken)
                 {
@@ -46,22 +48,7 @@
             </select>
 
             <br />
-        </form>
-
-        <form style="display: inline" action="../../Menu/SMenu" method="get">
             <button>Submit</button>
         </form>
     </body>
 </html>
-
-<script>
-    
-    var count = 0;
-    for (var x in @vakken) {
-        var opt = document.createElement("option");
-        document.getElementById("selectNumber").innerHTML += '<option id="' + count + '">' + x.Naam + '</option>';
-        count = count + 1;
-    }
-    
-
-</script>

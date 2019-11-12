@@ -25,31 +25,23 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
         public void OnGet()
         {
-            VraagText = "voer hier je vraag in";
+            //VraagText = "voer hier je vraag in";
 
         }
 
         public void OnPost()
         {
-
-
-            VraagID = 1;
-            UserID = 1;
-
-
-            List<List<string>> connect = new DBConnection().Send("");
-            
-
+            VraagID = 0;
+            UserID = Sessie.GetInstance.getLoginUserID();
             VraagText = Request.Form[nameof(VraagText)];
 
+            
+            
             AndwoordText = "";
             DateAdded = DateTime.UtcNow;
             EndDate = DateTime.MinValue;
-
-
-            Vraag temp = new Vraag(VraagID, UserID, 1, VraagText, AndwoordText,false, DateAdded, EndDate);
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateAdded, EndDate);
             temp.Insert();
-            
         }
     }
 }
