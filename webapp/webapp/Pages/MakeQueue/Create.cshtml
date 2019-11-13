@@ -44,7 +44,7 @@
     </head>
 
     <body>
-        <form method="post" style="display: inline" action="/Menu/PMenu">
+        <form method="post" style="display: inline">
             <br />
             <select id="selectNumber">
                 <option>Kies begintijd</option>
@@ -65,8 +65,9 @@
                 <option> @enddate[7]</option>
             </select>
             <br />
-        </form>
-        <form style="display: inline" action="../Menu/PMenu" method="get">
+
+            <input placeholder="Naam van de wachtrij"/>
+            <!--<input asp-for="Name" placeholder="Naam van de wachtrij" />-->
             <button>Submit</button>
         </form>
     </body>
