@@ -1,43 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using DatabaseController;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using webapp.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using webapp.Models;
+
 
 namespace webapp.Pages.MakeQueue
 {
-    public class CreateModel : PageModel
-    {
-        private readonly webapp.Data.webappContext _context;
+    public class Queue : PageModel
+    {   
+        public int WachtrijID { get; set; }
+        public List<string> Peercoaches { get; set; }
+        public List<Vraag> Vragen { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime EndDate { get; set; }
 
-        public CreateModel(webapp.Data.webappContext context)
+        public void OnGet()
         {
-            _context = context;
         }
 
-        public IActionResult OnGet()
+        public void OnPost()
         {
-            return Page();
-        }
-
-        [BindProperty]
-        public Queue Queue { get; set; }
-
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            _context.Queue.Add(Queue);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
         }
     }
 }
+ 

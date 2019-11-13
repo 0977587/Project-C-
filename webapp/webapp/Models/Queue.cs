@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace webapp.Models
 {
-    public class Queue
+    public class Wachtrij
     {
-        public string ID { get; set; }
-        public string Peercoach { get; set; }
-        public string Lokaal { get; set; }
-        public string Tijdvak { get; set; }
+        public int WachtrijID { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime EndDate { get; set; }
+        public String Name { get; set; }
+        //DateAdded wanneer aangemaatk DB>.Send("get * where db.vraag.DateAdded later dan DateAdded"
     }
 }

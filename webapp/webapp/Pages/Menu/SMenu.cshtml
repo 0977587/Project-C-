@@ -1,25 +1,22 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Studenten Menu";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Peercoach app Student</h1>
+    <h1 class="display-4">student menu</h1>
 </div>
 
+<form style="display: inline" action="../Vakken/SVakken" method="get">
+    <button>vakken</button>
+</form>
+<form style="display: inline" action="../Vragen/Steleenvraag/Create" method="get">
 
-<a asp-page="../Vakken/SVakken">
-    <button>Vakken</button>
-</a>
-
-<a asp-page="../Vragen/Steleenvraag/Create">
     <button>Vragen</button>
-</a>
-
-<a asp-page="../MakeQueue/Index">
-    <button>Wachtrij bekijken</button>
-</a>
-
+</form>
+<form style="display: inline" action="../Agenda/SAgenda" method="get">
+    <button>agenda</button>
+</form>
 
 <button> Log uit</button>
