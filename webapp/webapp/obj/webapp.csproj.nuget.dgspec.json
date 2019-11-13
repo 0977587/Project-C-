@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marni\\OneDrive\\Bureaublad\\Project-C--Laurens\\webapp\\webapp\\webapp.csproj": {}
+    "C:\\Users\\marni\\Documents\\Project-C-\\webapp\\webapp\\webapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marni\\OneDrive\\Bureaublad\\Project-C--Laurens\\webapp\\webapp\\webapp.csproj": {
+    "C:\\Users\\marni\\Documents\\Project-C-\\webapp\\webapp\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marni\\OneDrive\\Bureaublad\\Project-C--Laurens\\webapp\\webapp\\webapp.csproj",
+        "projectUniqueName": "C:\\Users\\marni\\Documents\\Project-C-\\webapp\\webapp\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "C:\\Users\\marni\\OneDrive\\Bureaublad\\Project-C--Laurens\\webapp\\webapp\\webapp.csproj",
+        "projectPath": "C:\\Users\\marni\\Documents\\Project-C-\\webapp\\webapp\\webapp.csproj",
         "packagesPath": "C:\\Users\\marni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marni\\OneDrive\\Bureaublad\\Project-C--Laurens\\webapp\\webapp\\obj\\",
+        "outputPath": "C:\\Users\\marni\\Documents\\Project-C-\\webapp\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
