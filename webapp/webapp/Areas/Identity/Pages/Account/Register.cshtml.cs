@@ -99,10 +99,10 @@ namespace webapp.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        return Redirect("https://localhost:44319/Pages/Index");
+                        return LocalRedirect(returnUrl);
                     }
-                    
-                    
+
+
 
                 }
                 
