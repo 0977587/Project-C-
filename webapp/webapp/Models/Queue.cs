@@ -1,4 +1,19 @@
-﻿public Wachtrij(int wachtrijID, DateTime dateAdded, DateTime endDate, string name)
+﻿using DatabaseController;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace webapp.Models
+{
+    public class Wachtrij
+    {
+        public int WachtrijID { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime EndDate { get; set; }
+        public String Name { get; set; }
+
+        public Wachtrij(int wachtrijID, DateTime dateAdded, DateTime endDate, string name)
         {
             WachtrijID = wachtrijID;
             DateAdded = dateAdded;
@@ -43,7 +58,7 @@
 
         public void Update()
         {
-            new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = '" + DateAdded + "', `EndDate` = '" + EndDate + "', `Name` = '" + Name+ "');");
+            new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = '" + DateAdded + "', `EndDate` = '" + EndDate + "', `Name` = '" + Name + "');");
         }
 
         public void Insert()
@@ -51,3 +66,5 @@
             new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = '" + DateAdded + "', `EndDate` = '" + EndDate + "', `Name` = '" + Name + "');");
         }
     }
+}
+
