@@ -19,6 +19,7 @@ using webapp;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0de2af9a164ee3753e497a78126bca349af7a6bd", @"/Pages/Menu/PMenu.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5569a73cf905216bed2b6e1222f91d848aa1d31c", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Menu_PMenu : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -61,7 +62,7 @@ using webapp;
             WriteLiteral("\r\n<div class=\"text-center\">\r\n    <h1 class=\"display-4\">Peercoach app Peercoach</h1>\r\n</div>\r\n\r\n");
             EndContext();
             BeginContext(166, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd5537", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd5695", async() => {
                 BeginContext(236, 31, true);
                 WriteLiteral("\r\n    <button>vakken</button>\r\n");
                 EndContext();
@@ -87,7 +88,7 @@ using webapp;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(276, 110, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd7381", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd7539", async() => {
                 BeginContext(346, 33, true);
                 WriteLiteral("\r\n\r\n    <button>Vragen</button>\r\n");
                 EndContext();
@@ -113,7 +114,7 @@ using webapp;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(388, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd9229", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd9387", async() => {
                 BeginContext(458, 31, true);
                 WriteLiteral("\r\n    <button>agenda</button>\r\n");
                 EndContext();
@@ -139,7 +140,7 @@ using webapp;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(500, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd11077", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de2af9a164ee3753e497a78126bca349af7a6bd11235", async() => {
                 BeginContext(572, 39, true);
                 WriteLiteral("\r\n    <button>Wachtrij maken</button>\r\n");
                 EndContext();

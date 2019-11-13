@@ -95,11 +95,12 @@ namespace webapp.Areas.Identity.Pages.Account
                     //return LocalRedirect(returnUrl);
                     if(Input.IsPeercoach == "peercoach")
                     {
-                        return Redirect("https://localhost:44319/Identity/Account/wachtwoordpeercoach");
+                        return Redirect("https://localhost:44319/Identity/Account/wwpeercoach");
                     }
                     else
                     {
-                        return LocalRedirect(returnUrl);
+                        //return LocalRedirect(returnUrl);
+                        return Redirect("https://localhost:44319/Menu/SMenu?");
                     }
 
 

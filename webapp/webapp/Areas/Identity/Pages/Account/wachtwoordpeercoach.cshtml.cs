@@ -15,22 +15,8 @@ namespace webapp.Areas.Identity.Pages.Account
 
     public class wachtwoordpeercoach : PageModel
     {
-        
-           
-        public ActionResult Wachtwoord()
-        {
-            string wachtwoord;
-            wachtwoord = "onlyforpeercoaches";
-            if(wachtwoord ==  "onlyforpeercoaches")
-            {
-                return Redirect("https://localhost:44319/Identity/Account/Login");
-            }
-            else
-            {
-                return Redirect("https://localhost:44319/Identity/Account/Login");
-            }
-        }
-      
-        
+
+       
+       
     }
 }

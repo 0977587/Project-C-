@@ -19,6 +19,7 @@ using webapp;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34a2ae20aa5d6ca790d39cbcfddea55f09025f4f", @"/Pages/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5569a73cf905216bed2b6e1222f91d848aa1d31c", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Index : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -59,7 +60,7 @@ using webapp;
             WriteLiteral("\r\n<div class=\"text-center\">\r\n    <h1 class=\"display-4\">Peercoach app</h1>\r\n</div>\r\n\r\n");
             EndContext();
             BeginContext(210, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a2ae20aa5d6ca790d39cbcfddea55f09025f4f4743", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a2ae20aa5d6ca790d39cbcfddea55f09025f4f4901", async() => {
                 BeginContext(274, 38, true);
                 WriteLiteral("\r\n    <button>Student menu</button> \r\n");
                 EndContext();
@@ -85,7 +86,7 @@ using webapp;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(321, 110, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a2ae20aa5d6ca790d39cbcfddea55f09025f4f6594", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a2ae20aa5d6ca790d39cbcfddea55f09025f4f6752", async() => {
                 BeginContext(385, 39, true);
                 WriteLiteral("\r\n    <button>Peercoach menu</button>\r\n");
                 EndContext();

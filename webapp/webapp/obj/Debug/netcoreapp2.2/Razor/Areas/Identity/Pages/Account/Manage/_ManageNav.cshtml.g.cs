@@ -13,13 +13,13 @@ namespace webapp.Areas.Identity.Pages.Account.Manage
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 2 "C:\Users\marni\Documents\Project-C-\webapp\webapp\Areas\Identity\Pages\_ViewImports.cshtml"
-using webapp.Areas.Identity;
+#line 1 "C:\Users\marni\Documents\Project-C-\webapp\webapp\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
-#line 3 "C:\Users\marni\Documents\Project-C-\webapp\webapp\Areas\Identity\Pages\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+#line 2 "C:\Users\marni\Documents\Project-C-\webapp\webapp\Areas\Identity\Pages\_ViewImports.cshtml"
+using webapp.Areas.Identity;
 
 #line default
 #line hidden
@@ -34,7 +34,8 @@ using webapp.Areas.Identity.Pages.Account.Manage;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3e9da082267c8088a2b5fbd6f9546980fb532813", @"/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"22d78b823e9e98b9ff4f600ff3595b49999c6888", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"16594ad87da4d5c41be844ee4c52e62a65f33027", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1ee6a10f3be431fc22170b62133b946d24ab6bdd", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"01f3b677825ef0efacf1163a660290866f4740a0", @"/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_Manage__ManageNav : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -81,7 +82,7 @@ using webapp.Areas.Identity.Pages.Account.Manage;
             WriteLiteral("<ul class=\"nav nav-pills flex-column\">\r\n    <li class=\"nav-item\">");
             EndContext();
             BeginContext(221, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb5328137899", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb5328138057", async() => {
                 BeginContext(316, 7, true);
                 WriteLiteral("Profile");
                 EndContext();
@@ -112,7 +113,7 @@ AddHtmlAttributeValue(" ", 239, ManageNavPages.IndexNavClass(ViewContext), 240, 
             WriteLiteral("</li>\r\n    <li class=\"nav-item\">");
             EndContext();
             BeginContext(359, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb5328139930", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281310088", async() => {
                 BeginContext(480, 8, true);
                 WriteLiteral("Password");
                 EndContext();
@@ -152,7 +153,7 @@ AddHtmlAttributeValue(" ", 377, ManageNavPages.ChangePasswordNavClass(ViewContex
             WriteLiteral("        <li id=\"external-logins\" class=\"nav-item\">");
             EndContext();
             BeginContext(585, 139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281312279", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281312438", async() => {
                 BeginContext(705, 15, true);
                 WriteLiteral("External logins");
                 EndContext();
@@ -191,7 +192,7 @@ AddHtmlAttributeValue(" ", 623, ManageNavPages.ExternalLoginsNavClass(ViewContex
             WriteLiteral("    <li class=\"nav-item\">");
             EndContext();
             BeginContext(763, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281314583", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281314742", async() => {
                 BeginContext(897, 25, true);
                 WriteLiteral("Two-factor authentication");
                 EndContext();
@@ -222,7 +223,7 @@ AddHtmlAttributeValue(" ", 781, ManageNavPages.TwoFactorAuthenticationNavClass(V
             WriteLiteral("</li>\r\n    <li class=\"nav-item\">");
             EndContext();
             BeginContext(958, 132, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281316653", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e9da082267c8088a2b5fbd6f9546980fb53281316812", async() => {
                 BeginContext(1073, 13, true);
                 WriteLiteral("Personal data");
                 EndContext();

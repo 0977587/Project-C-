@@ -29,6 +29,7 @@ using webapp.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f3a96c49bfe1317ade71923cd89ec9c13ae970c6", @"/Pages/Vragen/Steleenvraag/Create.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5569a73cf905216bed2b6e1222f91d848aa1d31c", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Vragen_Steleenvraag_Create : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -88,7 +89,7 @@ using webapp.Models;
             WriteLiteral("<!DOCTYPE html>\r\n    <html>\r\n    ");
             EndContext();
             BeginContext(705, 121, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c66759", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c66917", async() => {
                 BeginContext(711, 108, true);
                 WriteLiteral("\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <title>Stel een vraag</title>\r\n    ");
                 EndContext();
@@ -108,17 +109,17 @@ using webapp.Models;
             WriteLiteral("\r\n\r\n    ");
             EndContext();
             BeginContext(834, 432, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c68064", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c68222", async() => {
                 BeginContext(840, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(850, 270, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c68455", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c68613", async() => {
                     BeginContext(894, 14, true);
                     WriteLiteral("\r\n            ");
                     EndContext();
                     BeginContext(908, 29, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f3a96c49bfe1317ade71923cd89ec9c13ae970c68869", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f3a96c49bfe1317ade71923cd89ec9c13ae970c69027", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -141,12 +142,12 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     WriteLiteral("\r\n            <br />\r\n            ");
                     EndContext();
                     BeginContext(971, 112, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c610591", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c610749", async() => {
                         BeginContext(1013, 18, true);
                         WriteLiteral("\r\n                ");
                         EndContext();
                         BeginContext(1031, 29, false);
-                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c611034", async() => {
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c611192", async() => {
                             BeginContext(1039, 12, true);
                             WriteLiteral("Kies het vak");
                             EndContext();
@@ -208,7 +209,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(1130, 123, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c615441", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a96c49bfe1317ade71923cd89ec9c13ae970c615599", async() => {
                     BeginContext(1199, 47, true);
                     WriteLiteral("\r\n            <button>Submit</button>\r\n        ");
                     EndContext();
