@@ -93,11 +93,16 @@ namespace webapp.Areas.Identity.Pages.Account
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     //return LocalRedirect(returnUrl);
-                    //return RedirectToAction("wachtwoordpeercoach", "Account");
-                    //return redirec
-                    return Redirect("https://localhost:44319/Identity/Account/wachtwoordpeercoach");
+                    if(Input.IsPeercoach == "peercoach")
+                    {
+                        return Redirect("https://localhost:44319/Identity/Account/wachtwoordpeercoach");
+                    }
+                    else
+                    {
+                        return Redirect("https://localhost:44319/Pages/Index");
+                    }
                     
-                    //return wachtwoordpeercoach();
+                    
 
                 }
                 
