@@ -46,14 +46,14 @@
 <body>
     <form method="post" style="display: inline">
         <br />
-        <select id="selectNumber">
+        <select id="selectNumber" asp-for="DateAdded">
             <option>Kies begintijd</option>
             <option> @dates[0]</option>
             <option> @dates[1]</option>
             <option> @dates[2]</option>
             <option> @dates[3]</option>
         </select>
-        <select id="selectNumber2">
+        <select id="selectNumber2" asp-for="EndDate">
             <option>Kies eindtijd</option>
             <option> @enddate[0]</option>
             <option> @enddate[1]</option>
@@ -66,26 +66,8 @@
         </select>
         <br />
 
-        <input placeholder="Naam van de wachtrij" />
-        <!--<input asp-for="Name" placeholder="Naam van de wachtrij" />-->
+        <input placeholder="Naam van de wachtrij" asp-for="Name"/>
         <button>Submit</button>
     </form>
 </body>
 </html>
-
-<script>
-    //todo jurriaans vakken weergeven invoegen
-    //todo add a fucntionality
-
-    var tijdenweergeven = @dates;
-    for(i = 0; i < 4; i++) {
-        var opt = document.createElement("option");
-        document.getElementById("selectNumber").innerHTML += '<option id="' + i + '">' + @dates[1]) + '</option>';
-    }
-
-     var endwachtrij = @enddate;
-    for(i = 0; i < 8; i++) {
-        var opt = document.createElement("option");
-        document.getElementById("selectNumber2").innerHTML += '<option id="' + i + '">' + @enddate[1] + '</option>';
-    }
-</script>

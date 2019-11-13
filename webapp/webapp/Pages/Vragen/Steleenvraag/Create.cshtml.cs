@@ -40,7 +40,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
             AndwoordText = "";
             DateAdded = DateTime.UtcNow;
             EndDate = DateTime.MinValue;
-            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateAdded, EndDate);
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.Now);
             temp.Insert();
         }
     }
