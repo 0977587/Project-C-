@@ -25,13 +25,16 @@ namespace webapp.Pages.MakeQueue
 
         public void OnPost()
         {
+
             Name = Request.Form[nameof(Name)];
             List<string> Peercoaches = new List<string>();
             List<Vraag> Vragen = new List<Vraag>();
             WachtrijID = 0;
-            DateAdded = DateTime.UtcNow;
-            EndDate = DateTime.MinValue;
-            Wachtrij temp = new Wachtrij(WachtrijID, DateTime.Now, DateTime.Now, Name);
+            var datetemp = Request.Form[nameof(DateAdded)];
+            var enddatetemp = Request.Form[nameof(EndDate)];
+            DateAdded = Convert.ToDateTime(datetemp);
+            EndDate = Convert.ToDateTime(enddatetemp);
+            Wachtrij temp = new Wachtrij(WachtrijID, DateAdded, EndDate, Name);
             temp.Insert();
         }
     }
