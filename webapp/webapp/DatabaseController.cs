@@ -75,5 +75,12 @@ namespace DatabaseController
         {
             connection.Close();
         }
+
+        public int returnWachtrijLength()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT COUNT(WachtrijId) FROM projectcdb.wachtrij");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length;
+        }
     }
 }

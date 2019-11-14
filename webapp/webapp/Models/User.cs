@@ -49,7 +49,6 @@ namespace webapp.Models
             IsEmailGeverifieerd = isEmailGeverifieerd;
             ActivatieCode = activatieCode;
         }
-       
         public void SelectOne(int input)
         {
             //geef vraagID mee

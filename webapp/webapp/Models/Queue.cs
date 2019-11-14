@@ -37,10 +37,17 @@ namespace webapp.Models
             Name = null;
         }
 
+        public int returnWachtrijLength()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length+1;
+        }
+
         public void SelectOne(int input)
         {
             // geef WachtrijID mee
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.user WHERE UserID = " + input + ";");
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = " + input + ";");
             WachtrijID = Convert.ToInt32(returnstatement[0][0]);
             if (returnstatement[0][1] != "")
                 DateAdded = Convert.ToDateTime(returnstatement[0][1]);
@@ -50,9 +57,9 @@ namespace webapp.Models
                 Name = returnstatement[0][3];
         }
 
-        public List<List<string>> getVragen()
+        public List<Vraag> getVragen()
         {
-           
+
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
             List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = 0) AND AndwoordText = '' and isFAQ = False");
@@ -86,7 +93,7 @@ namespace webapp.Models
                 returnlist.Add(v);
             }
             return returnlist;
-            
+
         }
 
         public void Delete()

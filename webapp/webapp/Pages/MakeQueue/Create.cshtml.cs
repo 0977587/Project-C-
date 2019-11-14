@@ -1,9 +1,11 @@
 ﻿using DatabaseController;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using webapp.Models;
+
 
 
 namespace webapp.Pages.MakeQueue
@@ -35,6 +37,8 @@ namespace webapp.Pages.MakeQueue
             DateAdded = Convert.ToDateTime(datetemp);
             EndDate = Convert.ToDateTime(enddatetemp);
             Wachtrij temp = new Wachtrij(WachtrijID, DateAdded, EndDate, Name);
+            int length = temp.returnWachtrijLength();
+            temp.WachtrijID = length;
             temp.Insert();
         }
     }

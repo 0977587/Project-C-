@@ -35,6 +35,13 @@ namespace webapp.Models
             EndDate = endDate;
         }
 
+        public int returnVraagLength()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(vraagId) FROM projectcdb.vraag");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length + 1;
+        }
+
         //constructor zonder andwoordtext
         public Vraag(int vraagID, int userID, int vakID, string vraagText, bool isFAQ, string andwoordText, DateTime dateAdded, DateTime endDate)
         {
@@ -55,9 +62,6 @@ namespace webapp.Models
         public Vraag()
         {
         }
-
-
-     
 
         public void SelectOne(int input)
         {
