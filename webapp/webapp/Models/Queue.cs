@@ -50,6 +50,45 @@ namespace webapp.Models
                 Name = returnstatement[0][3];
         }
 
+        public List<List<string>> getVragen()
+        {
+           
+            //geef vraagID mee
+            List<Vraag> returnlist = new List<Vraag>();
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = 0) AND AndwoordText = '' and isFAQ = False");
+            foreach (List<string> returnstatement2 in returnstatement)
+            {
+                Vraag v = new Vraag();
+                v.VraagID = Convert.ToInt32(returnstatement2[0]);
+                if (returnstatement2[1] != "")
+                    v.UserID = Convert.ToInt32(returnstatement2[1]);
+                if (returnstatement2[2] != "")
+                    v.VakID = Convert.ToInt32(returnstatement2[2]);
+                if (returnstatement2[3] != "")
+                    v.VraagText = returnstatement2[3];
+                if (returnstatement2[4] != "")
+                    v.AndwoordText = returnstatement2[4];
+                if (returnstatement2[5] != "")
+                {
+                    if (returnstatement2[5] == "0")
+                    {
+                        v.IsFAQ = false;
+                    }
+                    else
+                    {
+                        v.IsFAQ = true;
+                    }
+                }
+                if (returnstatement2[6] != "")
+                    v.DateAdded = Convert.ToDateTime(returnstatement2[6]);
+                if (returnstatement2[7] != "")
+                    v.EndDate = Convert.ToDateTime(returnstatement2[7]);
+                returnlist.Add(v);
+            }
+            return returnlist;
+            
+        }
+
         public void Delete()
         {
             //geef WachtrijID mee  

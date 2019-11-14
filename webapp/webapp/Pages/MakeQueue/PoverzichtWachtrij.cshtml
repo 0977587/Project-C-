@@ -1,8 +1,36 @@
-﻿@page
-@model PrivacyModel
+﻿@namespace
+@page
+@model webapp.Pages.MakeQueue.Queue
+@using DatabaseController
+@using webapp.Models
 @{
     ViewData["Title"] = "Vraag stellen";
+
+    Wachtrij temp = new Wachtrij();
+    temp.SelectOne(0);
+    var vragen = temp.getVragen();
+
+
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Stel een vraag Peercoach</p>
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Voer hier je vraag in</title>
+
+    </head>
+
+    <body>     
+        @foreach (var item in vragen)
+        {
+            <option>@item.Vraag</option>
+        }
+    </body>
+</html>
