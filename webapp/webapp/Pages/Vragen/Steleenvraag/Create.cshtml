@@ -9,13 +9,13 @@
 @{
     ViewData["Title"] = "Create";
     var time = DateTime.Now;
-  
 
-    
+
+
     int UserID = Sessie.GetInstance.getLoginUserID();
     List<Vak> vakken = new List<Vak>();
 
-    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " +UserID.ToString()+   ";");
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " + UserID.ToString() + ";");
     foreach (List<string> temp in connect)
     {
         Vak a = new Vak();
@@ -24,34 +24,36 @@
     }
 
 
-   
-    
+
 }
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Voer hier je vraag in</title>
-    
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Voer hier je vraag in</title>
 
-    <body>
-        <form method="post" style="display: inline">
-            <input asp-for="VraagText" placeholder="kies je vraag" />
-            <br />
-            <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">
+</head>
 
-                @foreach (var item in vakken)
-                {
-                    <option>@item.Naam</option>
-                }
-            </select>
-            <br />
-            <input id="SelectLocatie" placeholder="Kies je locatie" asp-for="Locatie" />
+<body>
+    <form method="post" style="display: inline">
+        <input asp-for="VraagText" placeholder="kies je vraag" />
+        <br />
+        <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">
+            
+            @foreach (var item in vakken)
+            {
+                <option value="@item.VakID"> @item.Naam</option>
+            }
+        </select>
 
-            <br />
 
-            <button>Submit</button>
-        </form>
-    </body>
+        <br />
+        <input id="SelectLocatie" placeholder="Kies je locatie" asp-for="Locatie" />
+
+        <br />
+
+        <button>Submit</button>
+    </form>
+
+</body>
 </html>
