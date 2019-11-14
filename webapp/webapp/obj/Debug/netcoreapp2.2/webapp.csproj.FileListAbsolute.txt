@@ -295,6 +295,5 @@ C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp
 C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.dll
 C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.pdb
 C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csproj.CopyComplete
-C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\wachtwoordpeercoach.cshtml.g.cs
 C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\wwpeercoach.cshtml.g.cs
 C:\Users\marni\Documents\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\_ViewImports.cshtml.g.cs
