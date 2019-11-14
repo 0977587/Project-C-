@@ -34,13 +34,10 @@ namespace webapp.Pages.Vragen.Steleenvraag
             VraagID = 0;
             UserID = Sessie.GetInstance.getLoginUserID();
             VraagText = Request.Form[nameof(VraagText)];
-
-            
-            
             AndwoordText = "";
-            DateAdded = DateTime.UtcNow;
-            EndDate = DateTime.MinValue;
-            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.Now);
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue);
+            int length = temp.returnVraagLength();
+            temp.VraagID = length;
             temp.Insert();
         }
     }

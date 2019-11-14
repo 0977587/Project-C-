@@ -37,10 +37,17 @@ namespace webapp.Models
             Name = null;
         }
 
+        public int returnWachtrijLength()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length+1;
+        }
+
         public void SelectOne(int input)
         {
             // geef WachtrijID mee
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.user WHERE UserID = " + input + ";");
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = " + input + ";");
             WachtrijID = Convert.ToInt32(returnstatement[0][0]);
             if (returnstatement[0][1] != "")
                 DateAdded = Convert.ToDateTime(returnstatement[0][1]);
@@ -48,6 +55,45 @@ namespace webapp.Models
                 EndDate = Convert.ToDateTime(returnstatement[0][2]);
             if (returnstatement[0][3] != "")
                 Name = returnstatement[0][3];
+        }
+
+        public List<Vraag> getVragen()
+        {
+
+            //geef vraagID mee
+            List<Vraag> returnlist = new List<Vraag>();
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = 0) AND AndwoordText = '' and isFAQ = False");
+            foreach (List<string> returnstatement2 in returnstatement)
+            {
+                Vraag v = new Vraag();
+                v.VraagID = Convert.ToInt32(returnstatement2[0]);
+                if (returnstatement2[1] != "")
+                    v.UserID = Convert.ToInt32(returnstatement2[1]);
+                if (returnstatement2[2] != "")
+                    v.VakID = Convert.ToInt32(returnstatement2[2]);
+                if (returnstatement2[3] != "")
+                    v.VraagText = returnstatement2[3];
+                if (returnstatement2[4] != "")
+                    v.AndwoordText = returnstatement2[4];
+                if (returnstatement2[5] != "")
+                {
+                    if (returnstatement2[5] == "0")
+                    {
+                        v.IsFAQ = false;
+                    }
+                    else
+                    {
+                        v.IsFAQ = true;
+                    }
+                }
+                if (returnstatement2[6] != "")
+                    v.DateAdded = Convert.ToDateTime(returnstatement2[6]);
+                if (returnstatement2[7] != "")
+                    v.EndDate = Convert.ToDateTime(returnstatement2[7]);
+                returnlist.Add(v);
+            }
+            return returnlist;
+
         }
 
         public void Delete()
