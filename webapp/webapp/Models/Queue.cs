@@ -37,6 +37,12 @@ namespace webapp.Models
             Name = null;
         }
 
+        public int returnWachtrijLength2()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.peercoachwachtrij");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length + 1;
+        }
         public int returnWachtrijLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
@@ -50,11 +56,11 @@ namespace webapp.Models
             List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = " + input + ";");
             WachtrijID = Convert.ToInt32(returnstatement[0][0]);
             if (returnstatement[0][1] != "")
-                DateAdded = Convert.ToDateTime(returnstatement[0][1]);
+                Name = returnstatement[0][1];
             if (returnstatement[0][2] != "")
-                EndDate = Convert.ToDateTime(returnstatement[0][2]);
+                DateAdded = Convert.ToDateTime(returnstatement[0][2]);
             if (returnstatement[0][3] != "")
-                Name = returnstatement[0][3];
+                EndDate  = Convert.ToDateTime(returnstatement[0][3]);
         }
 
         public List<Vraag> getVragen()
@@ -109,7 +115,8 @@ namespace webapp.Models
 
         public void Insert()
         {
-            new DBConnection().Send("INSERT `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "';");
+            new DBConnection().Send("INSERT `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "'; ");
+            new DBConnection().Send("INSERT INTO `projectcdb`.`peercoachwachtrij` (`PeercoachWachtrijID`, `PeercoachID`, `WachtrijID`) VALUES('" + returnWachtrijLength2() + 1 + "', '" + Sessie.GetInstance.getLoginUserID() + "', '" + WachtrijID + "');");
         }
     }
 }

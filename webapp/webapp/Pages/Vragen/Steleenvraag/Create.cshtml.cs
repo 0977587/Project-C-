@@ -23,7 +23,6 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public DateTime DateAdded { get; set; }
         public DateTime EndDate { get; set; }
         public string Locatie { get; set; }
-
         public void OnGet()
         {
             //VraagText = "voer hier je vraag in";
@@ -35,9 +34,9 @@ namespace webapp.Pages.Vragen.Steleenvraag
             VraagID = 0;
             UserID = Sessie.GetInstance.getLoginUserID();
             VraagText = Request.Form[nameof(VraagText)];
+            Locatie = Request.Form[nameof(Locatie)];
             AndwoordText = "";
-            Locatie = Request.Form[nameof(Locatie)]; 
-            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText, false, DateTime.Now, DateTime.MinValue, Locatie);
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue, Locatie);
             int length = temp.returnVraagLength();
             temp.VraagID = length;
             temp.Insert();
