@@ -29,6 +29,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public DateTime DateAdded { get; set; }
         public DateTime EndDate { get; set; }
         public string Locatie { get; set; }
+        public int WachtrijID { get; set; }
 
 
         public void OnGet()

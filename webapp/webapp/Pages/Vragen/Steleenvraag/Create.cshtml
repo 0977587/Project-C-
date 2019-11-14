@@ -10,8 +10,6 @@
     ViewData["Title"] = "Create";
     var time = DateTime.Now;
 
-
-
     int UserID = Sessie.GetInstance.getLoginUserID();
     List<Vak> vakken = new List<Vak>();
 
@@ -21,6 +19,16 @@
         Vak a = new Vak();
         a.SelectOne(Convert.ToInt32(temp[0]));
         vakken.Add(a);
+    }
+
+    List<Wachtrij> Wachtrijen = new List<Wachtrij>();
+    List<List<string>> connect2 = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij;");
+    foreach (List<string> temp in connect2)
+    {
+        Wachtrij a = new Wachtrij();
+        a.SelectOne(Convert.ToInt32(temp[0]));
+        Wachtrijen.Add(a);
+
     }
 
 
@@ -39,7 +47,7 @@
         <input asp-for="VraagText" placeholder="kies je vraag" />
         <br />
         <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">
-            
+
             @foreach (var item in vakken)
             {
                 <option value="@item.VakID"> @item.Naam</option>
@@ -51,6 +59,14 @@
         <input id="SelectLocatie" placeholder="Kies je locatie" asp-for="Locatie" />
 
         <br />
+        <select id="selectNumber" placeholder="kies je Wachtrij" asp-for="WachtrijID">
+
+            @foreach (var item in Wachtrijen)
+            {
+                <option value="@item.WachtrijID"> @item.Name</option>
+            }
+        </select>
+
 
         <button>Submit</button>
     </form>
