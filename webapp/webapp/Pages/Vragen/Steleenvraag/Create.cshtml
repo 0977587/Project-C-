@@ -43,11 +43,14 @@
 
                 @foreach (var item in vakken)
                 {
-                    <option>@item.Naam</option>;
+                    <option>@item.Naam</option>
                 }
             </select>
+            <br />
+            <input id="SelectLocatie" placeholder="Kies je locatie" asp-for="Locatie" />
 
             <br />
+
             <button>Submit</button>
         </form>
     </body>
