@@ -161,7 +161,7 @@ namespace webapp.Models
             {
                 IsFAQbool = 0;
             }
-            new DBConnection().Send("INSERT `projectcdb`.`vraag` SET `VraagID` = '" + VraagID + "',`UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), 'Locatie' = " + Locatie + ";");
+            new DBConnection().Send("INSERT `projectcdb`.`vraag` SET `VraagID` = '" + VraagID + "',`UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Locatie` = '" + Locatie + "';");
         }
     }
 
