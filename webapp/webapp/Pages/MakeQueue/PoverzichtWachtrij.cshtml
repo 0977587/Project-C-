@@ -13,11 +13,10 @@
 
 }
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,39 +26,97 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
     <div class="container">
         <h2>Algemene wachtrij</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Vraag</th>
+                    <th id="vraag">Vraag</th>
                     <th>Naam</th>
                     <th>Lokaal</th>
                 </tr>
             </thead>
             <tbody>
-                
                 @foreach (var item in vragen)
                 {
                     User user = new User();
 
                     user.SelectOne(item.UserID);
 
-                    
+
                     <tr>
                         <th>@item.VraagText</th>
-                        
+
                         <th>@user.Voornaam</th>
-                    
+
                         <th> @item.Locatie </th>
-                       
+
                     </tr>
 
                 }
             </tbody>
         </table>
     </div>
+</body>
 
-    </body>
+
+<div class="col-xs-6">
+    <h2 class="sub-header">To Do</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-md-1">Vraag</th>
+                    <th class="col-md-2">Naam</th>
+                    <th class="col-md-3">Lokaal</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in vragen)
+                {
+                    User user = new User();
+
+                    user.SelectOne(item.UserID);
+
+
+                <tr>
+                    <td class="col-md-1">@item.VraagText</td>
+                    <td class="col-md-2">@user.Voornaam</td>
+                    <td class="col-md-3">@item.Locatie</td>
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    <h2 class="sub-header">Doing</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-2">Header</th>
+                        <th class="col-md-3">Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-md-1">1,001</td>
+                        <td class="col-md-2">1,001</td>
+                        <td class="col-md-3">1,001</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1">1,001</td>
+                        <td class="col-md-2">1,001</td>
+                        <td class="col-md-3">1,001</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1">1,001</td>
+                        <td class="col-md-2">1,001</td>
+                        <td class="col-md-3">1,001</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </html>
