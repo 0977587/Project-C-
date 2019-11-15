@@ -65,10 +65,9 @@ namespace webapp.Models
 
         public List<Vraag> getVragen()
         {
-
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = 0) AND AndwoordText = '' and isFAQ = False");
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = "+ WachtrijID+ ") and `isFAQ` = 0 and (AndwoordText is null or AndwoordText = '') ;");
             foreach (List<string> returnstatement2 in returnstatement)
             {
                 Vraag v = new Vraag();
@@ -113,6 +112,12 @@ namespace webapp.Models
             new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "';");
         }
 
+        public int getVragenAmount()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT COUNT(*) FROM projectcdb.vraag Where WachtrijID =" + WachtrijID.ToString() );
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length;
+        }
         public void Insert()
         {
             new DBConnection().Send("INSERT `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "'; ");
