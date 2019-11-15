@@ -22,9 +22,11 @@ namespace webapp.Models
         public DateTime EndDate { get; set; }
 
         public string Locatie { get; set; }
+        
+        public Boolean isInProgress { get; set; }
 
         //constructor met andwoordtext
-        public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie)
+        public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, Boolean isinprogress)
         {
             VraagID = vraagID;
             UserID = userID;
@@ -35,6 +37,7 @@ namespace webapp.Models
             DateAdded = dateAdded;
             EndDate = endDate;
             Locatie = locatie;
+            isInProgress = isinprogress; 
         }
 
         public int returnVraagLength()

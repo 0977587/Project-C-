@@ -36,7 +36,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
             VraagText = Request.Form[nameof(VraagText)];
             Locatie = Request.Form[nameof(Locatie)];
             AndwoordText = "";
-            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue, Locatie);
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue, Locatie,false);
             int length = temp.returnVraagLength();
             temp.VraagID = length;
             temp.Insert();
