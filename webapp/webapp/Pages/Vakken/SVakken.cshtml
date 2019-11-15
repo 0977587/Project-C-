@@ -1,8 +1,35 @@
 ﻿@page
-@model PrivacyModel
+@model webapp.Pages.Vragen.Steleenvraag.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using DatabaseController
+@using webapp.Models
+@using System;
+@using System.Collections.Generic;
+
 @{
     ViewData["Title"] = "Vakken";
+
+
+    int UserID = Sessie.GetInstance.getLoginUserID();
+    List<Vak> vakken = new List<Vak>();
+
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " + UserID.ToString() + ";");
+    foreach (List<string> temp in connect)
+    {
+        Vak a = new Vak();
+        a.SelectOne(Convert.ToInt32(temp[0]));
+        vakken.Add(a);
+    }
 }
 <h1>@ViewData["Title"]</h1>
 
-<p> Hier komen de vakken Student @Sessie.GetInstance.getLoginUserID()  </p>
+<p> Mijn ingeschreven vakken:  </p>
+<ul>
+
+    @foreach (var x in vakken)
+    {
+        <li>@x.Naam</li>
+
+    }
+
+</ul> 

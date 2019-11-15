@@ -97,6 +97,19 @@ namespace webapp.Models
                 DateAdded = Convert.ToDateTime(returnstatement[0][6]);
             if (returnstatement[0][7] != "")
                 EndDate = Convert.ToDateTime(returnstatement[0][7]);
+            if (returnstatement[0][7] != "")
+                Locatie = returnstatement[0][7];
+            if (returnstatement[0][8] != "")
+            {
+                if (returnstatement[0][8] == "0")
+                {
+                    isInProgress = false;
+                }
+                else
+                {
+                    isInProgress = true;
+                }
+            }
 
         }
         public static List<Vraag> SelectAll()
@@ -131,6 +144,19 @@ namespace webapp.Models
                     v.DateAdded = Convert.ToDateTime(returnstatement2[6]);
                 if (returnstatement2[7] != "")
                     v.EndDate = Convert.ToDateTime(returnstatement2[7]);
+                if (returnstatement2[7] != "")
+                    v.Locatie = returnstatement2[7];
+                if (returnstatement2[8] != "")
+                {
+                    if (returnstatement2[8] == "0")
+                    {
+                        v.isInProgress = false;
+                    }
+                    else
+                    {
+                        v.isInProgress = true;
+                    }
+                }
                 returnlist.Add(v);
             }
             return returnlist;

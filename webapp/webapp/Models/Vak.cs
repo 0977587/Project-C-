@@ -27,6 +27,13 @@ namespace webapp.Models
         {
         //lege constructor altijd handig
         }
+        public int returnVaklength()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(VakID) FROM projectcdb.vak");
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length + 1;
+        }
+
         public void SelectOne(int input)
         {
             //geef vakID mee
