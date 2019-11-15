@@ -22,6 +22,8 @@ namespace webapp.Models
         public DateTime EndDate { get; set; }
 
         public string Locatie { get; set; }
+
+        public int WachtrijID { get; set; }
         
         public Boolean isInProgress { get; set; }
 
@@ -38,6 +40,20 @@ namespace webapp.Models
             EndDate = endDate;
             Locatie = locatie;
             isInProgress = isinprogress; 
+        }
+        public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie,int wachtrijid, Boolean isinprogress)
+        {
+            VraagID = vraagID;
+            UserID = userID;
+            VakID = vakID;
+            VraagText = vraagText;
+            AndwoordText = andwoordText;
+            IsFAQ = isFAQ;
+            DateAdded = dateAdded;
+            EndDate = endDate;
+            Locatie = locatie;
+            WachtrijID = wachtrijid;
+            isInProgress = isinprogress;
         }
 
         public int returnVraagLength()
@@ -100,8 +116,10 @@ namespace webapp.Models
             if (returnstatement[0][7] != "")
                 Locatie = returnstatement[0][7];
             if (returnstatement[0][8] != "")
+                WachtrijID = Convert.ToInt32(returnstatement[0][8]);
+            if (returnstatement[0][9] != "")
             {
-                if (returnstatement[0][8] == "0")
+                if (returnstatement[0][9] == "0")
                 {
                     isInProgress = false;
                 }
@@ -147,8 +165,10 @@ namespace webapp.Models
                 if (returnstatement2[7] != "")
                     v.Locatie = returnstatement2[7];
                 if (returnstatement2[8] != "")
+                    v.WachtrijID = Convert.ToInt32(returnstatement2[8]);
+                if (returnstatement2[9] != "")
                 {
-                    if (returnstatement2[8] == "0")
+                    if (returnstatement2[9] == "0")
                     {
                         v.isInProgress = false;
                     }
@@ -169,6 +189,7 @@ namespace webapp.Models
         public void Update()
         {
             int IsFAQbool;
+            int isInProgressbool;
             if (IsFAQ == true)
             {
                 IsFAQbool = 1;
@@ -177,11 +198,21 @@ namespace webapp.Models
             {
                 IsFAQbool = 0;
             }
-            new DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `UserID` = '"+UserID+"', `VakID` = '"+VakID+"', `VraagText` = '"+VraagText+"', `AndwoordText` = '"+AndwoordText+"', `IsFAQ` = '"+IsFAQbool+ "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s') WHERE (`vraagID` = '" + VraagID+"');");
+
+            if (isInProgress == true)
+            {
+                isInProgressbool = 1;
+            }
+            else
+            {
+                isInProgressbool = 0;
+            }
+            new DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `UserID` = '"+UserID+"', `VakID` = '"+VakID+"', `VraagText` = '"+VraagText+"', `AndwoordText` = '"+AndwoordText+"', `IsFAQ` = '"+IsFAQbool+ "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' WHERE (`vraagID` = '" + VraagID+"');");
         }
         public void Insert()
         {
             int IsFAQbool;
+            int isInProgressbool;
             if (IsFAQ == true)
             {
                 IsFAQbool = 1;
@@ -190,7 +221,15 @@ namespace webapp.Models
             {
                 IsFAQbool = 0;
             }
-            new DBConnection().Send("INSERT `projectcdb`.`vraag` SET `VraagID` = '" + VraagID + "',`UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s');");
+            if (isInProgress == true)
+            {
+                isInProgressbool = 1;
+            }
+            else
+            {
+                isInProgressbool = 0;
+            }
+            new DBConnection().Send("INSERT `projectcdb`.`vraag` SET `VraagID` = '" + VraagID + "',`UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' ;");
         }
     }
 
