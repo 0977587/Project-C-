@@ -14,6 +14,8 @@ namespace webapp
     {
         public static void Main(string[] args)
         {
+            DBconnector x = new DBconnector("localhost", "3306", "projectcdb", "root", "root");
+            x.Connect();
             CreateWebHostBuilder(args).Build().Run();
         }
 
