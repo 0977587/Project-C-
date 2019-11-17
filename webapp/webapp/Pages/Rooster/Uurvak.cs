@@ -20,7 +20,8 @@ namespace Uurvak1
 
         internal int fillNextEmpty(string a)
         {
-            if( maandag == null){
+            if (maandag == null)
+            {
                 maandag = a;
                 return 1;
             }
@@ -47,9 +48,9 @@ namespace Uurvak1
             return 0;
         }
 
-        internal void fillday(int a,string s)
+        internal void fillday(int a, string s)
         {
-            if(a == 1)
+            if (a == 1)
             {
                 maandag = s;
             }

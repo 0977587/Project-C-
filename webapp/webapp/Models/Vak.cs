@@ -14,6 +14,11 @@ namespace webapp.Models
         public string Discriptie { get; set; }
         public Boolean Isleeg { get; set; }
 
+        //alternative variable
+        public string dagnaam;
+        public string van;
+        public string tot;
+
         public Vak(int vakID, string docent, string locaal, string naam, string discriptie, Boolean isleeg)
         {
             VakID = vakID;
@@ -122,6 +127,199 @@ namespace webapp.Models
                 IsLeegbool = 0;
             }
             new DBConnection().Send("INSERT `projectcdb`.`vak` SET `VakID` = '" + VakID + "',`Docent` = '" + Docent + "', `Locaal` = '" + Locaal + "', `Naam` = '" + Naam + "', `Discriptie` = '" + Discriptie + "', `Isleeg` = '" + IsLeegbool + "';");
+        }
+        public void setinfo()
+        {
+            List<List<string>> returnstatement2 = new DBConnection().Send("SELECT * FROM projectcdb.roosterdag where Uur1 = " + this.VakID + " Or Uur2 = " + this.VakID + " Or Uur3 = " + this.VakID + " Or Uur4 = " + this.VakID + " Or Uur5 = " + this.VakID + " Or Uur6 = " + this.VakID + " Or Uur7 = " + this.VakID + " Or Uur8 = " + this.VakID + " Or Uur9 = " + this.VakID + " Or Uur10 = " + this.VakID + " Or Uur11 = " + this.VakID + " Or Uur12 = " + this.VakID + " Or Uur13 = " + this.VakID + " Or Uur14 = " + this.VakID + " Or Uur15 = " + this.VakID + ";");
+            this.dagnaam = returnstatement2[0][17];
+            List<int> ulist = new List<int>();
+            if (Convert.ToInt32(returnstatement2[0][1]) == this.VakID)
+            {
+                ulist.Add(1);
+            }
+            if (Convert.ToInt32(returnstatement2[0][2]) == this.VakID)
+            {
+                ulist.Add(2);
+            }
+            if (Convert.ToInt32(returnstatement2[0][3]) == this.VakID)
+            {
+                ulist.Add(3);
+            }
+            if (Convert.ToInt32(returnstatement2[0][4]) == this.VakID)
+            {
+                ulist.Add(4);
+            }
+            if (Convert.ToInt32(returnstatement2[0][5]) == this.VakID)
+            {
+                ulist.Add(5);
+            }
+            if (Convert.ToInt32(returnstatement2[0][6]) == this.VakID)
+            {
+                ulist.Add(6);
+            }
+            if (Convert.ToInt32(returnstatement2[0][7]) == this.VakID)
+            {
+                ulist.Add(7);
+            }
+            if (Convert.ToInt32(returnstatement2[0][8]) == this.VakID)
+            {
+                ulist.Add(8);
+            }
+            if (Convert.ToInt32(returnstatement2[0][9]) == this.VakID)
+            {
+                ulist.Add(9);
+            }
+            if (Convert.ToInt32(returnstatement2[0][10]) == this.VakID)
+            {
+                ulist.Add(10);
+            }
+            if (Convert.ToInt32(returnstatement2[0][11]) == this.VakID)
+            {
+                ulist.Add(11);
+            }
+            if (Convert.ToInt32(returnstatement2[0][12]) == this.VakID)
+            {
+                ulist.Add(12);
+            }
+            if (Convert.ToInt32(returnstatement2[0][13]) == this.VakID)
+            {
+                ulist.Add(13);
+            }
+            if (Convert.ToInt32(returnstatement2[0][14]) == this.VakID)
+            {
+                ulist.Add(14);
+            }
+            if (Convert.ToInt32(returnstatement2[0][15]) == this.VakID)
+            {
+                ulist.Add(15);
+            }
+
+
+            if (ulist[0] == 1) 
+            {
+                van = "8:30";
+            }
+            if (ulist[0] == 2)
+            {
+                van = "9:20";
+            }
+            if (ulist[0] == 3)
+            {
+                van = "10:30";
+            }
+            if (ulist[0] == 4)
+            {
+                van = "11:20";
+            }
+            if (ulist[0] == 5)
+            {
+                van = "12:10";
+            }
+            if (ulist[0] == 6)
+            {
+                van = "13:00";
+            }
+            if (ulist[0] == 7)
+            {
+                van = "13:50";
+            }
+            if (ulist[0] == 8)
+            {
+                van = "15:00";
+            }
+            if (ulist[0] == 9)
+            {
+                van = "15:50";
+            }
+            if (ulist[0] == 10)
+            {
+                van = "17:00";
+            }
+            if (ulist[0] == 11)
+            {
+                van = "17:50";
+            }
+            if (ulist[0] == 12)
+            {
+                van = "18:40";
+            }
+            if (ulist[0] == 13)
+            {
+                van = "19:30";
+            }
+            if (ulist[0] == 14)
+            {
+                van = "20:20";
+            }
+            if (ulist[0] == 15)
+            {
+                van = "21:10";
+            }
+
+            ulist.Reverse();
+            //reverse time
+
+            if (ulist[0] == 1)
+            {
+                tot = "9:20";
+            }
+            if (ulist[0] == 2)
+            {
+                tot = "10:10";
+            }
+            if (ulist[0] == 3)
+            {
+                tot = "11:20";
+            }
+            if (ulist[0] == 4)
+            {
+                tot = "12:10";
+            }
+            if (ulist[0] == 5)
+            {
+                tot = "13:00";
+            }
+            if (ulist[0] == 6)
+            {
+                tot = "13:50";
+            }
+            if (ulist[0] == 7)
+            {
+                tot = "14:40";
+            }
+            if (ulist[0] == 8)
+            {
+                tot = "15:50";
+            }
+            if (ulist[0] == 9)
+            {
+                tot = "16:40";
+            }
+            if (ulist[0] == 10)
+            {
+                tot = "17:50";
+            }
+            if (ulist[0] == 11)
+            {
+                tot = "18:40";
+            }
+            if (ulist[0] == 12)
+            {
+                tot = "19:30";
+            }
+            if (ulist[0] == 13)
+            {
+                tot = "20:20";
+            }
+            if (ulist[0] == 14)
+            {
+                tot = "21:10";
+            }
+            if (ulist[0] == 15)
+            {
+                tot = "22:00";
+            }
+
         }
 
     }
