@@ -6,61 +6,45 @@ using DatabaseController;
 using Uurvak1;
 using Roosterdag;
 using Vak1;
+using System.Globalization;
+using webapp;
 
 namespace Roosterzoeker
 {
+
+    /// <summary>
+    /// new RoosterZoeker().Zoek("INF1A",47);
+    /// </summary>
     class RoosterZoeker
     {
-        public void Zoek(String klas,int week)
+        List<int> idlist = new List<int>();
+        public int klasnumber;
+        public int week;
+        public void Zoek(int Klasnumber)
         {
-            int klasnumber = 0;
-            if (klas == "INF1A")
+            klasnumber = Klasnumber;
+
+            CultureInfo ciCurr = CultureInfo.CurrentCulture;
+            //int week = ciCurr.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            week = 47;
+
+            List<List<string>> checky = new DBConnection().Send("SELECT * FROM projectcdb.roosterweek Where WeekNummer = "+week+" AND KlasID = "+klasnumber+";");
+            if (checky.Count != 0)
             {
-                klasnumber = 77;
+                herlaad();
+                return;
             }
-            if (klas == "INF1B")
-            {
-                klasnumber = 78;
-            }
-            if (klas == "INF1C")
-            {
-                klasnumber = 79;
-            }
-            if (klas == "INF1D")
-            {
-                klasnumber = 80;
-            }
-            if (klas == "INF1E")
-            {
-                klasnumber = 81;
-            }
-            if (klas == "INF1F")
-            {
-                klasnumber =82;
-            }
-            if (klas == "INF1G")
-            {
-                klasnumber = 83;
-            }
-            if (klas == "INF1H")
-            {
-                klasnumber = 84;
-            }
-            if (klas == "INF1I")
-            {
-                klasnumber = 85;
-            }
-            if (klas == "INF1J")
-            {
-                klasnumber = 86;
-            }
+
+
+
+
             //Lijsten opstellen
             List<string> UrenList = new List<string>();
             List<Uurvak> Uurvakken = new List<Uurvak>();
 
             //HTML OPVRAGEN
             string html = string.Empty;
-            string url = @"http://misc.hro.nl/roosterdienst/webroosters/CMI/kw1/"+week+"/c/c000"+klasnumber+".htm";
+            string url = @"http://misc.hro.nl/roosterdienst/webroosters/CMI/kw2/" + week + "/c/c000" + klasnumber + ".htm";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
@@ -156,11 +140,11 @@ namespace Roosterzoeker
                 }
                 count2++;
             }
-            RoosterDag r1 = new RoosterDag("Maandag",44);
-            RoosterDag r2 = new RoosterDag("Dinsdag",44);
-            RoosterDag r3 = new RoosterDag("Woensdag",44);
-            RoosterDag r4 = new RoosterDag("Donderdag",44);
-            RoosterDag r5 = new RoosterDag("Vrijdag",44);
+            RoosterDag r1 = new RoosterDag("Maandag", week);
+            RoosterDag r2 = new RoosterDag("Dinsdag", week);
+            RoosterDag r3 = new RoosterDag("Woensdag", week);
+            RoosterDag r4 = new RoosterDag("Donderdag", week);
+            RoosterDag r5 = new RoosterDag("Vrijdag", week);
 
             foreach (Uurvak s1 in Uurvakken)
             {
@@ -172,36 +156,76 @@ namespace Roosterzoeker
 
             }
 
-            int weeknummer = week - 37;
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterweek` (`RoosterWeekID`, `WeekNummer`, `KlasID`) VALUES ('" + klasnumber + week + "', '" + weeknummer + "', '" + klasnumber + "');");
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "1', '" + week + "11', '" + week + "12', '" + week + "13', '" + week + "14', '" + week + "15', '" + week + "16', '" + week + "17', '" + week + "18', '" + week + "19', '" + week + "110', '" + week + "111', '" + week + "112', '" + week + "113', '" + week + "113', '" + week + "115', '" + week + "', 'Maandag');");
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "2', '" + week + "21', '" + week + "22', '" + week + "23', '" + week + "24', '" + week + "25', '" + week + "26', '" + week + "27', '" + week + "28', '" + week + "29', '" + week + "210', '" + week + "211', '" + week + "212', '" + week + "213', '" + week + "213', '" + week + "215', '" + week + "', 'Dinsdag');");
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "3', '" + week + "31', '" + week + "32', '" + week + "33', '" + week + "34', '" + week + "35', '" + week + "36', '" + week + "37', '" + week + "38', '" + week + "39', '" + week + "310', '" + week + "311', '" + week + "312', '" + week + "313', '" + week + "313', '" + week + "315', '" + week + "', 'Woensdag');");
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "4', '" + week + "41', '" + week + "42', '" + week + "43', '" + week + "44', '" + week + "45', '" + week + "46', '" + week + "47', '" + week + "48', '" + week + "49', '" + week + "410', '" + week + "411', '" + week + "412', '" + week + "413', '" + week + "413', '" + week + "415', '" + week + "', 'Donderdag');");
-            new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "5', '" + week + "51', '" + week + "52', '" + week + "53', '" + week + "54', '" + week + "55', '" + week + "56', '" + week + "57', '" + week + "58', '" + week + "59', '" + week + "510', '" + week + "511', '" + week + "512', '" + week + "513', '" + week + "513', '" + week + "515', '" + week + "', 'Vrijdag');");
 
-            r1.VakkenNaarDb(week, 1, klasnumber);
-            r2.VakkenNaarDb(week, 2, klasnumber);
-            r3.VakkenNaarDb(week, 3, klasnumber);
-            r4.VakkenNaarDb(week, 4, klasnumber);
-            r5.VakkenNaarDb(week, 5, klasnumber);
+            int roosterweekID = Convert.ToInt32(new DBConnection().Send("INSERT INTO `projectcdb`.`roosterweek` (`WeekNummer`, `KlasID`) VALUES ('" + week + "', '" + klasnumber + "');SELECT LAST_INSERT_ID();")[0][0]);
+            r1.VakkenNaarDb(week, 1, klasnumber, roosterweekID);
+            r2.VakkenNaarDb(week, 2, klasnumber, roosterweekID);
+            r3.VakkenNaarDb(week, 3, klasnumber, roosterweekID);
+            r4.VakkenNaarDb(week, 4, klasnumber, roosterweekID);
+            r5.VakkenNaarDb(week, 5, klasnumber, roosterweekID);
+
+
+
+            //new DBConnection().Send("INSERT INTO `projectcdb`.`roosterdag` (`RoosterDagID`, `Uur1`, `Uur2`, `Uur3`, `Uur4`, `Uur5`, `Uur6`, `Uur7`, `Uur8`, `Uur9`, `Uur10`, `Uur11`, `Uur12`, `Uur13`, `Uur14`, `Uur15`, `RoosterWeekID`, `DagnNaam`) VALUES ('" + klasnumber + week + "1', '" + week + "11', '" + week + "12', '" + week + "13', '" + week + "14', '" + week + "15', '" + week + "16', '" + week + "17', '" + week + "18', '" + week + "19', '" + week + "110', '" + week + "111', '" + week + "112', '" + week + "113', '" + week + "113', '" + week + "115', '" + week + "', 'Maandag');");
+
+
 
             //Zet dit in het zoek rooster knopje
-           // RoosterZoeker a = new RoosterZoeker();
+            // RoosterZoeker a = new RoosterZoeker();
 
-           // a.Zoek("INF1A", 44);
-           // a.Zoek("INF1B", 44);
+            // a.Zoek("INF1A", 44);
+            // a.Zoek("INF1B", 44);
             //a.Zoek("INF1C", 44);
             //a.Zoek("INF1D", 44);
             //a.Zoek("INF1E", 44);
             //a.Zoek("INF1F", 44);
-           // a.Zoek("INF1H", 44);
-           // a.Zoek("INF1I", 44);
+            // a.Zoek("INF1H", 44);
+            // a.Zoek("INF1I", 44);
             //a.Zoek("INF1J", 44);
             //a.Zoek("INF1K", 44);
 
 
 
+        }
+        public void herlaad()
+        {
+            new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE (`UserID` = '"+Sessie.GetInstance.getLoginUserID()+"');");
+            List<List<string>> rw = new DBConnection().Send("SELECT * FROM projectcdb.roosterweek Where WeekNummer = " + week + " AND KlasID = " + klasnumber + ";");
+            List<List<string>> rd = new DBConnection().Send("SELECT * FROM projectcdb.roosterdag where RoosterWeekID = "+rw[0][0]+";");
+            foreach (List<string> a in rd)
+            {
+                idcheck(Convert.ToInt32(a[1]));
+                idcheck(Convert.ToInt32(a[2]));
+                idcheck(Convert.ToInt32(a[3]));
+                idcheck(Convert.ToInt32(a[4]));
+                idcheck(Convert.ToInt32(a[5]));
+                idcheck(Convert.ToInt32(a[6]));
+                idcheck(Convert.ToInt32(a[7]));
+                idcheck(Convert.ToInt32(a[8]));
+                idcheck(Convert.ToInt32(a[9]));
+                idcheck(Convert.ToInt32(a[10]));
+                idcheck(Convert.ToInt32(a[11]));
+                idcheck(Convert.ToInt32(a[12]));
+                idcheck(Convert.ToInt32(a[13]));
+                idcheck(Convert.ToInt32(a[14]));
+                idcheck(Convert.ToInt32(a[15]));
+            }
+
+
+
+
+
+
+        }
+        public void idcheck(int u1)
+        {
+            if (u1 != 0 && !idlist.Contains(u1))
+            {
+
+                idlist.Add(u1);
+                new DBConnection().Send("INSERT INTO `projectcdb`.`ingeschrevenvakken` (`UserID`, `vakID`) VALUES ('" + Sessie.GetInstance.getLoginUserID() + "', '" + u1 + "');");
+
+            }
         }
     }
 }

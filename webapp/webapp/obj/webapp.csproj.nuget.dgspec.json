@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {}
+    "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {
+    "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
+        "projectUniqueName": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj",
-        "packagesPath": "C:\\Users\\laure\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laure\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\obj\\",
+        "projectPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj",
+        "packagesPath": "C:\\Users\\jurri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\laure\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jurri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,10 +41,6 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.AspNet.Mvc": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            },
             "Microsoft.AspNet.Razor": {
               "target": "Package",
               "version": "[3.0.0, )"
