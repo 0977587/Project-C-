@@ -99,8 +99,6 @@ C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\PAgenda.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\SAgenda.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\MakeQueue\create.cshtml.g.cs

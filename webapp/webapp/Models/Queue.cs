@@ -56,19 +56,18 @@ namespace webapp.Models
             List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = " + input + ";");
             WachtrijID = Convert.ToInt32(returnstatement[0][0]);
             if (returnstatement[0][1] != "")
-                DateAdded = Convert.ToDateTime(returnstatement[0][1]);
+                Name = returnstatement[0][1];
             if (returnstatement[0][2] != "")
-                EndDate = Convert.ToDateTime(returnstatement[0][2]);
+                DateAdded = Convert.ToDateTime(returnstatement[0][2]);
             if (returnstatement[0][3] != "")
-                Name  = returnstatement[0][3];
+                EndDate  = Convert.ToDateTime(returnstatement[0][3]);
         }
 
         public List<Vraag> getVragen()
         {
-
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = 0) AND AndwoordText = '' and isFAQ = False");
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = "+ WachtrijID+ ") and `isFAQ` = 0 and (AndwoordText is null or AndwoordText = '') ;");
             foreach (List<string> returnstatement2 in returnstatement)
             {
                 Vraag v = new Vraag();
@@ -111,6 +110,13 @@ namespace webapp.Models
         public void Update()
         {
             new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "';");
+        }
+
+        public int getVragenAmount()
+        {
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT COUNT(*) FROM projectcdb.vraag Where WachtrijID =" + WachtrijID.ToString() );
+            int length = Convert.ToInt32(returnstatement[0][0]);
+            return length;
         }
 
         public void Insert()

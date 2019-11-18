@@ -1,11 +1,5 @@
 ﻿using DatabaseController;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.AspNetCore.Razor.TagHelpers;
-using Microsoft.CodeAnalysis;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -29,30 +23,25 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public DateTime DateAdded { get; set; }
         public DateTime EndDate { get; set; }
         public string Locatie { get; set; }
-        public int WachtrijID { get; set; }
-
-
         public void OnGet()
+        
         {
-            VraagText = "voer hier je vraag in";
+            //VraagText = "voer hier je vraag in";
 
         }
 
         public void OnPost()
         {
-            
             VraagID = 0;
             UserID = Sessie.GetInstance.getLoginUserID();
             VraagText = Request.Form[nameof(VraagText)];
             Locatie = Request.Form[nameof(Locatie)];
-            var Vaktemp = Request.Form[nameof(VakID)];
-            VakID = Convert.ToInt32(Vaktemp);
             AndwoordText = "";
-            Vraag temp = new Vraag(0, UserID, VakID, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue, Locatie);
+            int WachtrijID = 0;
+            Vraag temp = new Vraag(0, UserID, 1, VraagText, AndwoordText,false, DateTime.Now, DateTime.MinValue, Locatie, WachtrijID, false);
             int length = temp.returnVraagLength();
             temp.VraagID = length;
             temp.Insert();
         }
-
     }
 }
