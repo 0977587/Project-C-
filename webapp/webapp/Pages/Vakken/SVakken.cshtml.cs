@@ -25,7 +25,7 @@ namespace webapp.Pages.Vakken
         {
 
         }
-        public ActionResult BehandelVak(int choice)
+        public void BehandelVak(int choice)
         {
             new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '"+ choice + "' AND `UserID` = '"+ Sessie.GetInstance.getLoginUserID() + "');");
                 
