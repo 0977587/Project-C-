@@ -26,6 +26,7 @@ namespace webapp.Models
         public int WachtrijID { get; set; }
         
         public Boolean isInProgress { get; set; }
+        public int positie { get; set; }
 
         //constructor met andwoordtext
         public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, Boolean isinprogress)
@@ -113,13 +114,13 @@ namespace webapp.Models
                 DateAdded = Convert.ToDateTime(returnstatement[0][6]);
             if (returnstatement[0][7] != "")
                 EndDate = Convert.ToDateTime(returnstatement[0][7]);
-            if (returnstatement[0][7] != "")
-                Locatie = returnstatement[0][7];
             if (returnstatement[0][8] != "")
-                WachtrijID = Convert.ToInt32(returnstatement[0][8]);
+                Locatie = returnstatement[0][8];
             if (returnstatement[0][9] != "")
+                WachtrijID = Convert.ToInt32(returnstatement[0][9]);
+            if (returnstatement[0][10] != "")
             {
-                if (returnstatement[0][9] == "0")
+                if (returnstatement[0][10] == "0")
                 {
                     isInProgress = false;
                 }
