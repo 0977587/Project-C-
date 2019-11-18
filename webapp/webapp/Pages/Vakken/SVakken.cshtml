@@ -4,19 +4,26 @@
 @using DatabaseController
 @using webapp.Models
 @{
+    string SelectedID = "0";
     ViewData["Title"] = "Vakken";
     List<Vak> Vakken = new List<Vak>();
-    List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken WHERE UserID = "+Sessie.GetInstance.getLoginUserID()+";");
-    if (returnstatement != null) {
+    DBConnection dbc = Sessie.GetInstance.dbc;
+    List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.ingeschrevenvakken WHERE UserID = " + Sessie.GetInstance.getLoginUserID() + ";");
+    if (returnstatement != null)
+    {
+        
         foreach (var i in returnstatement)
         {
             Vak a = new Vak();
-            a.SelectOne(Convert.ToInt32(i[2]));
+            a.SelectOneX(Convert.ToInt32(i[2]));
             Vakken.Add(a);
             a.setinfo();
-            
+
         }
+        
     }
+ 
+
 
 
 }
@@ -79,8 +86,12 @@
                     <td>@item.dagnaam</td>
                     <td>@item.van</td>
                     <td>@item.tot</td>
+                    <td> <form method="post" style="display: inline">
+                        <input hidden="hidden" asp-for="postit" value="@item.VakID" />
+                        <button>Verwijder</button>
+                         </form>
+                    </td>
 
-                    <td align="right" ref="#" class="myButton" asp-controller="SVakkenModel" asp-action="BehandelVak" asp-route="@item.VakID">Verwijder</td>
                 </tr>
                 }
             </tbody>

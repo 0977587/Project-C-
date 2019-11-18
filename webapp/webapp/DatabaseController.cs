@@ -41,6 +41,38 @@ namespace DatabaseController
 
             return Stringlist2;
         }
+        public List<List<string>> SendX(string queri)
+        {
+            List<string> Stringlist;
+            List<List<string>> Stringlist2 = new List<List<string>>();
+
+            this.DatabaseName = "projectcdb";
+            if (this.IsConnect())
+            {
+                Console.WriteLine(queri);
+
+
+                var cmd = new MySqlCommand(queri, Connection);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Stringlist = new List<string>();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        Stringlist.Add(reader[i].ToString());
+                    }
+                    Stringlist2.Add(Stringlist);
+
+
+                }
+                cmd.Dispose();
+
+                reader.Close();
+
+            }
+
+            return Stringlist2;
+        }
 
         private string databaseName = string.Empty;
         public string DatabaseName
