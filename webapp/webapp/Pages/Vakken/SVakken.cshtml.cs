@@ -29,7 +29,7 @@ namespace webapp.Pages.Vakken
         {
             new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '"+ choice + "' AND `UserID` = '"+ Sessie.GetInstance.getLoginUserID() + "');");
                 
-            return Redirect(Request.Path);
+            //return Redirect(Request.Path);
         }
     }
 }
