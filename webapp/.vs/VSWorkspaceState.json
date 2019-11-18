@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\webapp",
-    "\\webapp\\Models",
     "\\webapp\\Pages",
+    "\\webapp\\Pages\\MakeQueue",
     "\\webapp\\Pages\\Vragen",
     "\\webapp\\Pages\\Vragen\\Steleenvraag"
   ],

@@ -63,11 +63,11 @@ namespace webapp.Models
                 EndDate  = Convert.ToDateTime(returnstatement[0][3]);
         }
 
-        public List<Vraag> getVragen()
+        public List<Vraag> getVragen(int choice)
         {
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE(`WachtrijID` = "+ WachtrijID+ ") and `isFAQ` = 0 and (AndwoordText is null or AndwoordText = '') ;");
+            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE `WachtrijID` = '"+ WachtrijID+ "' and `isFAQ` = 0 and IsinProgress = '"+ choice + "'  and (AndwoordText is null or AndwoordText = '')");
             foreach (List<string> returnstatement2 in returnstatement)
             {
                 Vraag v = new Vraag();
@@ -118,7 +118,6 @@ namespace webapp.Models
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length;
         }
-
         public void Insert()
         {
             new DBConnection().Send("INSERT `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "'; ");
