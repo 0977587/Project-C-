@@ -40,12 +40,20 @@ namespace webapp.Models
         public int returnWachtrijLength2()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.peercoachwachtrij");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }
         public int returnWachtrijLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length+1;
         }

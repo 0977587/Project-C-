@@ -36,6 +36,10 @@ namespace webapp.Models
         public int returnVaklength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(VakID) FROM projectcdb.vak");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }

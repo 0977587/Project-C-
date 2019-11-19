@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model webapp.Pages.Menu.SMenuModel
 @using DatabaseController
 @using webapp.Models
 @{
@@ -15,6 +15,9 @@
         Vraag v = new Vraag();
         v.SelectOne(Vraagid);
         List<List<string>> connect2 = new DBConnection().Send("SELECT * FROM projectcdb.vraag where WachtrijID = " + temp[9] + " order by DateAdded;");
+         List<List<string>> connect3 = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = "+temp[9]+";");
+        v.WachtrijEndDate = Convert.ToDateTime(connect3[0][3]);
+        v.wachtrijNaam = connect3[0][1];
         int positie = 1;
         int count = 1;
         foreach (List<string> temp2 in connect2)
@@ -94,7 +97,7 @@
         <button>Vragen</button>
     </form>
 
-    <input id="mijnaccountbtn" type="button" value="button" />
+    
 
     <button id="logoutbtn"> Log uit</button>
 
@@ -109,8 +112,9 @@
                         <th class="col-md-1">Vraag</th>
                         <th class="col-md-2">Wachtrij</th>
                         <th class="col-md-3">Positie</th>
-                    </tr>
-                </thead>
+                        <th class="col-md-4">Eindtijd </th>
+                        <th align="right" class="col=md-3"></th>
+</thead>
                 <tbody>
                     @{
                         var cnt = 0;
@@ -124,12 +128,19 @@
                             break;
                         }
 
-                        <tr>
-                            <td class="col-md-1">@item.VraagText</td>
-                            <td class="col-md-2">@item.WachtrijID</td>
-                            <td class="col-md-3">@item.positie</td>
+                    <tr>
+                        <td class="col-md-1">@item.VraagText</td>
+                        <td nowrap class="col-md-2">@item.wachtrijNaam</td>
+                        <td class="col-md-3">@item.positie</td>
+                        <td nowrap class="col-md-3">@item.WachtrijEndDate</td>
+                        <td>
+                            <form method="post" style="display: inline">
+                                <input hidden="hidden" asp-for="postit" value="@item.VraagID" />
+                                <button>Verwijder</button>
+                            </form>
+                        </td>
 
-                        </tr>
+                    </tr>
                     }
                 </tbody>
             </table>
