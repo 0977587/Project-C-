@@ -10,23 +10,29 @@ namespace webapp.Models
     //info over vragen 
     public class Vraag
     {
-      
+
         public int VraagID { get; set; }
-       
+
         public int UserID { get; set; }
         public int VakID { get; set; }
         public string VraagText { get; set; }
         public string AndwoordText { get; set; }
         public Boolean IsFAQ { get; set; }
-        public DateTime DateAdded  { get; set; }
+        public DateTime DateAdded { get; set; }
         public DateTime EndDate { get; set; }
 
         public string Locatie { get; set; }
 
         public int WachtrijID { get; set; }
-        
+
         public Boolean isInProgress { get; set; }
+
+        //alternative variable
         public int positie { get; set; }
+
+        public DateTime WachtrijEndDate { get; set; }
+
+        public string wachtrijNaam { get; set; }
 
         //constructor met andwoordtext
         public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, Boolean isinprogress)
@@ -40,9 +46,9 @@ namespace webapp.Models
             DateAdded = dateAdded;
             EndDate = endDate;
             Locatie = locatie;
-            isInProgress = isinprogress; 
+            isInProgress = isinprogress;
         }
-        public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie,int wachtrijid, Boolean isinprogress)
+        public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, int wachtrijid, Boolean isinprogress)
         {
             VraagID = vraagID;
             UserID = userID;
@@ -60,6 +66,10 @@ namespace webapp.Models
         public int returnVraagLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(vraagId) FROM projectcdb.vraag");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }
@@ -91,7 +101,7 @@ namespace webapp.Models
 
             List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE vraagID = " + input + ";");
             VraagID = Convert.ToInt32(returnstatement[0][0]);
-            if (returnstatement[0][1] != "") 
+            if (returnstatement[0][1] != "")
                 UserID = Convert.ToInt32(returnstatement[0][1]);
             if (returnstatement[0][2] != "")
                 VakID = Convert.ToInt32(returnstatement[0][2]);
@@ -184,8 +194,8 @@ namespace webapp.Models
         }
         public void Delete()
         {
-             //geef vraagID mee  
-            List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE (`vraagID` = '"+ VraagID + "');");      
+            //geef vraagID mee  
+            List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE (`vraagID` = '" + VraagID + "');");
         }
         public void Update()
         {
@@ -208,7 +218,7 @@ namespace webapp.Models
             {
                 isInProgressbool = 0;
             }
-            new DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `UserID` = '"+UserID+"', `VakID` = '"+VakID+"', `VraagText` = '"+VraagText+"', `AndwoordText` = '"+AndwoordText+"', `IsFAQ` = '"+IsFAQbool+ "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' WHERE (`vraagID` = '" + VraagID+"');");
+            new DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' WHERE (`vraagID` = '" + VraagID + "');");
         }
         public void Insert()
         {

@@ -14,7 +14,7 @@
             a.SelectOne(Convert.ToInt32(i[2]));
             Vakken.Add(a);
             a.setinfo();
-            
+
         }
     }
 
@@ -25,31 +25,35 @@
 <html lang="en">
 <style>
 
+
     .myButton {
-        background-color: #44c767;
-        border-radius: 28px;
-        border: 1px solid #18ab29;
-        display: inline-block;
-        cursor: pointer;
-        color: #ffffff;
-        font-family: Arial;
-        font-size: 17px;
-        padding: 16px 31px;
-        text-decoration: none;
-        text-shadow: 0px 1px 0px #2f6627;
+	    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	    background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	    background-color:#3d94f6;
+	    border-radius:13px;
+	    display:inline-block;
+	    cursor:pointer;
+	    color:#ffffff;
+	    font-family:Arial;
+	    font-size:15px;
+	    font-weight:bold;
+	    padding:10px 20px;
+	    text-decoration:none;
+	    text-shadow:0px 1px 0px #1570cd;
+    }
+    .myButton:hover {
+	    background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	    background-color:#1e62d0;
+    }
+    .myButton:active {
+	    position:relative;
+	    top:1px;
     }
 
-        .myButton:hover {
-            background-color: #5cbf2a;
-        }
 
-        .myButton:active {
-            position: relative;
-            top: 1px;
-        }
 </style>
 <form method="post" style="display: inline">
-    <button>Herlaad vakken</button>
+    <button class="myButton">Herlaad vakken</button>
 </form>
 <div class="col-xs-6">
     <h2 class="sub-header">Mijn Vakken</h2>
@@ -79,6 +83,11 @@
                     <td>@item.dagnaam</td>
                     <td>@item.van</td>
                     <td>@item.tot</td>
+                    <td> <form method="post" style="display: inline">
+                        <input hidden="hidden" asp-for="postit" value="@item.VakID" />
+                        <button class="myButton">Verwijder</button>
+                         </form>
+                    </td>
 
                     <td align="right" ref="#" class="myButton" asp-controller="SVakkenModel" asp-action="BehandelVak" asp-route="@item.VakID">Verwijder</td>
                 </tr>
