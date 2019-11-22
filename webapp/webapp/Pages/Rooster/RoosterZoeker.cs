@@ -25,8 +25,8 @@ namespace Roosterzoeker
             klasnumber = Klasnumber;
 
             CultureInfo ciCurr = CultureInfo.CurrentCulture;
-            //int week = ciCurr.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            week = 47;
+            week = ciCurr.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            
 
             List<List<string>> checky = new DBConnection().Send("SELECT * FROM projectcdb.roosterweek Where WeekNummer = "+week+" AND KlasID = "+klasnumber+";");
             if (checky.Count != 0)

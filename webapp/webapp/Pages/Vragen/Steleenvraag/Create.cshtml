@@ -17,7 +17,7 @@
     foreach (List<string> temp in connect)
     {
         Vak a = new Vak();
-        a.SelectOne(Convert.ToInt32(temp[0]));
+        a.SelectOne(Convert.ToInt32(temp[2]));
         vakken.Add(a);
     }
 
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-    <form method="post"  style="display: inline">
+    <form method="post" style="display: inline">
         <input asp-for="VraagText" placeholder="kies je vraag" />
         <br />
         <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">

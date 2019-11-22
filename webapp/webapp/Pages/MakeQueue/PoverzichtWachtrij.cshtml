@@ -1,45 +1,73 @@
-﻿
-@page
-@model webapp.Pages.MakeQueue.Queue
+﻿@page
+@model webapp.Pages.MakeQueue.PWachtrij
 @using DatabaseController
 @using webapp.Models
 @{
     ViewData["Title"] = "Vraag stellen";
-
-    Wachtrij temp = new Wachtrij();
-    temp.SelectOne(0);
-    var vragen = temp.getVragen(0);
-    var vragen2 = temp.getVragen(1);
-    int temp2 = temp.getVragenAmount();
-
-  
+    List
+    <string>
+    temp = new List
+    <string>
+    ();
+    temp.Add("Analyse");
+    temp.Add("Development");
+    temp.Add("Project A");
+    temp.Add("Project B");
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-.myButton {
-	background-color:#44c767;
-	border-radius:28px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.myButton:hover {
-	background-color:#5cbf2a;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+    .myButton {
+        background-color: #44c767;
+        border-radius: 28px;
+        border: 1px solid #18ab29;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 17px;
+        padding: 16px 31px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #2f6627;
+    }
 
+        .myButton:hover {
+            background-color: #5cbf2a;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+    .myButton2 {
+        background-color: #44c767;
+        border-radius: 7px;
+        border: 1px solid #18ab29;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 14px;
+        padding: 8px 16px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #2f6627;
+    }
+
+        .myButton2:hover {
+            background-color: #5cbf2a;
+        }
+
+        .myButton2:active {
+            position: relative;
+            top: 1px;
+        }
 </style>
 <div class="col-xs-6">
     <h2 class="sub-header">Te behandelen vragen</h2>
@@ -57,7 +85,7 @@
                 @{
                     var count = 0;
                 }
-                @foreach (var item in vragen)
+                @foreach (var item in Model.Vragen)
                 {
                     count++;
                     if (count > 5)
@@ -65,53 +93,77 @@
                         break;
                     }
                     User user = new User();
-
-
                     user.SelectOne(item.UserID);
-
-                <tr>
-                    <td class="col-md-1">@item.VraagText</td>
-                    <td class="col-md-2">@user.Voornaam</td>
-                    <td class="col-md-3">@item.Locatie</td>
-
-                    <td ref="#" class="myButton" asp-controller="PWachtrij" asp-action ="BehandelVraag" asp-route ="@item.VraagID">Behandel</td>
-                </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-    <h2 class="sub-header">Vragen in behandeling</h2>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th class="col-md-1">Vraag</th>
-                    <th class="col-md-2">Naam</th>
-                    <th class="col-md-3">Lokaal</th>
-                </tr>
-            </thead>
-            <tbody>
-                @{
-                    var count2 = 0;
-                }
-                @foreach (var item in vragen2)
-                {
-                    count2++;
-                    if (count2 > 5)
-                    {
-                        break;
-                    }
-                    User user = new User();
-                    user.SelectOne(item.UserID);
-
                     <tr>
                         <td class="col-md-1">@item.VraagText</td>
                         <td class="col-md-2">@user.Voornaam</td>
                         <td class="col-md-3">@item.Locatie</td>
+                        <td>
+                            <form method="post">
+                                <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
+                                <button ref="#" class="myButton">Behandel</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
+    <br />
+    <br /><br />
+    <br /><br />
+</div>
+<h2 class="sub-header">Vragen in behandeling</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-1" rowspan="2">Vraag</th>
+                <th class="col-md-2">Naam</th>
+                <th class="col-md-3">Lokaal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var count2 = 0;
+            }
+            @foreach (var item in Model.Vragen2)
+            {
+                count2++;
+                if (count2 > 5)
+                {
+                    break;
+                }
+                User user = new User();
+                user.SelectOne(item.UserID);
+                <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
+                <form asp-action="OnChange">
+
+                    <tr>
+                        <td rowspan="2">
+                            <input placeholder="Antwoord"> </input>
+                        <td>
+                            @item.VraagText
+                        </td>
+                        <td>
+                        </td>
+                        </td>
+                        <td class="col-md-2" rowspan="2">@user.Voornaam</td>
+                        <td class="col-md-3" rowspan="2"><button class="myButton2">
+                            Rond de vraag af
+                        </button></td>
+                    <tr>
+                        <td>
+                            <input type="checkbox" asp-for="IsChecked">vraag voor de Faq
+                        </td>
+                        <td>
+                            @item.Locatie
+                        </td>
+                    </tr>
+                    </tr>
+                </form>
+            }
+        </tbody>
+    </table>
 </div>
 </html>

@@ -32,6 +32,36 @@ using webapp.Models;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5569a73cf905216bed2b6e1222f91d848aa1d31c", @"/Pages/_ViewImports.cshtml")]
     public class Pages_MakeQueue_Create : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("selectNumber"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("selectNumber2"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("placeholder", new global::Microsoft.AspNetCore.Html.HtmlString("Naam van de wachtrij"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("style", new global::Microsoft.AspNetCore.Html.HtmlString("display: inline"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        #line hidden
+        #pragma warning disable 0169
+        private string __tagHelperStringValueBuffer;
+        #pragma warning restore 0169
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner __tagHelperRunner = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner();
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __tagHelperScopeManager
+        {
+            get
+            {
+                if (__backed__tagHelperScopeManager == null)
+                {
+                    __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
+                }
+                return __backed__tagHelperScopeManager;
+            }
+        }
+        private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -64,140 +94,515 @@ using webapp.Models;
 
 #line default
 #line hidden
-            BeginContext(953, 337, true);
-            WriteLiteral(@"<!DOCTYPE html>
-<html>
-<head>
-    <meta name=""viewport"" content=""width=device-width"" />
-    <title>Maak een wachtrij</title>
-</head>
-
-<body>
-    <form method=""post"" style=""display: inline"">
-        <br />
-        <select id=""selectNumber"" asp-for=""DateAdded"">
-            <option>Kies begintijd</option>
-            <option> ");
+            BeginContext(953, 25, true);
+            WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
-            BeginContext(1291, 8, false);
+            BeginContext(978, 112, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b6800", async() => {
+                BeginContext(984, 99, true);
+                WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Maak een wachtrij</title>\r\n");
+                EndContext();
+            }
+            );
+            __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper>();
+            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            EndContext();
+            BeginContext(1090, 4, true);
+            WriteLiteral("\r\n\r\n");
+            EndContext();
+            BeginContext(1094, 961, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b8093", async() => {
+                BeginContext(1100, 6, true);
+                WriteLiteral("\r\n    ");
+                EndContext();
+                BeginContext(1106, 940, false);
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b8481", async() => {
+                    BeginContext(1150, 26, true);
+                    WriteLiteral("\r\n        <br />\r\n        ");
+                    EndContext();
+                    BeginContext(1176, 274, false);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b8912", async() => {
+                        BeginContext(1222, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1236, 31, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b9350", async() => {
+                            BeginContext(1244, 14, true);
+                            WriteLiteral("Kies begintijd");
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1267, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1281, 27, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b10787", async() => {
+                            BeginContext(1289, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1291, 8, false);
 #line 49 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(dates[0]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1299, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1332, 8, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1308, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1322, 27, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b12477", async() => {
+                            BeginContext(1330, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1332, 8, false);
 #line 50 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(dates[1]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1340, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1373, 8, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1349, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1363, 27, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b14167", async() => {
+                            BeginContext(1371, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1373, 8, false);
 #line 51 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(dates[2]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1381, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1414, 8, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1390, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1404, 27, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b15857", async() => {
+                            BeginContext(1412, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1414, 8, false);
 #line 52 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(dates[3]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1422, 150, true);
-            WriteLiteral("</option>\r\n        </select>\r\n        <select id=\"selectNumber2\" asp-for=\"EndDate\">\r\n            <option>Kies eindtijd</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1573, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1431, 10, true);
+                        WriteLiteral("\r\n        ");
+                        EndContext();
+                    }
+                    );
+                    __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
+                    __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper);
+                    __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
+#line 47 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
+__Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.DateAdded);
+
+#line default
+#line hidden
+                    __tagHelperExecutionContext.AddTagHelperAttribute("asp-for", __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    EndContext();
+                    BeginContext(1450, 10, true);
+                    WriteLiteral("\r\n        ");
+                    EndContext();
+                    BeginContext(1460, 452, false);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b19056", async() => {
+                        BeginContext(1505, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1519, 30, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b19495", async() => {
+                            BeginContext(1527, 13, true);
+                            WriteLiteral("Kies eindtijd");
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1549, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1563, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b20932", async() => {
+                            BeginContext(1571, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1573, 10, false);
 #line 56 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[0]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1583, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1616, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1592, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1606, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b22625", async() => {
+                            BeginContext(1614, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1616, 10, false);
 #line 57 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[1]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1626, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1659, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1635, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1649, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b24318", async() => {
+                            BeginContext(1657, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1659, 10, false);
 #line 58 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[2]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1669, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1702, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1678, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1692, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b26011", async() => {
+                            BeginContext(1700, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1702, 10, false);
 #line 59 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[3]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1712, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1745, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1721, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1735, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b27704", async() => {
+                            BeginContext(1743, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1745, 10, false);
 #line 60 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[4]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1755, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1788, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1764, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1778, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b29397", async() => {
+                            BeginContext(1786, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1788, 10, false);
 #line 61 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[5]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1798, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1831, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1807, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1821, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b31090", async() => {
+                            BeginContext(1829, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1831, 10, false);
 #line 62 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[6]);
 
 #line default
 #line hidden
-            EndContext();
-            BeginContext(1841, 32, true);
-            WriteLiteral("</option>\r\n            <option> ");
-            EndContext();
-            BeginContext(1874, 10, false);
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1850, 14, true);
+                        WriteLiteral("\r\n            ");
+                        EndContext();
+                        BeginContext(1864, 29, false);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b32783", async() => {
+                            BeginContext(1872, 1, true);
+                            WriteLiteral(" ");
+                            EndContext();
+                            BeginContext(1874, 10, false);
 #line 63 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
                 Write(enddate[7]);
 
 #line default
 #line hidden
+                            EndContext();
+                        }
+                        );
+                        __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
+                        __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper);
+                        await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                        if (!__tagHelperExecutionContext.Output.IsContentModified)
+                        {
+                            await __tagHelperExecutionContext.SetOutputContentAsync();
+                        }
+                        Write(__tagHelperExecutionContext.Output);
+                        __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                        EndContext();
+                        BeginContext(1893, 10, true);
+                        WriteLiteral("\r\n        ");
+                        EndContext();
+                    }
+                    );
+                    __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
+                    __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper);
+                    __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
+#line 54 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
+__Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.EndDate);
+
+#line default
+#line hidden
+                    __tagHelperExecutionContext.AddTagHelperAttribute("asp-for", __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    EndContext();
+                    BeginContext(1912, 28, true);
+                    WriteLiteral("\r\n        <br />\r\n\r\n        ");
+                    EndContext();
+                    BeginContext(1940, 58, false);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cb617b83328b4a25965560fa08f5ac6dbc8eb90b36004", async() => {
+                    }
+                    );
+                    __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
+                    __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
+                    __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_2);
+#line 67 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\MakeQueue\Create.cshtml"
+__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Name);
+
+#line default
+#line hidden
+                    __tagHelperExecutionContext.AddTagHelperAttribute("asp-for", __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+                    await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                    if (!__tagHelperExecutionContext.Output.IsContentModified)
+                    {
+                        await __tagHelperExecutionContext.SetOutputContentAsync();
+                    }
+                    Write(__tagHelperExecutionContext.Output);
+                    __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                    EndContext();
+                    BeginContext(1998, 41, true);
+                    WriteLiteral("\r\n\r\n        <button>Submit</button>\r\n    ");
+                    EndContext();
+                }
+                );
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_3.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_3);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_4);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                EndContext();
+                BeginContext(2046, 2, true);
+                WriteLiteral("\r\n");
+                EndContext();
+            }
+            );
+            __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper>();
+            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
             EndContext();
-            BeginContext(1884, 182, true);
-            WriteLiteral("</option>\r\n        </select>\r\n        <br />\r\n\r\n        <input placeholder=\"Naam van de wachtrij\" asp-for=\"Name\"/>\r\n\r\n        <button>Submit</button>\r\n    </form>\r\n</body>\r\n</html>\r\n");
+            BeginContext(2055, 11, true);
+            WriteLiteral("\r\n</html>\r\n");
             EndContext();
         }
         #pragma warning restore 1998
