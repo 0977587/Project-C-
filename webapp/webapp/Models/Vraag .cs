@@ -26,7 +26,13 @@ namespace webapp.Models
         public int WachtrijID { get; set; }
         
         public Boolean isInProgress { get; set; }
+
+        //alternative variable
         public int positie { get; set; }
+
+        public DateTime WachtrijEndDate { get; set; }
+
+        public string wachtrijNaam { get; set; }
 
         //constructor met andwoordtext
         public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, Boolean isinprogress)
@@ -60,6 +66,10 @@ namespace webapp.Models
         public int returnVraagLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(vraagId) FROM projectcdb.vraag");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }

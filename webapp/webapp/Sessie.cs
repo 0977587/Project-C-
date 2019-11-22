@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using webapp;
 
 namespace webapp
 {
@@ -11,6 +12,7 @@ namespace webapp
 
 
         int LoginUserID = 1;
+        public DatabaseController.DBConnection dbc = new DatabaseController.DBConnection();
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
         static Sessie()
@@ -33,6 +35,7 @@ namespace webapp
             LoginUserID = a;
 
         }
+
 
         public static Sessie GetInstance
         {

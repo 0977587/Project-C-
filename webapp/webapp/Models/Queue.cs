@@ -40,12 +40,20 @@ namespace webapp.Models
         public int returnWachtrijLength2()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.peercoachwachtrij");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }
         public int returnWachtrijLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
+            if (returnstatement[0][0].Equals(""))
+            {
+                return 0;
+            }
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length+1;
         }
@@ -65,7 +73,6 @@ namespace webapp.Models
 
         public List<Vraag> getVragen(int choice)
         {
-            //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
             List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE `WachtrijID` = '"+ WachtrijID+ "' and `isFAQ` = 0 and IsinProgress = '"+ choice + "'  and (AndwoordText is null or AndwoordText = '')");
             foreach (List<string> returnstatement2 in returnstatement)
@@ -95,6 +102,9 @@ namespace webapp.Models
                     v.DateAdded = Convert.ToDateTime(returnstatement2[6]);
                 if (returnstatement2[7] != "")
                     v.EndDate = Convert.ToDateTime(returnstatement2[7]);
+                if (returnstatement2[8] != "")
+                    v.Locatie = returnstatement2[8];
+
                 returnlist.Add(v);
             }
             return returnlist;

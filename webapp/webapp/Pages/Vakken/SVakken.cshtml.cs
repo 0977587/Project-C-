@@ -12,12 +12,26 @@ namespace webapp.Pages.Vakken
 {
     public class SVakkenModel : PageModel
     {
+
+        public string postit { get; set; }
         public void OnPost()
         {
+            string postit2 = Request.Form[nameof(postit)];
+            int id = Convert.ToInt32(postit2);
+            if (id == 0)
+            {
+                User a = new User();
+                a.SelectOne(Sessie.GetInstance.getLoginUserID());
+                new Roosterzoeker.RoosterZoeker().Zoek(a.KlasID);
+            }
+            else
+            {
 
-            User a = new User();
-            a.SelectOne(Sessie.GetInstance.getLoginUserID());
-            new Roosterzoeker.RoosterZoeker().Zoek(a.KlasID);
+
+
+                new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '" + id + "' AND `UserID` = '" + Sessie.GetInstance.getLoginUserID() + "');");
+
+            }
 
 
         }
@@ -25,12 +39,8 @@ namespace webapp.Pages.Vakken
         {
 
         }
-        public ActionResult BehandelVak(int choice)
-        {
-            new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '"+ choice + "' AND `UserID` = '"+ Sessie.GetInstance.getLoginUserID() + "');");
-                
-            return Redirect(Request.Path);
-        }
+
+
     }
 }
 
