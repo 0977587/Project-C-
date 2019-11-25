@@ -36,6 +36,7 @@ namespace DatabaseController
                 cmd.Dispose();
 
                 reader.Close();
+                connection.Close();
                
             }
 

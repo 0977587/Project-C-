@@ -17,6 +17,7 @@ namespace webapp.Pages.MakeQueue
         public int Amount { get; set; }
         public bool IsChecked { get; set; }
         public string Antwoord { get; set; }
+        public int Keus { get; set; }
 
 
         public void OnGet()
@@ -30,8 +31,9 @@ namespace webapp.Pages.MakeQueue
         public void OnPost()
         {
             Vraag vraag = new Vraag();
-            int temp = int.Parse(Request.Form[nameof(Choice)]);
-            vraag.SelectOne(temp);
+            string temp = Request.Form[nameof(Choice)];
+            int inttemp = Convert.ToInt32(temp);
+            vraag.SelectOne(inttemp);
             vraag.isInProgress = true;
             vraag.Update();
             Wachtrij Wachtrij = new Wachtrij();
