@@ -6,13 +6,15 @@
     ViewData["Title"] = "Vraag stellen";
     List
     <string>
-    temp = new List
-    <string>
+    temp = new List <string>
     ();
     temp.Add("Analyse");
     temp.Add("Development");
     temp.Add("Project A");
     temp.Add("Project B");
+
+    
+   
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +80,7 @@
                     <th class="col-md-1">Vraag</th>
                     <th class="col-md-2">Naam</th>
                     <th class="col-md-3">Lokaal</th>
-                    <th class="col=md-4"> </th>
+                    <th class="col=md-4"> choice</th>
                 </tr>
             </thead>
             <tbody>
@@ -118,50 +120,40 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th class="col-md-1" rowspan="2">Vraag</th>
+                <th class="col-md-1">Vraag</th>
                 <th class="col-md-2">Naam</th>
                 <th class="col-md-3">Lokaal</th>
+                <th class="col-md-4">choice</th>
+
             </tr>
         </thead>
         <tbody>
             @{
                 var count2 = 0;
             }
+
             @foreach (var item in Model.Vragen2)
             {
+
+                int intkeus = Model.Vragen2.IndexOf(item);
+                string stringkeus = intkeus.ToString();
                 count2++;
                 if (count2 > 5)
                 {
                     break;
                 }
-                User user = new User();
-                user.SelectOne(item.UserID);
-                <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
-                <form asp-action="OnChange">
 
-                    <tr>
-                        <td rowspan="2">
-                            <input placeholder="Antwoord"> </input>
-                        <td>
-                            @item.VraagText
-                        </td>
-                        <td>
-                        </td>
-                        </td>
-                        <td class="col-md-2" rowspan="2">@user.Voornaam</td>
-                        <td class="col-md-3" rowspan="2"><button class="myButton2">
-                            Rond de vraag af
-                        </button></td>
-                    <tr>
-                        <td>
-                            <input type="checkbox" asp-for="IsChecked">vraag voor de Faq
-                        </td>
-                        <td>
-                            @item.Locatie
-                        </td>
-                    </tr>
-                    </tr>
-                </form>
+            <tr>
+                <td class="col-md-1">@item.VraagText</td>
+                <td class="col-md-2">@item.VraagID</td>
+                <td class="col-md-3">@item.Locatie</td>
+                <td>
+                    <form method="post">
+                        <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
+                        <button ref="#" class="myButton">Behandel</button>
+                    </form>
+                    </td>
+            </tr>
             }
         </tbody>
     </table>
