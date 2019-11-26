@@ -13,5 +13,15 @@ namespace webapp.Pages
         {
 
         }
+
+
+
+        public void OnPost()
+        {
+
+            Sessie.GetInstance.setLoginUserID(-1);
+
+            Response.Redirect("../Index");
+        }
     }
 }
