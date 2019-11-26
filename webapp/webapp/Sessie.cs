@@ -11,7 +11,7 @@ namespace webapp
         public static Sessie instance = new Sessie();
 
 
-        int LoginUserID = 1;
+        int LoginUserID = -1;
         public DatabaseController.DBConnection dbc = new DatabaseController.DBConnection();
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
