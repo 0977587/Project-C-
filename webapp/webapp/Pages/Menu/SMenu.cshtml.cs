@@ -17,15 +17,10 @@ namespace webapp.Pages.Menu
         }
         public void OnPost()
         {
+
             string postit2 = Request.Form[nameof(postit)];
             int id = Convert.ToInt32(postit2);
-
-
-
-
             new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE(`vraagID` = '" + id + "');");
-
-
         }
     }
 }

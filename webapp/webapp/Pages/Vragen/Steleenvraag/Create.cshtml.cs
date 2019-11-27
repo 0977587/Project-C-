@@ -9,7 +9,7 @@ using webapp.Models;
 
 namespace webapp.Pages.Vragen.Steleenvraag
 {
-    public class IndexModel : PageModel
+    public class StelEenVraagModel : PageModel
     {
         public int VraagID { get; set; }
         public int UserID { get; set; }
