@@ -1,6 +1,6 @@
 ﻿
 @page
-@model webapp.Pages.MakeQueue.Queue
+@model webapp.Pages.MakeQueue.PWachtrij
 @using DatabaseController
 @using webapp.Models
 @{
@@ -74,7 +74,12 @@
                     <td class="col-md-2">@user.Voornaam</td>
                     <td class="col-md-3">@item.Locatie</td>
 
-                    <td ref="#" class="myButton" asp-controller="PWachtrij" asp-action ="BehandelVraag" asp-route ="@item.VraagID">Behandel</td>
+                    <td>
+                        <form method="post" style="display: inline">
+                            <input hidden="hidden" asp-for="postit" value="@item.VraagID" />
+                            <button>Behandel</button>
+                        </form>
+                    </td>
                 </tr>
                 }
             </tbody>

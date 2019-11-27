@@ -6,21 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using webapp.Models;
 
-namespace Test_webapp.Pages
+namespace webapp.Pages.MakeQueue
 {
     public class PWachtrij : PageModel
     {
-        public void OnGet()
+        public string postit { get; set; }
+        public void OnPost()
         {
-            
-        }
-        public ActionResult BehandelVraag(int choice)
-        {
+
+            string postit2 = Request.Form[nameof(postit)];
+            int id = Convert.ToInt32(postit2);
             Vraag vraag = new Vraag();
-            vraag.SelectOne(choice);
+            vraag.SelectOne(id);
             vraag.isInProgress = true;
             vraag.Update();
-            return Redirect(Request.Path);
+           
         }
+
     }
 }

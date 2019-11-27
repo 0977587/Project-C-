@@ -31,6 +31,24 @@
 
     }
 
+    List<Vraag> Vragen = new List<Vraag>();
+    DBConnection dbc = Sessie.GetInstance.dbc;
+    List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.vraag WHERE IsFAQ = 1;");
+    if (returnstatement != null)
+    {
+
+        foreach (var i in returnstatement)
+        {
+            Vraag a = new Vraag();
+            a.SelectOne(Convert.ToInt32(i[0]));
+            Vragen.Add(a);
+            List<List<String>> vk = dbc.Send("SELECT * FROM projectcdb.vak WHERE VakID = '"+i[2]+"';");
+            a.VakNaam = vk[0][3];
+
+        }
+
+    }
+
 
 
 }
@@ -71,6 +89,36 @@
 
         <button>Submit</button>
     </form>
+    <div class="col-xs-6">
+        <h2 class="sub-header">FAQ</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">Vak</th>
+                        <th class="col-md-1">Vraag</th>
+                        <th class="col-md-1">Antwoord</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Vragen)
+                    {
+
+                        <tr>
+                            <td nowrap>@item.VakNaam</td>
+                            <td>@item.VraagText</td>
+                            <td>@item.AndwoordText</td>
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </body>
 </html>

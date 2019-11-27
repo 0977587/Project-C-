@@ -34,6 +34,8 @@ namespace webapp.Models
 
         public string wachtrijNaam { get; set; }
 
+        public string VakNaam { get; set; }
+
         //constructor met andwoordtext
         public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie, Boolean isinprogress)
         {

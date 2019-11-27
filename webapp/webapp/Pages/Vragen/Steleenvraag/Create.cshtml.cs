@@ -24,6 +24,9 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public DateTime EndDate { get; set; }
         public string Locatie { get; set; }
         public int WachtrijID { get; set; }
+
+        public string postit { get; set; }
+
         public void OnGet()
         {
             //VraagText = "voer hier je vraag in";
