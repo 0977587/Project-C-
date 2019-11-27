@@ -143,8 +143,9 @@
 
 
 
-    <form id="logoutbtn">
-        <button class="myButton" asp-controller="LogOutController" asp-action="LogOut">Log Uit</button>
+    <form id="logoutbtn" method="post">
+        <input hidden="hidden" asp-for="LU" value="1" />
+        <button class="myButton">Log Uit</button>
     </form>
 
     <h2 class="text-body">Announcements</h2>
@@ -190,9 +191,6 @@
                     }
                 </tbody>
             </table>
-        </div>
-        <div>
-            @TempData["buttonval"]
         </div>
 </body>
 </html>
