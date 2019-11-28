@@ -4,17 +4,6 @@
 @using webapp.Models
 @{
     ViewData["Title"] = "Vraag stellen";
-    List
-    <string>
-    temp = new List <string>
-    ();
-    temp.Add("Analyse");
-    temp.Add("Development");
-    temp.Add("Project A");
-    temp.Add("Project B");
-
-    
-   
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +12,11 @@
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+    }
+     #invul
+    {
+        width: 100%;
+        font-size:12pt;
     }
 
     .myButton {
@@ -123,7 +117,8 @@
                 <th class="col-md-1">Vraag</th>
                 <th class="col-md-2">Naam</th>
                 <th class="col-md-3">Lokaal</th>
-                <th class="col-md-4">choice</th>
+                <th class="col-md-4">isFaq</th>
+                <th class="col-md-5">choice</th>
 
             </tr>
         </thead>
@@ -135,8 +130,6 @@
             @foreach (var item in Model.Vragen2)
             {
 
-                int intkeus = Model.Vragen2.IndexOf(item);
-                string stringkeus = intkeus.ToString();
                 count2++;
                 if (count2 > 5)
                 {
@@ -144,18 +137,44 @@
                 }
 
             <tr>
-                <td class="col-md-1">@item.VraagText</td>
+                <form method="post">
+                <td class="col-md-1">
+                    @item.VraagText
+                    <br />
+                    <input id="Invul" asp-for="Antwoord" placeholder="Antwoord">
+                </td>
+
                 <td class="col-md-2">@item.VraagID</td>
                 <td class="col-md-3">@item.Locatie</td>
                 <td>
-                    <form method="post">
-                        <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
-                        <button ref="#" class="myButton">Behandel</button>
-                    </form>
-                    </td>
+                    <input id="IsChecked" type="checkbox" onclick="myFunction()"> is Faq/>
+
+                    <select id="Vak" asp-for="Vak">
+                        @foreach (String temp in Model.Vakkenlijst)
+                        {
+                            <option>@temp</option>
+                        }
+                    </select>
+                </td>
+                <td>
+
+                    
+                    <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
+                    <input id="isChecekd" hidden="hidden" asp-for="IsChecked" value="IsChecked" />
+
+                    <button ref="#" onclick="myFunction()" class="myButton">Behandel</button>
+
+                </td>
+            </form>
             </tr>
             }
         </tbody>
     </table>
 </div>
 </html>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myCheck").checked;
+        document.getElementById('isChecekd').value = x;
+    }
+</script>

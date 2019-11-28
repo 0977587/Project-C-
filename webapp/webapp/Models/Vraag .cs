@@ -24,10 +24,9 @@ namespace webapp.Models
         public string Locatie { get; set; }
 
         public int WachtrijID { get; set; }
-        
+
         public Boolean isInProgress { get; set; }
 
-        //alternative variable
         public int positie { get; set; }
 
         public DateTime WachtrijEndDate { get; set; }
@@ -242,7 +241,11 @@ namespace webapp.Models
             }
             new DBConnection().Send("INSERT `projectcdb`.`vraag` SET `VraagID` = '" + VraagID + "',`UserID` = '" + UserID + "', `VakID` = '" + VakID + "', `VraagText` = '" + VraagText + "', `AndwoordText` = '" + AndwoordText + "', `IsFAQ` = '" + IsFAQbool + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' ;");
         }
+        public void InsertFaq(String vak)
+        {
+            new DBConnection().Send("INSERT `projectcdb`.`faqvragen` SET `vraag` = '" + VraagText + "',`vak` = '" + vak + "', `antwoord` = '" + AndwoordText + "' ;"); 
+        }
     }
+        
 
-
-}
+}   
