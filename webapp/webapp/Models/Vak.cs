@@ -70,32 +70,6 @@ namespace webapp.Models
                 }
             }
         }
-        public void SelectOneX(int input)
-        {
-            //geef vakID mee
-            DBConnection dbc = Sessie.GetInstance.dbc;
-            List<List<string>> returnstatement = dbc.SendX("SELECT * FROM projectcdb.vak WHERE vakID = " + input + ";");
-            VakID = Convert.ToInt32(returnstatement[0][0]);
-            if (returnstatement[0][1] != "")
-                Docent = returnstatement[0][1];
-            if (returnstatement[0][2] != "")
-                Locaal = returnstatement[0][2];
-            if (returnstatement[0][3] != "")
-                Naam = returnstatement[0][3];
-            if (returnstatement[0][4] != "")
-                Discriptie = returnstatement[0][4];
-            if (returnstatement[0][5] != "")
-            {
-                if (returnstatement[0][5] == "0")
-                {
-                    Isleeg = false;
-                }
-                else
-                {
-                    Isleeg = true;
-                }
-            }
-        }
         public List<Vak> SelectAll()
         {
             //geef vraagID mee
@@ -161,7 +135,7 @@ namespace webapp.Models
         }
         public void setinfo()
         {
-            DBConnection DBC = Sessie.GetInstance.dbc;
+            DBConnection DBC = new DBConnection();
             List<List<string>> returnstatement2 = DBC.Send("SELECT * FROM projectcdb.roosterdag where Uur1 = " + this.VakID + " Or Uur2 = " + this.VakID + " Or Uur3 = " + this.VakID + " Or Uur4 = " + this.VakID + " Or Uur5 = " + this.VakID + " Or Uur6 = " + this.VakID + " Or Uur7 = " + this.VakID + " Or Uur8 = " + this.VakID + " Or Uur9 = " + this.VakID + " Or Uur10 = " + this.VakID + " Or Uur11 = " + this.VakID + " Or Uur12 = " + this.VakID + " Or Uur13 = " + this.VakID + " Or Uur14 = " + this.VakID + " Or Uur15 = " + this.VakID + ";");
             this.dagnaam = returnstatement2[0][17];
             List<int> ulist = new List<int>();

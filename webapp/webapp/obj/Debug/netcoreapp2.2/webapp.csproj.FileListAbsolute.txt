@@ -99,8 +99,6 @@ C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\PAgenda.cshtml.g.cs
-C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Agenda\SAgenda.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\MakeQueue\create.cshtml.g.cs
@@ -255,3 +253,4 @@ C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webap
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.dll
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.pdb
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csproj.CopyComplete
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Create.cshtml.g.cs

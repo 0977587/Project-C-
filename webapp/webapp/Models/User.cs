@@ -133,16 +133,7 @@ namespace webapp.Models
         }
         public void Update()
         {
-            int IsLeegbool;
-            if (IsEmailGeverifieerd == true)
-            {
-                IsLeegbool = 1;
-            }
-            else
-            {
-                IsLeegbool = 0;
-            }
-            new DBConnection().Send("UPDATE `projectcdb`.`user` SET `Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "',`IsEmailGeverifieerd` = '" + IsLeegbool + "',`ActivatieCode` = '" + ActivatieCode + "',`ResetWachtwoordCode` = '" + ResetWachtwoordCode + "'WHERE (`UserID` = '" + UserID + "');");
+            new DBConnection().Send("UPDATE `projectcdb`.`user` SET `Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "' WHERE userID = '"+ UserID+ "';");
         }
         public void Insert()
         {
