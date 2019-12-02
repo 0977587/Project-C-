@@ -207,3 +207,5 @@ C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj
 C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.dll
 C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.pdb
 C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csproj.CopyComplete
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\Create.cshtml.g.cs
+C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\PeerRegistratie.cshtml.g.cs
