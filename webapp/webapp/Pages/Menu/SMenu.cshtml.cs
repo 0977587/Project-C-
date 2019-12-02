@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DatabaseController;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using webapp.Models;
 
 namespace webapp.Pages.Menu
 {
@@ -12,9 +13,10 @@ namespace webapp.Pages.Menu
     {
         public string postit { get; set; }
         public int LU { get; set; }
+        public string announceText { get; set; }
         public static void OnGet()
         {
-
+           
         }
         public void OnPost()
         {

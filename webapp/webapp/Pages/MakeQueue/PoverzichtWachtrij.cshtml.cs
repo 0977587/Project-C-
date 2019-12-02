@@ -26,9 +26,6 @@ namespace webapp.Pages.MakeQueue
         public List<Vak> Vakken {get;set;}
         public string Vak { get; set; }
         public List<string> Vakkenlijst { get; set; }
-
-
-        
         public void OnGet()
         {
             int id = Sessie.GetInstance.getChoice();

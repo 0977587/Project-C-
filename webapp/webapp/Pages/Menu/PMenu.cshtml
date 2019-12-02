@@ -138,6 +138,11 @@
             top: 30%;
             left: 35%
         }
+         #annbtn {
+            position: absolute;
+            top: 40%;
+            left: 35%
+        }
 
         #wachtrijbekijkenbtn {
             position: absolute;
@@ -184,11 +189,12 @@
 
 <form id="logoutbtn" method="post">
     <input hidden="hidden" asp-for="LU" value="1" />
-    <button class="myButton">Log Uit</button>
+    <button class="myButton2">Log Uit</button>
 </form>
 
-<form id="faqbtn" action="../FAQ/overzichtFAQ" method="get">
-    <button class="myButton">FAQ</button>
+
+<form id="annbtn" action="../Announcements/Announcement" method="get">
+    <button class="myButton">Announcements</button>
 </form>
 <br />
 <br />
@@ -224,7 +230,7 @@
                         <input hidden="hidden" asp-for="Choice" value="@tempChoices[count2]" />
                         
                         <td class="col-md-1">@x</td>
-                        <td class="col-md-2"> @temptimes[count2] </td>
+                        <td class="col-md-2"> Open tot @temptimes[count2] </td>
                         <td class="col-md-3">
                             <button class = "myButton4">ga naar wachtrij</button>
                         </td>
