@@ -13,7 +13,7 @@ namespace webapp.Pages.Agenda
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 1 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\_ViewImports.cshtml"
+#line 1 "C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\Pages\_ViewImports.cshtml"
 using webapp;
 
 #line default
@@ -25,7 +25,7 @@ using webapp;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
-#line 3 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Agenda\SAgenda.cshtml"
+#line 3 "C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\Pages\Agenda\SAgenda.cshtml"
   
     ViewData["Title"] = "Agenda";
 
@@ -35,7 +35,7 @@ using webapp;
             WriteLiteral("<h1>");
             EndContext();
             BeginContext(75, 17, false);
-#line 6 "C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\Pages\Agenda\SAgenda.cshtml"
+#line 6 "C:\Users\Matthijs\Documents\GitHub\Project-C-\webapp\webapp\Pages\Agenda\SAgenda.cshtml"
 Write(ViewData["Title"]);
 
 #line default
