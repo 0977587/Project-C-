@@ -13,6 +13,7 @@ namespace webapp.Pages.MakeQueue
 {
     public class PWachtrij : PageModel
     {
+        public string Title { get; set; }
         public int Choice { get; set; }
         public Wachtrij Wachtrij { get; set; }
         public List<Vraag> Vragen { get; set; }
@@ -55,6 +56,8 @@ namespace webapp.Pages.MakeQueue
 
                 Wachtrij Wachtrij = new Wachtrij();
                 Wachtrij.SelectOne(id);
+
+                Title = Wachtrij.Name.Replace(";","");
                 Vragen = Wachtrij.getVragen(0);
                 Vragen2 = Wachtrij.getVragen(1);
                 Amount = Wachtrij.getVragenAmount();
@@ -62,7 +65,8 @@ namespace webapp.Pages.MakeQueue
                 Vraag vraag = new Vraag();
             }
             else{
-                List<Vak> Vakken = new List<Vak>();
+                Title = "Algemeen";
+                List <Vak> Vakken = new List<Vak>();
 
                 DBConnection dbc = new DBConnection();
                 List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.vak;");
