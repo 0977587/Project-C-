@@ -1,5 +1,6 @@
 ﻿using DatabaseController;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -27,7 +28,14 @@ namespace webapp.Pages.Registratie
             string p = Request.Form[nameof(peercoach)];
             if(Convert.ToInt32(p) != 1)
             {
-                User u = new User();
+                Voornaam = Request.Form[nameof(Voornaam)];
+                Achternaam = Request.Form[nameof(Achternaam)];
+                Email = Request.Form[nameof(Email)];
+                Wachtwoord = Request.Form[nameof(Wachtwoord)];
+                Klas = Request.Form[nameof(Klas)];
+                User u = new User("s", Convert.ToInt32(Klas), Voornaam, Achternaam, Email, Wachtwoord);
+                u.Insert();
+
             }
             else
             {

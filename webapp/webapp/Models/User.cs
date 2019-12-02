@@ -18,23 +18,29 @@ namespace webapp.Models
         public string ActivatieCode { get; set; }
         public string ResetWachtwoordCode { get; set; }
 
-        public User(int userID, string rol, int klasID, string voornaam, string achternaam, string email, string wachtwoord, bool isEmailGeverifieerd, string activatieCode, string resetWachtwoordcode)
+        public User(string rol, int klasID, string voornaam, string achternaam, string email, string wachtwoord)
         {
-            UserID = userID;
             Rol = rol;
             KlasID = klasID;
             Voornaam = voornaam;
             Email = email;
             Wachtwoord = wachtwoord;
             Achternaam = achternaam;
-            IsEmailGeverifieerd = isEmailGeverifieerd;
-            ActivatieCode = activatieCode;
-            ResetWachtwoordCode = resetWachtwoordcode;
         }
         //lege constructor
         public User()
         {
 
+        }
+
+        public User(string rol, string voornaam, string achternaam, string email, string wachtwoord)
+        {
+            KlasID = 0;
+            Rol = rol;
+            Voornaam = voornaam;
+            Email = email;
+            Wachtwoord = wachtwoord;
+            Achternaam = achternaam;
         }
         //constructor zonder resetWachtwoordcode
         public User(int userID, string rol, int klasID, string voornaam, string email, string wachtwoord, string achternaam, bool isEmailGeverifieerd, string activatieCode)
@@ -78,21 +84,7 @@ namespace webapp.Models
                 Wachtwoord = returnstatement[0][5];
             if (returnstatement[0][6] != "")
                 Achternaam = returnstatement[0][6];
-            if (returnstatement[0][7] != "")
-            {
-                if (returnstatement[0][7] == "0")
-                {
-                    IsEmailGeverifieerd = false;
-                }
-                else
-                {
-                    IsEmailGeverifieerd = true;
-                }
-            }
-            if (returnstatement[0][8] != "")
-                ActivatieCode = returnstatement[0][8];
-            if (returnstatement[0][9] != "")
-                ResetWachtwoordCode = returnstatement[0][9];
+
         }
         public List<User> SelectAll()
         {
