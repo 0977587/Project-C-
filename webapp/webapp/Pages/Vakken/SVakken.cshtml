@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Vakken";
     List<Vak> Vakken = new List<Vak>();
-    DBConnection dbc = Sessie.GetInstance.dbc;
+    DBConnection dbc = new DBConnection();
     List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.ingeschrevenvakken WHERE UserID = " + Sessie.GetInstance.getLoginUserID() + ";");
     if (returnstatement != null)
     {
@@ -14,7 +14,7 @@
         foreach (var i in returnstatement)
         {
             Vak a = new Vak();
-            a.SelectOneX(Convert.ToInt32(i[2]));
+            a.SelectOne(Convert.ToInt32(i[2]));
             Vakken.Add(a);
             a.setinfo();
 
