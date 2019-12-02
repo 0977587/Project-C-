@@ -255,3 +255,6 @@ C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webap
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.dll
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.pdb
 C:\Users\Matthijs\Desktop\New folder\webapp\webapp\obj\Debug\netcoreapp2.2\webapp.csproj.CopyComplete
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\FAQ\overzichtFAQ.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\Create.cshtml.g.cs
+C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\PeerRegistratie.cshtml.g.cs
