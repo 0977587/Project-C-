@@ -30,6 +30,7 @@ namespace webapp.Pages.Registratie
             if (PeercoachW == "pc")
             {
                 Voornaam = Request.Form[nameof(Voornaam)];
+                Achternaam = Request.Form[nameof(Achternaam)];
                 Email = Request.Form[nameof(Email)];
                 Wachtwoord = Request.Form[nameof(Wachtwoord)];
                 User u = new User("p", Voornaam, Achternaam, Email, Wachtwoord);
