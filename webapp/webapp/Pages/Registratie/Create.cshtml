@@ -1,0 +1,39 @@
+﻿@page
+@model webapp.Pages.Registratie.Registratiemodel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using DatabaseController
+@using webapp.Models
+@using System;
+@using System.Collections.Generic;
+
+@{
+    //List<List<string>> db = new DBConnection().Send();
+
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <form method="post" style="display: inline">
+
+        <input id="Voornaam" placeholder="Voornaam" asp-for="Voornaam" />
+        <br />
+        <input id="Voornaam" placeholder="Achternaam" asp-for="Achternaam" />
+        <br />
+        <input id="Voornaam" placeholder="Email" asp-for="Email" />
+        <br />
+        <input id="Voornaam" type="password" placeholder="Wachtwoord" asp-for="Wachtwoord" />
+        <br />
+        <button>Submit</button>
+    </form>
+
+    <form method="post" style="display:inline">
+        <input hidden="hidden" value="1" asp-for="peercoach" />
+        <button>Peercoach?</button>
+    </form>
+</body>
+</html>
