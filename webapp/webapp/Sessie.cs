@@ -12,6 +12,7 @@ namespace webapp
 
 
         int LoginUserID = -1;
+        int Choice = -1;
         public DatabaseController.DBConnection dbc = new DatabaseController.DBConnection();
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
@@ -33,6 +34,16 @@ namespace webapp
         public void setLoginUserID(int a)
         {
             LoginUserID = a;
+
+        }
+        public int getChoice()
+        {
+            return Choice;
+
+        }
+        public void setChoice(int a)
+        {
+            Choice = a;
 
         }
 
