@@ -1,5 +1,5 @@
 ﻿@page
-@model webapp.Pages.FAQ.overzichtFAQModel
+@model webapp.Pages.FAQ.SoverzichtFAQModel
 @using webapp.Models
 @using DatabaseController
 @{
@@ -14,16 +14,7 @@
         Blokken.Add(blok);
     }
 }
-    <form method="post" style="display: inline">
 
-        <input id="SelectLocatie" placeholder="Zoek een vraag" asp-for="vraag" />
-
-        <br />
-
-
-
-        <button>Submit</button>
-    </form>
 <center>overzicht van de FAQ</center>
 <br />
 <br />
@@ -78,13 +69,13 @@
         nrs.push(nr)
 
         document.getElementById(nr).style.display = "block"
-        console.log(nr+" pushed")
+        console.log(nr + " pushed")
 
 
     }
-        function myFunction(item, index) {
-            document.getElementById(item).style.display = "none"
-            console.log(item)
+    function myFunction(item, index) {
+        document.getElementById(item).style.display = "none"
+        console.log(item)
     }
 </script>
 <style>

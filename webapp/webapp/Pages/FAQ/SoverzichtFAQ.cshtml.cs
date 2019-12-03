@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace webapp.Pages.FAQ
 {
-    public class overzichtFAQModel : PageModel
+    public class SoverzichtFAQModel : PageModel
     {
-        public string vraag;
         public void OnGet()
         {
 
