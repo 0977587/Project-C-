@@ -26,7 +26,7 @@ namespace webapp.Pages.Registratie
         public void OnPost()
         {
             string p = Request.Form[nameof(peercoach)];
-            if(Convert.ToInt32(p) != 1)
+            if (Convert.ToInt32(p) != 1)
             {
                 Voornaam = Request.Form[nameof(Voornaam)];
                 Achternaam = Request.Form[nameof(Achternaam)];

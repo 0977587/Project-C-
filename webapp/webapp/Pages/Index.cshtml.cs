@@ -23,11 +23,6 @@ namespace webapp.Pages
 
             int id = Sessie.GetInstance.getLoginUserID();
 
-
-
-
-
-            int x = 5;
             if(id != -1)
             {
                 User u = new User();

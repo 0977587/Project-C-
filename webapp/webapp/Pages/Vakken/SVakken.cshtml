@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Vakken";
     List<Vak> Vakken = new List<Vak>();
-    DBConnection dbc = Sessie.GetInstance.dbc;
+    DBConnection dbc = new DBConnection();
     List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.ingeschrevenvakken WHERE UserID = " + Sessie.GetInstance.getLoginUserID() + ";");
     if (returnstatement != null)
     {
@@ -21,10 +21,6 @@
         }
         
     }
- 
-
-
-
 }
 
 <!DOCTYPE html>
