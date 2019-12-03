@@ -10,7 +10,7 @@ namespace webapp.Pages
 {
     public class AnnouncementModel : PageModel
     {
-        public Announcements announceText { get; set; }
+        public Announcements AnnounceText { get; set; }
         public string inputText { get; set; }
         public int LU { get; set; }
         public DateTime now { get; set; }
@@ -19,7 +19,7 @@ namespace webapp.Pages
         {
             Announcements temp = new Announcements();
             temp.getAnnouncements();
-            announceText = temp;
+            AnnounceText = temp;
         }
         public void OnPost()
         {
@@ -28,11 +28,11 @@ namespace webapp.Pages
             {
                 Announcements ann = new Announcements();
                 ann.getAnnouncements();
-                announceText = ann;
+                AnnounceText = ann;
                 string temp = Request.Form[nameof(inputText)];
-                if (temp != null && announceText.announcement != null)
+                if (temp != null && AnnounceText.announcement != null)
                 {
-                    announceText.deleteAnnouncement();
+                    AnnounceText.deleteAnnouncement();
                 }
                 if (temp != null)
                 {
@@ -48,8 +48,8 @@ namespace webapp.Pages
             {
                 Announcements ann = new Announcements();
                 ann.getAnnouncements();
-                announceText = ann;
-                announceText.deleteAnnouncement();
+                AnnounceText = ann;
+                AnnounceText.deleteAnnouncement();
             }
             OnGet();
         }

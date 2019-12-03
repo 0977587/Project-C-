@@ -6,7 +6,7 @@
     ViewData["Title"] = "FAQ";
     List<List<String>> Vakken = new List<List<String>>();
     DBConnection dbc = new DBConnection();
-    Vakken = dbc.Send("SELECT distinct vak FROM projectcdb.faqvragen;");
+    Vakken = dbc.Send("SELECT distinct vak,vraagid FROM projectcdb.faqvragen;");
     List<List<List<String>>> Blokken = new List<List<List<String>>>();
     foreach (var vak in Vakken)
     {
@@ -22,7 +22,7 @@
     <center>
         @foreach (var item in Vakken)
         {
-            <a href="#" class="button" onclick='show("@item[0]");'>
+            <a href="#" class="button" onclick='show("@item[1]");'>
                 <span>@item[0]</span>
             </a>
             <p>&nbsp;&nbsp;</p>
@@ -34,7 +34,7 @@
     {
         <td>
 
-            <Table id=@item2[0][1] class="table table-striped" style="display:none" title="@item2[0][1]">
+            <Table id=@item2[0][3] class="table table-striped" style="display:none" title="@item2[0][1]">
                 <thead>
                     <tr>
                         <th class="col-md-1">Vraag</th>
