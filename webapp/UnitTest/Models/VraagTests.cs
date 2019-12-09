@@ -66,7 +66,7 @@ namespace UnitTest.Models
             Assert.IsInstanceOfType(fullVraag.isInProgress, typeof(bool));
         }
         /*
-         * this method test setter of vraagiD
+         * this m   ethod test setter of vraagiD
          */
         [TestMethod]
         public void setVraagID()
