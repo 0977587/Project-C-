@@ -105,7 +105,6 @@ namespace webapp.Models
         }
         public void Delete()
         {
-            //geef vraagID mee  
             List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`vak` WHERE (`vakID` = '" + VakID + "');");
         }
         public void Update()

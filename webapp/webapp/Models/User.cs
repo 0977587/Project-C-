@@ -56,16 +56,6 @@ namespace webapp.Models
             ActivatieCode = activatieCode;
         }
 
-        public int returnUserlength()
-        {
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(UserID) FROM projectcdb.user");
-            if (returnstatement[0][0].Equals(""))
-            {
-                return 0;
-            }
-            int length = Convert.ToInt32(returnstatement[0][0]);
-            return length + 1;
-        }
         public void SelectOne(int input)
         {
             //geef vraagID mee
@@ -86,50 +76,7 @@ namespace webapp.Models
                 Achternaam = returnstatement[0][6];
 
         }
-        public List<User> SelectAll()
-        {
-            //geef vraagID mee
-            List<User> returnlist = new List<User>();
-            List<List<string>> returnstatement = new DBConnection().Send("SELECT * FROM projectcdb.user;");
-            foreach (List<string> returnstatement2 in returnstatement)
-            {
-                User u = new User();
-                u.UserID = Convert.ToInt32(returnstatement2[0]);
-                if (returnstatement2[1] != "")
-                    u.Rol = returnstatement2[1];
-                if (returnstatement2[2] != "")
-                    u.KlasID = Convert.ToInt32(returnstatement2[2]);
-                if (returnstatement2[3] != "")
-                    u.Voornaam = returnstatement2[3];
-                if (returnstatement2[4] != "")
-                    u.Email = returnstatement[0][4];
-                if (returnstatement2[5] != "")
-                {
-                    string tempo = returnstatement2[5];
-                    
-                    u.Wachtwoord =  returnstatement2[5];
-                }
-                if (returnstatement2[6] != "")
-                    u.Achternaam = returnstatement2[6];
-                if (returnstatement2[7] != "")
-                {
-                    if (returnstatement2[7] == "0")
-                    {
-                        u.IsEmailGeverifieerd = false;
-                    }
-                    else
-                    {
-                        u.IsEmailGeverifieerd = true;
-                    }
-                }
-                if (returnstatement2[8] != "")
-                    u.ActivatieCode = returnstatement2[8];
-                if (returnstatement2[9] != "")
-                    u.ResetWachtwoordCode = returnstatement2[9];
-                returnlist.Add(u);
-            }
-            return returnlist;
-        }
+
         public void Delete()
         {
             //geef userID mee  
