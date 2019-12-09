@@ -73,18 +73,6 @@ namespace webapp.Models
             return length + 1;
         }
 
-        //constructor zonder andwoordtext
-        public Vraag(int vraagID, int userID, int vakID, string vraagText, bool isFAQ, string andwoordText, DateTime dateAdded, DateTime endDate)
-        {
-            VraagID = vraagID;
-            UserID = userID;
-            VakID = vakID;
-            VraagText = vraagText;
-            IsFAQ = isFAQ;
-            DateAdded = dateAdded;
-            EndDate = endDate;
-        }
-     
 
         public Vraag()
         {

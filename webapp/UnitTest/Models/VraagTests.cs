@@ -167,14 +167,38 @@ namespace UnitTest.Models
 
 
         /*
-         * this method tests returnVraagLength
-         */
+        * this method tests returnVraagLength with empty list of questions
+        */
         [TestMethod]
         public void testreturnVraagLength()
         {
             List<Vraag> vragenLijst = new List<Vraag>();
+            
+            Assert.AreEqual(returnVraagLength(vragenLijst), 0);
+        }
+
+        /*
+       * this method tests returnVraagLength with a list of 1 question
+       */
+        [TestMethod]
+        public void testreturnVraagLengthWithaQuestions()
+        {
+            List<Vraag> vragenLijst = new List<Vraag>();
+            vragenLijst.Add(vraag1);
+            Assert.AreEqual(returnVraagLength(vragenLijst), 2);
+        }
+
+        /*
+         * this method tests returnVraagLength with different size of questions
+         */
+        [TestMethod]
+        public void testreturnVraagLengthWithMultipleQuestions()
+        {
+            List<Vraag> vragenLijst = new List<Vraag>();
             vragenLijst.Add(vraag1);
             vragenLijst.Add(vraag2);
+
+            Assert.AreEqual(returnVraagLength(vragenLijst), 3);
             vragenLijst.Add(vraag3);
             Assert.AreEqual(returnVraagLength(vragenLijst),4);
         }
@@ -183,15 +207,19 @@ namespace UnitTest.Models
 
         // start of functions to reproduce
 
-
+        /*
+         * this method returns the length of vragenlijst
+         */
         public int returnVraagLength(List<Vraag> vragenLijst)
         {
-            if (returnstatement[0][0].Equals(""))
+            if (vragenLijst.Count == 0)
             {
                 return 0;
             }
-            int length = Convert.ToInt32(returnstatement[0][0]);
-            return length + 1;
+            else
+            {
+                return vragenLijst.Count + 1;
+            }
         }
     }
 }
