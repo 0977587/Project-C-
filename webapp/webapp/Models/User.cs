@@ -104,7 +104,11 @@ namespace webapp.Models
                 if (returnstatement2[4] != "")
                     u.Email = returnstatement[0][4];
                 if (returnstatement2[5] != "")
-                    u.Wachtwoord = returnstatement2[5];
+                {
+                    string tempo = returnstatement2[5];
+                    
+                    u.Wachtwoord =  returnstatement2[5];
+                }
                 if (returnstatement2[6] != "")
                     u.Achternaam = returnstatement2[6];
                 if (returnstatement2[7] != "")
@@ -137,6 +141,7 @@ namespace webapp.Models
         }
         public void Insert()
         {
+            Wachtwoord.GetHashCode();
             new DBConnection().Send("INSERT `projectcdb`.`user` SET `Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "';");
         }
     }
