@@ -4,10 +4,10 @@
     ViewData["Title"] = "Announcement";
     string welcometext = "";
     string temptext = "";
-    if(Model.announceText.announcement != null)
+    if(Model.AnnounceText.announcement != null)
     {
         welcometext = "This is your current Announcement:";
-        
+
         temptext = "Would you like to change it?";
     }
     else
@@ -21,10 +21,10 @@
 
 <body>
     @welcometext
-    @Model.announceText.announcement
+    @Model.AnnounceText.announcement
     <br />
     @temptext
-    @if (Model.announceText.announcement != null)
+    @if (Model.AnnounceText.announcement != null)
     {
         <form method="post">
           
@@ -44,7 +44,7 @@
     }
 
     <form method="post">
-        @if (Model.announceText.announcement == null)
+        @if (Model.AnnounceText.announcement == null)
         {
             <div class="container">
                 <div class="group">

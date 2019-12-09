@@ -33,6 +33,8 @@ namespace webapp.Pages.Registratie
                 Email = Request.Form[nameof(Email)];
                 Wachtwoord = Request.Form[nameof(Wachtwoord)];
                 Klas = Request.Form[nameof(Klas)];
+                //todo hashen
+               
                 User u = new User("s", Convert.ToInt32(Klas), Voornaam, Achternaam, Email, Wachtwoord);
                 u.Insert();
 

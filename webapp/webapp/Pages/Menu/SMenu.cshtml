@@ -126,12 +126,26 @@
         #mijnaccountbtn {
             position: absolute;
             left: 15%;
-            top: 40%;
+            top: 30%;
         }
 
         #table {
             position: absolute;
             top: 75%;
+        }
+        #faqbtn{
+            position: absolute;
+            left: 35%;
+            top: 30%;
+
+        }
+
+        
+        #test {
+            position: absolute;
+            top: 60%;
+            left: 15%;
+            width: 70%;
         }
     </style>
 
@@ -148,6 +162,9 @@
     </form>
     <form id="steleenvraagbtn" action="../Vragen/Steleenvraag/Create" method="get">
         <button class="myButton">Vragen</button>
+    </form>
+    <form id="faqbtn" action="../FAQ/SoverzichtFAQ" method="get">
+        <button class="myButton">FAQ</button>
     </form>
 
     <form id="mijnaccountbtn" action="../Account/Create" method="get">
@@ -178,7 +195,7 @@
                         <th class="col-md-1">Vraag</th>
                         <th class="col-md-2">Wachtrij</th>
                         <th class="col-md-3">Positie</th>
-                        <th class="col-md-4">Eindtijd </th>
+                        <th class="col-md-4">Eindtijd van de wachtrij</th>
                         <th align="right" class="col=md-3"></th>
                 </thead>
                 <tbody>

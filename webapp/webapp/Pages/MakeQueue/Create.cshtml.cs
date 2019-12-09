@@ -40,6 +40,7 @@ namespace webapp.Pages.MakeQueue
             int length = temp.returnWachtrijLength();
             temp.WachtrijID = length;
             temp.Insert();
+            Response.Redirect("/Menu/PMenu");
         }
     }
 }

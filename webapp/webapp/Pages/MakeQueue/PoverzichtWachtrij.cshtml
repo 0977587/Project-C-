@@ -77,7 +77,6 @@
                     <th class="col-md-1">Vraag</th>
                     <th class="col-md-2">Naam</th>
                     <th class="col-md-3">Lokaal</th>
-                    <th class="col=md-4"> choice</th>
                 </tr>
             </thead>
             <tbody>
@@ -132,7 +131,9 @@
 
             @foreach (var item in Model.Vragen2)
             {
-
+                var x = @item.UserID;
+                User use = new User();
+                use.SelectOne(item.UserID);
                 count2++;
                 if (count2 > 5)
                 {
@@ -147,7 +148,7 @@
                     <input id="Invul" asp-for="Antwoord" placeholder="Antwoord">
                 </td>
 
-                <td class="col-md-2">@item.VraagID</td>
+                <td class="col-md-2">@use.Voornaam</td>
                 <td class="col-md-3">@item.Locatie</td>
                 <td>
                     <input id="IsChecked" type="checkbox" onclick="myFunction()"> is Faq

@@ -14,11 +14,16 @@
     List<Vak> vakken = new List<Vak>();
 
     List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " + UserID.ToString() + ";");
+    List<string> tempvakken = new List<string>();
     foreach (List<string> temp in connect)
     {
         Vak a = new Vak();
         a.SelectOne(Convert.ToInt32(temp[2]));
-        vakken.Add(a);
+        if(!tempvakken.Contains(a.Naam))
+        {
+            vakken.Add(a);
+            tempvakken.Add(a.Naam);
+        }
     }
 
     List<Wachtrij> Wachtrijen = new List<Wachtrij>();

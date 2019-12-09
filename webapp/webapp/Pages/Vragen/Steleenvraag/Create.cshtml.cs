@@ -45,6 +45,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
             int length = temp.returnVraagLength();
             temp.VraagID = length;
             temp.Insert();
+            Response.Redirect("/Menu/SMenu");
         }
     }
 }
