@@ -14,16 +14,11 @@
     List<Vak> vakken = new List<Vak>();
 
     List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " + UserID.ToString() + ";");
-    List<string> tempvakken = new List<string>();
     foreach (List<string> temp in connect)
     {
         Vak a = new Vak();
         a.SelectOne(Convert.ToInt32(temp[2]));
-        if(!tempvakken.Contains(a.Naam))
-        {
-            vakken.Add(a);
-            tempvakken.Add(a.Naam);
-        }
+        vakken.Add(a);
     }
 
     List<Wachtrij> Wachtrijen = new List<Wachtrij>();
@@ -49,9 +44,9 @@
 
 <body>
     <form method="post" style="display: inline">
-        <input asp-for="VraagText" placeholder="kies je vraag" />
+        <input asp-for="VraagText" placeholder="kies je vraag" value="@Model.VraagText"/>
         <br />
-        <select id="selectNumber" placeholder="kies je vak" asp-for="VakID">
+        <select id="vak" placeholder="kies je vak" asp-for="VakID">
 
             @foreach (var item in vakken)
             {
@@ -59,13 +54,13 @@
 
             }
         </select>
-
-
-        <br />
-        <input id="SelectLocatie" placeholder="Kies je locatie" asp-for="Locatie" />
+        <p id="vakT">@Model.vakT</p>
 
         <br />
-        <select id="selectNumber" placeholder="kies je Wachtrij" asp-for="WachtrijID">
+        <input id="loc" placeholder="Kies je locatie" asp-for="Locatie"value="@Model.Locatie" />
+
+        <br />
+        <select id="wacht" placeholder="kies je Wachtrij" asp-for="WachtrijID">
 
             @foreach (var item in Wachtrijen)
             {
@@ -74,8 +69,51 @@
         </select>
 
 
-        <button>Submit</button>
+        <button id="btn1" >@Model.Btntext</button>
     </form>
+    <td>
+
+        <Table id=Zoek class="table table-striped" style="display:block" title="Zoek">
+            <thead>
+                <tr>
+                    <th class="col-md-1">Vraag</th>
+                    <th class="col-md-1">Antwoord</th>
+                    <th class="col-md-1">Vak</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var z in @Model.Zoeklijst)
+                {
+
+                    <tr>
+                        <td>@z[0]</td>
+                        <td>@z[2]</td>
+                        <td>@z[1]</td>
+                    </tr>
+                }
+            </tbody>
+        </Table>
+    </td>
 
 </body>
+<script>
+    
+
+        if (@Model.Case == 0) {
+            console.log("Hello world!"); 
+            document.getElementById("loc").style.display = "none"
+            document.getElementById("wacht").style.display = "none"
+            document.getElementById("vakT").style.display = "none"
+        }
+        if (@Model.Case == 1) {
+            document.getElementById("vak").style.display = "none"
+        }
+
+
+
+    
+
+</script>
 </html>

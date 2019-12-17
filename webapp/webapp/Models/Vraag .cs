@@ -84,7 +84,11 @@ namespace webapp.Models
             DateAdded = dateAdded;
             EndDate = endDate;
         }
-     
+        //lege constructor
+        public Vraag(string v)
+        {
+
+        }
 
         public Vraag()
         {

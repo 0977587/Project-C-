@@ -9,8 +9,12 @@ namespace webapp.Pages.FAQ
 {
     public class overzichtFAQModel : PageModel
     {
-        public string vraag;
+        public string vraag { get; set; }
         public void OnGet()
+        {
+
+        }
+        public void OnPost()
         {
 
         }
