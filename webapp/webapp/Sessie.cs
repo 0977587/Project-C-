@@ -11,6 +11,7 @@ namespace webapp
         public static Sessie instance = new Sessie();
 
 
+        public int Case = 0;
         int LoginUserID = -1;
         int Choice = -1;
         public DatabaseController.DBConnection dbc = new DatabaseController.DBConnection();

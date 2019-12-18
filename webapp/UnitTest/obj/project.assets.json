@@ -8732,11 +8732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\jurri\\StudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
+      "projectPath": "C:\\Users\\jurri\\StudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
       "packagesPath": "C:\\Users\\jurri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\obj\\",
+      "outputPath": "C:\\Users\\jurri\\StudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8755,8 +8755,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj": {
-              "projectPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj"
+            "C:\\Users\\jurri\\StudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj": {
+              "projectPath": "C:\\Users\\jurri\\StudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj"
             }
           }
         }

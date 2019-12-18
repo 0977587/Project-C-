@@ -37,6 +37,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
         public void OnPost()
         {
+            Case = Sessie.GetInstance.Case;
             if (Case == 1)
             {
                 VraagID = 0;
@@ -52,6 +53,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
                 temp.VraagID = length;
                 temp.Insert();
                 Response.Redirect("/Menu/SMenu");
+                Sessie.GetInstance.Case = 0;
             }
             if (Case == 0)
             {
@@ -68,7 +70,7 @@ namespace webapp.Pages.Vragen.Steleenvraag
 
 
                 Zoeklijst = new DatabaseController.DBConnection().Send("SELECT * FROM projectcdb.faqvragen where vak = '"+vakT+"' and  vraag like '%"+VraagText+"%' or antwoord like '%"+VraagText+"%';");
-                Case = 1;
+                Sessie.GetInstance.Case = 1;
                 if (Zoeklijst.Count == 0)
                 {
                     Btntext = "Er zijn geen vergelijkbare vragen gevonden. klik hier om je vraag te stellen";
