@@ -32,15 +32,57 @@ namespace webapp.Pages.Vragen.Steleenvraag
         public string vakT { get; set; }
         public void OnGet()
         {
-            //VraagText = "voer hier je vraag in";
+            Vak v = new Vak();
+            v.SelectOne(Sessie.GetInstance.ZoekVak);
+            vakT = v.Naam;
+            Locatie = v.Locaal;
+            List<String> zoektermlist = new List<string>();
+            if(Sessie.GetInstance.Zoekterm1 != "")
+            {
+                zoektermlist.Add(Sessie.GetInstance.Zoekterm1);
+            }
+            if (Sessie.GetInstance.Zoekterm2 != "")
+            {
+                zoektermlist.Add(Sessie.GetInstance.Zoekterm2);
+            }
+            if (Sessie.GetInstance.Zoekterm3 != "")
+            {
+                zoektermlist.Add(Sessie.GetInstance.Zoekterm3);
+            }
+            if (Sessie.GetInstance.Zoekterm4 != "")
+            {
+                zoektermlist.Add(Sessie.GetInstance.Zoekterm4);
+            }
+            if (zoektermlist.Count != 0){
+                if (Sessie.GetInstance.Zoekterm1 == "")
+                {
+                    Sessie.GetInstance.Zoekterm1 = zoektermlist[0];
+                }
+                if (Sessie.GetInstance.Zoekterm2 == "")
+                {
+                    Sessie.GetInstance.Zoekterm2 = zoektermlist[0];
+                }
+                if (Sessie.GetInstance.Zoekterm3 == "")
+                {
+                    Sessie.GetInstance.Zoekterm3 = zoektermlist[0];
+                }
+                if (Sessie.GetInstance.Zoekterm4 == "")
+                {
+                    Sessie.GetInstance.Zoekterm4 = zoektermlist[0];
+                }
+                Zoeklijst = new DatabaseController.DBConnection().Send("(SELECT * FROM projectcdb.faqvragen where vak = '" + vakT + "' and  vraag like '%" + Sessie.GetInstance.Zoekterm1 + "%' or antwoord like '%" + Sessie.GetInstance.Zoekterm1 + "%') union (SELECT * FROM projectcdb.faqvragen where vak = '" + vakT + "' and  vraag like '%" + Sessie.GetInstance.Zoekterm2 + "%' or antwoord like '%" + Sessie.GetInstance.Zoekterm2 + "%') union (SELECT * FROM projectcdb.faqvragen where vak = '" + vakT + "' and  vraag like '%" + Sessie.GetInstance.Zoekterm3 + "%' or antwoord like '%" + Sessie.GetInstance.Zoekterm3 + "%') union (SELECT * FROM projectcdb.faqvragen where vak = '" + vakT + "' and  vraag like '%" + Sessie.GetInstance.Zoekterm4 + "%' or antwoord like '%" + Sessie.GetInstance.Zoekterm4 + "%')");
+
+            }
+            else
+            {
+                Zoeklijst = new List<List<string>>();
+            }
+          
         }
 
         public void OnPost()
         {
-            Case = Sessie.GetInstance.Case;
-            if (Case == 1)
-            {
-                VraagID = 0;
+            VraagID = 0;
                 UserID = Sessie.GetInstance.getLoginUserID();
                 VraagText = Request.Form[nameof(VraagText)];
                 Locatie = Request.Form[nameof(Locatie)];
@@ -48,29 +90,19 @@ namespace webapp.Pages.Vragen.Steleenvraag
                 var Vaktemp2 = Request.Form[nameof(WachtrijID)];
                 WachtrijID = Convert.ToInt32(Vaktemp2);
 
-                Vraag temp = new Vraag(0, UserID, VakID, VraagText, AndwoordText, false, DateTime.Now, DateTime.MinValue, Locatie, WachtrijID, false);
-                int length = temp.returnVraagLength();
-                temp.VraagID = length;
-                temp.Insert();
-                Response.Redirect("/Menu/SMenu");
-                Sessie.GetInstance.Case = 0;
-            }
-            if (Case == 0)
-            {
+            
+
+        
                 string vraagt = Request.Form[nameof(VraagText)];
                
                 VraagText = Request.Form[nameof(VraagText)];
                 Locatie = Request.Form[nameof(Locatie)];
                 var Vaktemp = Request.Form[nameof(VakID)];
                 VakID = Convert.ToInt32(Vaktemp);
-                Vak v = new Vak();
-                v.SelectOne(VakID);
-                vakT = v.Naam;
-                Locatie = v.Locaal;
 
 
-                Zoeklijst = new DatabaseController.DBConnection().Send("SELECT * FROM projectcdb.faqvragen where vak = '"+vakT+"' and  vraag like '%"+VraagText+"%' or antwoord like '%"+VraagText+"%';");
-                Sessie.GetInstance.Case = 1;
+
+               
                 if (Zoeklijst.Count == 0)
                 {
                     Btntext = "Er zijn geen vergelijkbare vragen gevonden. klik hier om je vraag te stellen";
@@ -79,7 +111,13 @@ namespace webapp.Pages.Vragen.Steleenvraag
                 {
                     Btntext = "Er zijn vergelijkbare vragen gevonden. klik hier om alsnog je vraag te stellen";
                 }
-            }
+
+            Vraag temp = new Vraag(0, UserID, Sessie.GetInstance.ZoekVak , VraagText, AndwoordText, false, DateTime.Now, DateTime.MinValue, Locatie, WachtrijID, false);
+            int length = temp.returnVraagLength();
+            temp.VraagID = length;
+            temp.Insert();
+            Response.Redirect("/Menu/SMenu");
+
         }
     }
 }

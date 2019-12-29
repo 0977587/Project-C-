@@ -13,6 +13,8 @@ namespace webapp.Pages.MakeQueue
 {
     public class PWachtrij : PageModel
     {
+        public int sluiten { get; set; }
+        public int isalgemeen { get; set; }
         public string Title { get; set; }
         public int Choice { get; set; }
         public Wachtrij Wachtrij { get; set; }
@@ -26,6 +28,8 @@ namespace webapp.Pages.MakeQueue
         public List<Vak> Vakken {get;set;}
         public string Vak { get; set; }
         public List<string> Vakkenlijst { get; set; }
+
+        public int WachtrijID;
         public void OnGet()
         {
             int id = Sessie.GetInstance.getChoice();
@@ -53,6 +57,7 @@ namespace webapp.Pages.MakeQueue
 
                 Wachtrij Wachtrij = new Wachtrij();
                 Wachtrij.SelectOne(id);
+                WachtrijID = id;
 
                 Title = Wachtrij.Name.Replace(";","");
                 Vragen = Wachtrij.getVragen(0);
@@ -63,6 +68,7 @@ namespace webapp.Pages.MakeQueue
             }
             else{
                 Title = "Algemeen";
+                isalgemeen = 1;
                 List <Vak> Vakken = new List<Vak>();
 
                 DBConnection dbc = new DBConnection();
@@ -95,25 +101,32 @@ namespace webapp.Pages.MakeQueue
         }
         public void OnPost()
         {
+
+
             Vraag vraag = new Vraag();
             string temp = Request.Form[nameof(Choice)];
             int inttemp = Convert.ToInt32(temp);
             vraag.SelectOne(inttemp);
 
+            string vaknaam = new DatabaseController.DBConnection().Send("SELECT Naam FROM projectcdb.vak where VakID = " + vraag.VakID + ";")[0][0];
+
             string isChecked = Request.Form[nameof(IsChecked)];
-            string selected = Request.Form[nameof(Vak)];
             string antwoord = Request.Form[nameof(Antwoord)];
             if (vraag.isInProgress)
             {
+                if (antwoord == "")
+                {
+                    antwoord = "geen antwoord";
+                }
                 if (isChecked != "false")
                 {
                     vraag.AndwoordText = antwoord;
-                    vraag.InsertFaq(selected);
-                    vraag.Delete();
+                    vraag.InsertFaq(vaknaam);
+                    new DatabaseController.DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `AndwoordText` = '"+antwoord+"', `IsBehandeld` = '1' WHERE (`vraagID` = '"+vraag.VraagID+"');");
                 }
                 else
                 {
-                    vraag.Delete();
+                    new DatabaseController.DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `AndwoordText` = '" + antwoord + "', `IsBehandeld` = '1' WHERE (`vraagID` = '" + vraag.VraagID + "');");
                 }
             }
             else
@@ -123,6 +136,17 @@ namespace webapp.Pages.MakeQueue
             }
             OnGet();
             //TODO:: Peercoach nummer aan toevoegen 
+
+
+
+            //check of sluiten is ingedrukt
+            if (Convert.ToInt32(Request.Form[nameof(sluiten)]) == 1)
+            {
+
+                new DatabaseController.DBConnection().Send("DELETE FROM `projectcdb`.`wachtrij` WHERE (`WachtrijId` = '" + Sessie.GetInstance.getChoice() + "');");
+                Response.Redirect("/Menu/PMenu");
+                return;
+            }
         }
     }
 }

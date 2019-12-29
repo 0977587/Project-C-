@@ -11,7 +11,11 @@ namespace webapp
         public static Sessie instance = new Sessie();
 
 
-        public int Case = 0;
+        public string Zoekterm1;
+        public string Zoekterm2;
+        public string Zoekterm3;
+        public string Zoekterm4;
+        public int ZoekVak;
         int LoginUserID = -1;
         int Choice = -1;
         public DatabaseController.DBConnection dbc = new DatabaseController.DBConnection();

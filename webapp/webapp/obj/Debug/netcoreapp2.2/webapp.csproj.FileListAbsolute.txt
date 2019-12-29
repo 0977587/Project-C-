@@ -272,3 +272,4 @@ C:\Users\jurri\StudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\
 C:\Users\jurri\StudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\FAQ\SoverzichtFAQ.cshtml.g.cs
 C:\Users\jurri\StudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\Create.cshtml.g.cs
 C:\Users\jurri\StudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Registratie\PeerRegistratie.cshtml.g.cs
+C:\Users\jurri\StudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp2.2\Razor\Pages\Vragen\Steleenvraag\Zoek.cshtml.g.cs
