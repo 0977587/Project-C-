@@ -70,7 +70,7 @@
 </h1>
 <form method="post">
     <input hidden="hidden" asp-for="sluiten" value="1" />
-    <button id="Killbtn" ref="#" onclick='deleteWachtrij()' class="myButton">Wachtrij sluiten</button>
+    <button class="myButton">Wachtrij sluiten</button>
 </form>
 
 <div class="col-xs-6">
@@ -91,6 +91,10 @@
                 }
                 @foreach (var item in Model.Vragen)
                 {
+                    if(Model.sluiten == 1)
+                    {
+                        return;
+                    }
                     string vaknaam2 = new DatabaseController.DBConnection().Send("SELECT Naam FROM projectcdb.vak where VakID = " + item.VakID + ";")[0][0];
                     count++;
                     if (count > 5)
@@ -140,6 +144,10 @@
 
             @foreach (var item in Model.Vragen2)
             {
+                    if(Model.sluiten == 1)
+                    {
+                        return;
+                    }
                 var x = @item.UserID;
                 User use = new User();
                 use.SelectOne(item.UserID);

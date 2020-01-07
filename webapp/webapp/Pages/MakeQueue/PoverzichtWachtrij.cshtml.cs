@@ -96,12 +96,24 @@ namespace webapp.Pages.MakeQueue
                 Amount = Wachtrij.getVragenAmount();
                 Vakkenlijst = temp;
                 Vraag vraag = new Vraag();
+
             }
-           
+
+
         }
         public void OnPost()
         {
+            //check of sluiten is ingedrukt
+            if (Convert.ToInt32(Request.Form[nameof(sluiten)]) == 1)
+            {
+                new DatabaseController.DBConnection().Send("DELETE FROM `projectcdb`.`wachtrij` WHERE (`WachtrijId` = '" + Sessie.GetInstance.getChoice() + "');");
 
+                Response.Redirect("/Menu/PMenu");
+                sluiten = 1;
+                Vragen = new List<Vraag>();
+                Vragen2 = new List<Vraag>();
+                return;
+            }
 
             Vraag vraag = new Vraag();
             string temp = Request.Form[nameof(Choice)];
@@ -139,14 +151,7 @@ namespace webapp.Pages.MakeQueue
 
 
 
-            //check of sluiten is ingedrukt
-            if (Convert.ToInt32(Request.Form[nameof(sluiten)]) == 1)
-            {
 
-                new DatabaseController.DBConnection().Send("DELETE FROM `projectcdb`.`wachtrij` WHERE (`WachtrijId` = '" + Sessie.GetInstance.getChoice() + "');");
-                Response.Redirect("/Menu/PMenu");
-                return;
-            }
         }
     }
 }
