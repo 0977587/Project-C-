@@ -52,8 +52,7 @@ namespace webapp.Models.Tests
 
         }
 
-
-        [TestMethod]
+ [TestMethod]
         public void testreturnWachtrijLength()
         {
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);

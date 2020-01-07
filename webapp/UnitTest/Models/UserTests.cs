@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace webapp.Models.Tests
+namespace webapp.Models.Tests   
 {
     [TestClass()]
     public class UserTests
