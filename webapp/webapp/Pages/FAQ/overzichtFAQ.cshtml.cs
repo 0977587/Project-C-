@@ -23,5 +23,7 @@ namespace webapp.Pages.FAQ
 
 
         }
+
+        public void OnPut() { }
     }
 }

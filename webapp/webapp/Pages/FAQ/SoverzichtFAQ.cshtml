@@ -6,11 +6,16 @@
     ViewData["Title"] = "FAQ";
     List<List<String>> Vakken = new List<List<String>>();
     DBConnection dbc = new DBConnection();
-    Vakken = dbc.Send("SELECT distinct vak,vraagid FROM projectcdb.faqvragen;");
+    Vakken = dbc.Send("SELECT distinct vak FROM projectcdb.faqvragen;");
+    foreach (var item in Vakken)
+    {
+        item.Add(item[0].Replace(" ", ""));
+    }
     List<List<List<String>>> Blokken = new List<List<List<String>>>();
     foreach (var vak in Vakken)
     {
         List<List<String>> blok = new DBConnection().Send("SELECT * FROM projectcdb.faqvragen WHERE vak = '" + vak[0] + "';");
+        blok[0].Add(vak[1]);
         Blokken.Add(blok);
     }
 
@@ -23,7 +28,7 @@
     <input id="inputvraag" placeholder="Zoek een vraag" asp-for="Vraag" />
 
 
-    <button onclick='show("Zoek");' >Submit</button>
+    <button onclick='show("Zoek");'>Submit</button>
 </form>
 <center>overzicht van de FAQ</center>
 <br />
@@ -45,7 +50,7 @@
     {
         <td>
 
-            <Table id=@item2[0][3] class="table table-striped" style="display:none" title="@item2[0][1]">
+            <Table id=@item2[0][4] class="table table-striped" style="display:none" title="@item2[0][1]">
                 <thead>
                     <tr>
                         <th class="col-md-1">Vraag</th>
