@@ -35,83 +35,31 @@ namespace webapp.Pages.MakeQueue
             int id = Sessie.GetInstance.getChoice();
             if(id != -1)
             {
-                List<Vak> Vakken = new List<Vak>();
-
-                DBConnection dbc = new DBConnection();
-                List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.vak;");
-
-                List<string> temp = new List<string>();
-                if (returnstatement != null)
-                {
-                    foreach (var i in returnstatement)
-                    {
-                        Vak a = new Vak();
-                        var tempstring = i[3];
-                        if (!temp.Contains(tempstring))
-                        {
-                            temp.Add(tempstring);
-                        }
-
-                    }
-                }
-
+                //Id voor wachtrij wordt opgezocht voordat deze wordt gemaakt
                 Wachtrij Wachtrij = new Wachtrij();
                 Wachtrij.SelectOne(id);
-                WachtrijID = id;
 
+                WachtrijID = id;
                 Title = Wachtrij.Name.Replace(";","");
-                Vragen = Wachtrij.getVragen(0);
-                Vragen2 = Wachtrij.getVragen(1);
-                Amount = Wachtrij.getVragenAmount();
-                Vakkenlijst = temp;
-                Vraag vraag = new Vraag();
+                SetVakkenlijst(Wachtrij);
             }
             else{
+                //Id voor de algemene wachtrij wordt gezet, en daarna pas aangemaakt
                 Title = "Algemeen";
                 isalgemeen = 1;
-                List <Vak> Vakken = new List<Vak>();
-
-                DBConnection dbc = new DBConnection();
-                List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.vak;");
-
-                List<string> temp = new List<string>();
-                if (returnstatement != null)
-                {
-                    foreach (var i in returnstatement)
-                    {
-                        Vak a = new Vak();
-                        var tempstring = i[3];
-                        if (!temp.Contains(tempstring))
-                        {
-                            temp.Add(tempstring);
-                        }
-
-                    }
-                }
-
+ 
                 Wachtrij Wachtrij = new Wachtrij();
                 Wachtrij.SelectOne(0);
-                Vragen = Wachtrij.getVragen(0);
-                Vragen2 = Wachtrij.getVragen(1);
-                Amount = Wachtrij.getVragenAmount();
-                Vakkenlijst = temp;
-                Vraag vraag = new Vraag();
-
+                SetVakkenlijst(Wachtrij);
             }
-
-
         }
+
         public void OnPost()
         {
             //check of sluiten is ingedrukt
             if (Convert.ToInt32(Request.Form[nameof(sluiten)]) == 1)
             {
-                new DatabaseController.DBConnection().Send("DELETE FROM `projectcdb`.`wachtrij` WHERE (`WachtrijId` = '" + Sessie.GetInstance.getChoice() + "');");
-
-                Response.Redirect("/Menu/PMenu");
-                sluiten = 1;
-                Vragen = new List<Vraag>();
-                Vragen2 = new List<Vraag>();
+                ExitQueue();
                 return;
             }
 
@@ -119,26 +67,29 @@ namespace webapp.Pages.MakeQueue
             string temp = Request.Form[nameof(Choice)];
             int inttemp = Convert.ToInt32(temp);
             vraag.SelectOne(inttemp);
-
             string vaknaam = new DatabaseController.DBConnection().Send("SELECT Naam FROM projectcdb.vak where VakID = " + vraag.VakID + ";")[0][0];
-
             string isChecked = Request.Form[nameof(IsChecked)];
             string antwoord = Request.Form[nameof(Antwoord)];
+
+            //Kijgt als de vraag behaldeld is, zo ja: maakt wordt hij beandwoord, zo nee: dan wordt hij behandeld.
             if (vraag.isInProgress)
             {
+                //Als er geen andwoord is gegeven wordt er alsnog een andrwoord aan gegeven
                 if (antwoord == "")
                 {
                     antwoord = "geen antwoord";
                 }
+
+                //Als FAQ gechecked is dan wordt het een FAQ gemaakt
                 if (isChecked != "false")
                 {
                     vraag.AndwoordText = antwoord;
                     vraag.InsertFaq(vaknaam);
-                    new DatabaseController.DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `AndwoordText` = '"+antwoord+"', `IsBehandeld` = '1' WHERE (`vraagID` = '"+vraag.VraagID+"');");
+                    UpdateQuestion(antwoord,vraag);
                 }
                 else
                 {
-                    new DatabaseController.DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `AndwoordText` = '" + antwoord + "', `IsBehandeld` = '1' WHERE (`vraagID` = '" + vraag.VraagID + "');");
+                    UpdateQuestion(antwoord,vraag);
                 }
             }
             else
@@ -147,11 +98,55 @@ namespace webapp.Pages.MakeQueue
                 vraag.Update();
             }
             OnGet();
-            //TODO:: Peercoach nummer aan toevoegen 
-
-
-
-
         }
+
+        //vakken worden gezocht
+        private List<string> ZoekVakken()
+        {
+            DBConnection dbc = new DBConnection();
+            List<List<string>> returnstatement = dbc.Send("SELECT * FROM projectcdb.vak;");
+            List<string> temp = new List<string>();
+            if (returnstatement != null)
+            {
+                foreach (var i in returnstatement)
+                {
+                    Vak a = new Vak();
+                    var tempstring = i[3];
+                    if (!temp.Contains(tempstring))
+                    {
+                        temp.Add(tempstring);
+                    }
+                }
+            }
+            return temp;
+        }
+
+        //vakkenlijst wordt geset
+        private void SetVakkenlijst(Wachtrij Wachtrij)
+        {
+            List<string> temp = ZoekVakken();
+            Vragen = Wachtrij.getVragen(0);
+            Vragen2 = Wachtrij.getVragen(1);
+            Amount = Wachtrij.getVragenAmount();
+            Vakkenlijst = temp;
+        }
+
+        //De wachtrij wordt verwijderd
+        private void ExitQueue()
+        {
+            new DatabaseController.DBConnection().Send("DELETE FROM `projectcdb`.`wachtrij` WHERE (`WachtrijId` = '" + Sessie.GetInstance.getChoice() + "');");
+
+            Response.Redirect("/Menu/PMenu");
+            sluiten = 1;
+            Vragen = new List<Vraag>();
+            Vragen2 = new List<Vraag>();
+        }
+        
+        //De vraag wordt geupdate
+        private void UpdateQuestion(string antwoord, Vraag vraag)
+        {
+            new DatabaseController.DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `AndwoordText` = '" + antwoord + "', `IsBehandeld` = '1' WHERE (`vraagID` = '" + vraag.VraagID + "');");
+        }
+
     }
 }

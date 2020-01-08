@@ -17,6 +17,7 @@ namespace webapp.Pages
         public DateTime end { get; set;}
         public void OnGet()
         {
+            //Vorige Announcements wordt gepakt
             Announcements temp = new Announcements();
             temp.getAnnouncements();
             AnnounceText = temp;
@@ -26,32 +27,44 @@ namespace webapp.Pages
             string loguit = Request.Form[nameof(LU)];
             if (loguit == null)
             {
-                Announcements ann = new Announcements();
-                ann.getAnnouncements();
-                AnnounceText = ann;
-                string temp = Request.Form[nameof(inputText)];
-                if (temp != null && AnnounceText.announcement != null)
-                {
-                    AnnounceText.deleteAnnouncement();
-                }
-                if (temp != null)
-                {
-                    Announcements temp2 = new Announcements();
-                    temp2.startdate = DateTime.Now;
-                    temp2.enddate = DateTime.Now.AddDays(7);
-                    temp2.announcement = temp;
-                    temp2.insertAnnouncement();
-                    Response.Redirect("/Menu/PMenu");
-                }
+                Change();
             }
             else if(loguit != null)
             {
-                Announcements ann = new Announcements();
-                ann.getAnnouncements();
-                AnnounceText = ann;
-                AnnounceText.deleteAnnouncement();
+                Delete();
             }
             OnGet();
+        }
+
+        //Announcements wordt verwijderd
+        public void Delete()
+        {
+            Announcements ann = new Announcements();
+            ann.getAnnouncements();
+            AnnounceText = ann;
+            AnnounceText.deleteAnnouncement();
+        }
+
+        //Announcements wordt veranderd
+        public void Change()
+        {
+            Announcements ann = new Announcements();
+            ann.getAnnouncements();
+            AnnounceText = ann;
+            string temp = Request.Form[nameof(inputText)];
+            if (temp != null && AnnounceText.announcement != null)
+            {
+                AnnounceText.deleteAnnouncement();
+            }
+            if (temp != null)
+            {
+                Announcements temp2 = new Announcements();
+                temp2.startdate = DateTime.Now;
+                temp2.enddate = DateTime.Now.AddDays(7);
+                temp2.announcement = temp;
+                temp2.insertAnnouncement();
+                Response.Redirect("/Menu/PMenu");
+            }
         }
         
     }

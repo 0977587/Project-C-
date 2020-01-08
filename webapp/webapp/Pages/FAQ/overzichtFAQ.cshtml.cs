@@ -12,18 +12,16 @@ namespace webapp.Pages.FAQ
         public string Vraag { get; set; }
         public List<List<String>> Zoeklijst = new List<List<string>>();
 
-        public void OnGet()
-        {
-
-        }
         public void OnPost()
         {
-            string vraagt = Request.Form[nameof(Vraag)];
-            Zoeklijst = new DatabaseController.DBConnection().Send("SELECT * FROM projectcdb.faqvragen where vraag like '%" + vraagt + "%' or vak like '%" + vraagt + "%' or antwoord like '%" + vraagt + "%';");
-
-
+            string vraagText = Request.Form[nameof(Vraag)];
+            ZoekFAQ(vraagText);
         }
 
-        public void OnPut() { }
+        //Er wordt gezocht met de de text die ingevoerd is
+        public void ZoekFAQ(string vraagt)
+        {
+            Zoeklijst = new DatabaseController.DBConnection().Send("SELECT * FROM projectcdb.faqvragen where vraag like '%" + vraagt + "%' or vak like '%" + vraagt + "%' or antwoord like '%" + vraagt + "%';");
+        }
     }
 }

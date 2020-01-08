@@ -25,50 +25,40 @@ namespace webapp.Pages.Account
 
         public void OnPost()
         {
+            //gegevens worden gepakt
             Voornaam = Request.Form[nameof(Voornaam)];
             Achternaam = Request.Form[nameof(Achternaam)];
             Email = Request.Form[nameof(Email)];
             Wachtwoord = Request.Form[nameof(Wachtwoord)];
             nieuw = Request.Form[nameof(nieuw)];
 
+            ChangeInfo();
+        }
 
-            if(Voornaam == "1")
+        //De informatie van de user wordt veranderd
+        public void ChangeInfo()
+        {
+            string n = nieuw;
+            User temp = new User();
+            temp.SelectOne(Sessie.GetInstance.getLoginUserID());
+            if (Voornaam == "1")
             {
-                string n = nieuw;
-                User temp = new User();
-                temp.SelectOne(Sessie.GetInstance.getLoginUserID());
                 temp.Voornaam = n;
-                temp.Update();
-                Response.Redirect("./Create");
             }
-            else if(Achternaam == "1")
+            else if (Achternaam == "1")
             {
-                string n = nieuw;
-                User temp = new User();
-                temp.SelectOne(Sessie.GetInstance.getLoginUserID());
                 temp.Achternaam = n;
-                temp.Update();
-                Response.Redirect("./Create");
             }
             else if (Email == "1")
             {
-                string n = nieuw;
-                User temp = new User();
-                temp.SelectOne(Sessie.GetInstance.getLoginUserID());
                 temp.Email = n;
-                temp.Update();
-                Response.Redirect("./Create");
             }
             else if (Wachtwoord == "1")
             {
-                string n = nieuw;
-                User temp = new User();
-                temp.SelectOne(Sessie.GetInstance.getLoginUserID());
                 temp.Wachtwoord = n;
-                temp.Update();
-                Response.Redirect("./Create");
             }
-
+            temp.Update();
+            Response.Redirect("./Create");
         }
     }
 }

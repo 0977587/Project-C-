@@ -18,29 +18,38 @@ namespace webapp.Pages.Registratie
         public string Wachtwoord { get; set; }
         public string Klas { get; set; }
         public string peercoach { get; set; }
-        public void OnGet()
-        {
-
-        }
 
         public void OnPost()
         {
             string p = Request.Form[nameof(peercoach)];
+
+            //Er wordt gekeken of de gebruiker een student wilt maken, of een peercoach wilt maken.
             if (Convert.ToInt32(p) != 1)
             {
-                Voornaam = Request.Form[nameof(Voornaam)];
-                Achternaam = Request.Form[nameof(Achternaam)];
-                Email = Request.Form[nameof(Email)];
-                Wachtwoord = Request.Form[nameof(Wachtwoord)];
-                Klas = Request.Form[nameof(Klas)];
-                User u = new User("s", Convert.ToInt32(Klas), Voornaam, Achternaam, Email, Wachtwoord);
-                u.Insert();
-
+                MakeUser();
             }
             else
             {
-                Response.Redirect("./PeerRegistratie");
+                ToPeerCoach();
             }
+        }
+
+        //Er wordt een student aangemaakt
+        private void MakeUser()
+        {
+            Voornaam = Request.Form[nameof(Voornaam)];
+            Achternaam = Request.Form[nameof(Achternaam)];
+            Email = Request.Form[nameof(Email)];
+            Wachtwoord = Request.Form[nameof(Wachtwoord)];
+            Klas = Request.Form[nameof(Klas)];
+            User u = new User("s", Convert.ToInt32(Klas), Voornaam, Achternaam, Email, Wachtwoord);
+            u.Insert();
+        }
+
+        //De gebruiker wordt naar PeerRegistratie gestuurd
+        private void ToPeerCoach()
+        {
+            Response.Redirect("./PeerRegistratie");
         }
     }
 }
