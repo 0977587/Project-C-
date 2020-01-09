@@ -18,29 +18,31 @@ namespace webapp.Pages.Vakken
         {
             string postit2 = Request.Form[nameof(postit)];
             int id = Convert.ToInt32(postit2);
+
+            //Checkt of de vakken herladen moeten worden, of als er een vak weggehaald moet worden
             if (id == 0)
             {
-                User a = new User();
-                a.SelectOne(Sessie.GetInstance.getLoginUserID());
-                new Roosterzoeker.RoosterZoeker().Zoek(a.KlasID);
+                ReadloadLession();
             }
             else
             {
-
-
-
-                new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '" + id + "' AND `UserID` = '" + Sessie.GetInstance.getLoginUserID() + "');");
-
+                DeleteLession(id);
             }
-
-
         }
-        public void OnGet()
+
+        //vakken worden herladen
+        private void ReadloadLession()
         {
-
+            User a = new User();
+            a.SelectOne(Sessie.GetInstance.getLoginUserID());
+            new Roosterzoeker.RoosterZoeker().Zoek(a.KlasID);
         }
 
-
+        //Vak wordt verweiderd
+        private void DeleteLession(int id)
+        {
+            new DBConnection().Send("DELETE FROM `projectcdb`.`ingeschrevenvakken` WHERE(`vakID` = '" + id + "' AND `UserID` = '" + Sessie.GetInstance.getLoginUserID() + "');");
+        }
     }
 }
 
