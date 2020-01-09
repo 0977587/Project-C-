@@ -2986,7 +2986,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/2.2.0": {
-      "sha512": "IeyzVFXZdpUAnWKWoNYE0SsP1Eu7JLjZaC94jaI1VfGtK57QykROz/iGMc8D0VcqC8i02qYTPQN/wPKm6PfidA==",
+      "sha512": "zW2jJWCnijyoZqL3a4W5zuvObFluZ7dvZeasbZVhBc8h1ZD4INufdpWXgtxceiu5wqfnedH+mzGTUdM4jNccUQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.language/2.2.0",
       "files": [
@@ -9491,23 +9491,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jurri\\.nuget\\packages\\": {},
+    "C:\\Users\\Matthijs\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\jurri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\UnitTest\\obj\\",
+      "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
+      "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jurri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9520,8 +9520,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj": {
-              "projectPath": "C:\\Users\\jurri\\AndroidStudioProjects\\OpenDagApp\\app\\Project-C-\\webapp\\webapp\\webapp.csproj"
+            "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {
+              "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj"
             }
           }
         }

@@ -59,8 +59,13 @@ namespace webapp.Pages.MakeQueue
             //check of sluiten is ingedrukt
             if (Convert.ToInt32(Request.Form[nameof(sluiten)]) == 1)
             {
-                ExitQueue();
-                return;
+                int test = Sessie.GetInstance.getChoice();
+                if (test != 0)
+                {
+                    ExitQueue();
+                    return;
+                }
+
             }
 
             Vraag vraag = new Vraag();
