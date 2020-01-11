@@ -6,7 +6,7 @@ using System.Text;
 using System.Transactions;
 using System.Configuration;
 
-namespace webapp.Models.Tests
+namespace UnitTest.Models
 {
     [TestClass()]
     public class WachtrijTests
@@ -22,6 +22,11 @@ namespace webapp.Models.Tests
         private Vraag vraag2;
         private Vraag vraag3;
 
+
+        /*
+         * 
+         * 
+         */
         [TestMethod()]
         public void WachtrijTest()
         {
@@ -52,7 +57,7 @@ namespace webapp.Models.Tests
 
         }
 
- [TestMethod]
+        [TestMethod]
         public void testreturnWachtrijLength()
         {
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);

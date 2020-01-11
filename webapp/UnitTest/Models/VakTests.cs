@@ -63,11 +63,10 @@ namespace UnitTest.Models
             Assert.AreEqual(1, returnVaklength(vakken));
         }
 
-
+        [TestMethod]
         /*
         * this method tests selectOne with empty list of vakken
         */
-        [TestMethod]
         public void testSelectNone()
         {
             List<Vak> vakkenLijsta = new List<Vak>();
@@ -80,7 +79,7 @@ namespace UnitTest.Models
         * this method tests selectOne with 1 Vak
         */
         [TestMethod]
-        public void testSelectoneWithaQuestion()
+        public void testSelectoneWithaVak()
         {
             List<Vak> vakkenLijst = new List<Vak>();
             vakkenLijst.Add(vak1);
@@ -117,7 +116,7 @@ namespace UnitTest.Models
         }
 
         /*
-        * this method tests selectAll with one question
+        * this method tests selectAll with one Vak
         */
         [TestMethod]
         public void testSelectAllWithOne()
@@ -158,10 +157,10 @@ namespace UnitTest.Models
 
 
         /*
-          * this method tests Delete with 1 question
+          * this method tests Delete with 1 Vakken
           */
         [TestMethod]
-        public void testDeleteOneQuestion()
+        public void testDeleteOneVak()
         {
             List<Vak> vakkenLijst = new List<Vak>();
             vakkenLijst.Add(vak1);
@@ -199,10 +198,10 @@ namespace UnitTest.Models
 
 
         /*
-         * this method tests Insert with a Question
+         * this method tests Insert with a Vak
          */
         [TestMethod]
-        public void testInsertOneQuestion()
+        public void testInsertOneVak()
         {
             List<Vak> vakkenLijst = new List<Vak>();
             vakkenLijst.Add(vak1);
@@ -214,7 +213,7 @@ namespace UnitTest.Models
         * this method tests Insert with multiple Vakken
         */
         [TestMethod]
-        public void testInsertMultipleQuestion()
+        public void testInsertMultipleVak()
         {
             List<Vak> vakkenLijst = new List<Vak>();
             List<Vak> test2 = new List<Vak>();
@@ -225,7 +224,7 @@ namespace UnitTest.Models
             Assert.AreNotEqual(test2, vakkenLijst);
             test2 = Insert(vak2, test2);
             Assert.AreNotEqual(test2, vakkenLijst);
-            foreach (var x in test2)
+            foreach (var x in vakkenLijst)
             {
                 Assert.IsTrue(vakkenLijst.Contains(x));
             }
