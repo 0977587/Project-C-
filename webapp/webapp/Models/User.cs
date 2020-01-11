@@ -107,21 +107,6 @@ namespace webapp.Models
                     u.Wachtwoord = returnstatement2[5];
                 if (returnstatement2[6] != "")
                     u.Achternaam = returnstatement2[6];
-                if (returnstatement2[7] != "")
-                {
-                    if (returnstatement2[7] == "0")
-                    {
-                        u.IsEmailGeverifieerd = false;
-                    }
-                    else
-                    {
-                        u.IsEmailGeverifieerd = true;
-                    }
-                }
-                if (returnstatement2[8] != "")
-                    u.ActivatieCode = returnstatement2[8];
-                if (returnstatement2[9] != "")
-                    u.ResetWachtwoordCode = returnstatement2[9];
                 returnlist.Add(u);
             }
             return returnlist;
