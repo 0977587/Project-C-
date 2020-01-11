@@ -52,6 +52,7 @@ namespace IntegrationTest.Models
             dbc = new DBConnection();
             dbc.Send("DELETE FROM vak;");
             dbc = new DBConnection();
+            dbc.Send("DELETE FROM peercoachwachtrij;");
 
             insertAnnouncements();
             insertIngeschrevenVakken();

@@ -173,9 +173,9 @@ namespace webapp.Models
                 if (returnstatement2[7] != "")
                     v.EndDate = Convert.ToDateTime(returnstatement2[7]);
                 if (returnstatement2[8] != "")
-                    v.Locatie = returnstatement2[7];
+                    v.Locatie = returnstatement2[8];
                 if (returnstatement2[9] != "")
-                    v.WachtrijID = Convert.ToInt32(returnstatement2[8]);
+                    v.WachtrijID = Convert.ToInt32(returnstatement2[9]);
                 if (returnstatement2[10] != "")
                 {
                     if (returnstatement2[10] == "0")
