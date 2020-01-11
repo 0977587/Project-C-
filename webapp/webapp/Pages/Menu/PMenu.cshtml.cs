@@ -23,20 +23,32 @@ namespace webapp.Pages
         public void OnPost()
         {
             string loguit = Request.Form[nameof(LU)];
+
+            //Er wordt gekeken of de gebruiker wilt uitloggen of naar een wachtrij wilt gaan
             if (loguit != null)
             {
-                Sessie.GetInstance.setLoginUserID(-1);
-                Response.Redirect("../Index");
+                Logout();
             }
             else
             {
-                string temp = Request.Form[nameof(Choice)];
-                int inttemp = Convert.ToInt32(temp);
-                Sessie.GetInstance.setChoice(inttemp);
-                string postit2 = Request.Form[nameof(postit)];
-                Response.Redirect("../MakeQueue/PoverzichtWachtrij/");
+                GoToQueue();
             }
+        }
 
+        //De user wordt uitgelogt
+        private void Logout()
+        {
+            Sessie.GetInstance.setLoginUserID(-1);
+            Response.Redirect("../Index");
+        }
+
+        //De gebruiker gaat naar de wachtrij, en het ID wordt opgeslagen in de Sessie
+        private void GoToQueue()
+        {
+            string temp = Request.Form[nameof(Choice)];
+            int inttemp = Convert.ToInt32(temp);
+            Sessie.GetInstance.setChoice(inttemp);
+            Response.Redirect("../MakeQueue/PoverzichtWachtrij/");
         }
     }
 }

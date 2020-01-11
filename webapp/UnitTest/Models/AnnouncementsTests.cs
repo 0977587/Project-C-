@@ -138,7 +138,9 @@ namespace UnitTest.Models
        */
         public List<Announcements> Remove(Announcements announcement, List<Announcements> announcementLijst)
         {
+
             announcementLijst.Remove(announcement);
+            announcementLijst.Add(new Announcements("Noone", DateTime.MinValue, DateTime.MinValue));
             return announcementLijst;
         }
 

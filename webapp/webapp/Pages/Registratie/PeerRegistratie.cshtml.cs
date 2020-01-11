@@ -19,23 +19,28 @@ namespace webapp.Pages.Registratie
         public string peercoach { get; set; }
         public string PeercoachW { get; set; }
 
-        public void OnGet()
-        {
-
-        }
 
         public void OnPost()
         {
             PeercoachW = Request.Form[nameof(PeercoachW)];
+
+            //Kijkt als de peercoach wachtwoord goed is
             if (PeercoachW == "pc")
             {
-                Voornaam = Request.Form[nameof(Voornaam)];
-                Achternaam = Request.Form[nameof(Achternaam)];
-                Email = Request.Form[nameof(Email)];
-                Wachtwoord = Request.Form[nameof(Wachtwoord)];
-                User u = new User("p", Voornaam, Achternaam, Email, Wachtwoord);
-                u.Insert();
+                NewPeerCoach();
             }
+        }
+
+        //Er wordt een Peercoach gemaakt
+        private void NewPeerCoach()
+        {
+            Voornaam = Request.Form[nameof(Voornaam)];
+            Achternaam = Request.Form[nameof(Achternaam)];
+            Email = Request.Form[nameof(Email)];
+            Wachtwoord = Request.Form[nameof(Wachtwoord)];
+            User u = new User("p", Voornaam, Achternaam, Email, Wachtwoord);
+            u.Insert();
+            Response.Redirect("../Index");
         }
     }
 }

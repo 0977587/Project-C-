@@ -44,7 +44,7 @@ namespace Roosterzoeker
 
             //HTML OPVRAGEN
             string html = string.Empty;
-            string url = @"http://misc.hro.nl/roosterdienst/webroosters/CMI/kw2/" + week + "/c/c000" + klasnumber + ".htm";
+            string url = @"http://misc.hro.nl/roosterdienst/webroosters/CMI/kw2/0" + week + "/c/c000" + klasnumber + ".htm";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;

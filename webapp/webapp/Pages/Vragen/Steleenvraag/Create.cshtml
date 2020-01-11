@@ -46,14 +46,7 @@
     <form method="post" style="display: inline">
         <input asp-for="VraagText" placeholder="kies je vraag" value="@Model.VraagText"/>
         <br />
-        <select id="vak" placeholder="kies je vak" asp-for="VakID">
-
-            @foreach (var item in vakken)
-            {
-                <option value="@item.VakID"> @item.Naam</option>
-
-            }
-        </select>
+        
         <p id="vakT">@Model.vakT</p>
 
         <br />
@@ -69,7 +62,7 @@
         </select>
 
 
-        <button id="btn1" >@Model.Btntext</button>
+        <button id="btn1" >Stel je vraag</button>
     </form>
     <td>
 
@@ -101,15 +94,7 @@
 <script>
     
 
-        if (@Model.Case == 0) {
-            console.log("Hello world!"); 
-            document.getElementById("loc").style.display = "none"
-            document.getElementById("wacht").style.display = "none"
-            document.getElementById("vakT").style.display = "none"
-        }
-        if (@Model.Case == 1) {
-            document.getElementById("vak").style.display = "none"
-        }
+
 
 
 

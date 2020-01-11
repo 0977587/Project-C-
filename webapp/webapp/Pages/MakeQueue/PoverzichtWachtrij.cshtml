@@ -13,34 +13,34 @@
         text-align: left;
         padding: 8px;
     }
-     #invul
-    {
+
+    #invul {
         width: 100%;
-        font-size:12pt;
+        font-size: 12pt;
     }
 
-        .myButton {
-            background-color: #44c767;
-            border-radius: 28px;
-            border: 1px solid #18ab29;
-            display: inline-block;
-            cursor: pointer;
-            color: #ffffff;
-            font-family: Arial;
-            font-size: 17px;
-            padding: 16px 31px;
-            text-decoration: none;
-            text-shadow: 0px 1px 0px #2f6627;
+    .myButton {
+        background-color: #44c767;
+        border-radius: 28px;
+        border: 1px solid #18ab29;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 17px;
+        padding: 16px 31px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #2f6627;
+    }
+
+        .myButton:hover {
+            background-color: #5cbf2a;
         }
 
-            .myButton:hover {
-                background-color: #5cbf2a;
-            }
-
-            .myButton:active {
-                position: relative;
-                top: 1px;
-            }
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
 
     .myButton2 {
         background-color: #44c767;
@@ -68,6 +68,11 @@
 <h1>
     @Model.Title
 </h1>
+<form method="post">
+    <input hidden="hidden" asp-for="sluiten" value="1" />
+    <button class="myButton">Wachtrij sluiten</button>
+</form>
+
 <div class="col-xs-6">
     <h2 class="sub-header">Te behandelen vragen</h2>
     <div class="table-responsive">
@@ -77,6 +82,7 @@
                     <th class="col-md-1">Vraag</th>
                     <th class="col-md-2">Naam</th>
                     <th class="col-md-3">Lokaal</th>
+                    <th class="col-md-3">vak</th>
                 </tr>
             </thead>
             <tbody>
@@ -85,6 +91,11 @@
                 }
                 @foreach (var item in Model.Vragen)
                 {
+                    if(Model.sluiten == 1)
+                    {
+                        return;
+                    }
+                    string vaknaam2 = new DatabaseController.DBConnection().Send("SELECT Naam FROM projectcdb.vak where VakID = " + item.VakID + ";")[0][0];
                     count++;
                     if (count > 5)
                     {
@@ -96,6 +107,7 @@
                         <td class="col-md-1">@item.VraagText</td>
                         <td class="col-md-2">@user.Voornaam</td>
                         <td class="col-md-3">@item.Locatie</td>
+                        <td class="col-md-3">@vaknaam2</td>
                         <td>
                             <form method="post">
                                 <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
@@ -119,6 +131,7 @@
                 <th class="col-md-1">Vraag</th>
                 <th class="col-md-2">Naam</th>
                 <th class="col-md-3">Lokaal</th>
+                <th class="col-md-3">Vak</th>
                 <th class="col-md-4">isFaq</th>
                 <th class="col-md-5">choice</th>
 
@@ -131,54 +144,57 @@
 
             @foreach (var item in Model.Vragen2)
             {
+                    if(Model.sluiten == 1)
+                    {
+                        return;
+                    }
                 var x = @item.UserID;
                 User use = new User();
                 use.SelectOne(item.UserID);
+
+
+                string vaknaam = new DatabaseController.DBConnection().Send("SELECT Naam FROM projectcdb.vak where VakID = " + item.VakID + ";")[0][0];
                 count2++;
                 if (count2 > 5)
                 {
                     break;
                 }
 
-            <tr>
-                <form method="post">
-                <td class="col-md-1">
-                    @item.VraagText
-                    <br />
-                    <input id="Invul" asp-for="Antwoord" placeholder="Antwoord">
-                </td>
 
-                <td class="col-md-2">@use.Voornaam</td>
-                <td class="col-md-3">@item.Locatie</td>
-                <td>
-                    <input id="IsChecked" type="checkbox" onclick="myFunction()"> is Faq
+                <tr>
+                    <form method="post">
+                        <td class="col-md-1">
+                            @item.VraagText
+                            <br />
+                            <input id="Invul" asp-for="Antwoord" placeholder="Antwoord">
+                        </td>
 
-                    <select id="Vak" asp-for="Vak">
-                        @foreach (String temp in Model.Vakkenlijst)
-                        {
-                            <option>@temp</option>
-                        }
-                    </select>
-                </td>
-                <td>
+                        <td class="col-md-2">@use.Voornaam</td>
+                        <td class="col-md-3">@item.Locatie</td>
+                        <td class="col-md-3">@vaknaam</td>
+                        <td>
+                            <input id="IsChecked" type="checkbox"  asp-for="IsChecked"> is Faq
 
-                    
-                    <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
-                    <input id="isChecekd" hidden="hidden" asp-for="IsChecked" value="IsChecked" />
 
-                    <button ref="#" onclick="myFunction()" class="myButton">Behandel</button>
+                        </td>
+                        <td>
 
-                </td>
-            </form>
-            </tr>
+
+                            <input hidden="hidden" asp-for="Choice" value="@item.VraagID" />
+                           
+                            <button ref="#" onclick="myFunction()" class="myButton">Behandel</button>
+
+                        </td>
+                    </form>
+                </tr>
             }
         </tbody>
     </table>
 </div>
 </html>
 <script>
-    function myFunction() {
-        var x = document.getElementById("myCheck").checked;
-        document.getElementById('isChecekd').value = x;
+
+    if (@Model.WachtrijID == 0) {
+        document.getElementById("Killbtn").style.display = "none";
     }
 </script>

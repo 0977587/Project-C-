@@ -114,7 +114,8 @@ namespace webapp.Models
         public void Delete()
         {
             //geef WachtrijID mee  
-            List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`Wachtrij` WHERE (`WachtrijID` = '" + WachtrijID + "';");
+            List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`Wachtrij` WHERE (`WachtrijID` = '" + WachtrijID + "');");
+            List<List<string>> returnstatement2 = new DBConnection().Send("DELETE FROM `projectcdb`.`peercoachwachtrij` WHERE (`WachtrijID` = '" + WachtrijID + "');");
         }
 
         public void Update()

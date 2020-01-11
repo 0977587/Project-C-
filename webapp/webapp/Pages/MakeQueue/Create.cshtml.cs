@@ -19,24 +19,21 @@ namespace webapp.Pages.MakeQueue
         public DateTime EndDate { get; set; }
         public String Name {get;set;}
 
-
-
-        public void OnGet()
-        {
-        }
-
         public void OnPost()
         {
-
             Name = Request.Form[nameof(Name)];
-            List<string> Peercoaches = new List<string>();
-            List<Vraag> Vragen = new List<Vraag>();
-            WachtrijID = 0;
             var datetemp = Request.Form[nameof(DateAdded)];
             var enddatetemp = Request.Form[nameof(EndDate)];
             DateAdded = Convert.ToDateTime(datetemp);
             EndDate = Convert.ToDateTime(enddatetemp);
-            Wachtrij temp = new Wachtrij(WachtrijID, DateAdded, EndDate, Name);
+
+            CreateQueue();
+        }
+
+        //Er wordt een wachtrij gemaakt
+        private void CreateQueue()
+        {
+            Wachtrij temp = new Wachtrij(0, DateAdded, EndDate, Name);
             int length = temp.returnWachtrijLength();
             temp.WachtrijID = length;
             temp.Insert();

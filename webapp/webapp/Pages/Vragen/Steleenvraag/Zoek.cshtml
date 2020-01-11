@@ -1,0 +1,55 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using DatabaseController
+@using webapp.Models
+@using System;
+@using System.Collections.Generic;
+@model webapp.Pages.Vragen.Steleenvraag.Zoek
+@{
+
+
+    int UserID = Sessie.GetInstance.getLoginUserID();
+    List<Vak> vakken = new List<Vak>();
+
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.ingeschrevenvakken where UserID = " + UserID.ToString() + ";");
+    foreach (List<string> temp in connect)
+    {
+        Vak a = new Vak();
+        a.SelectOne(Convert.ToInt32(temp[2]));
+        vakken.Add(a);
+    }
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Voer hier je vraag in</title>
+
+</head>
+
+<body>
+    <form method="post" style="display: inline">
+        <p>Geef 4 zoektermen mee</p>
+        <input asp-for="Zoek1" placeholder="Zoek term 1"  />
+        <br />
+        <input asp-for="Zoek2" placeholder="Zoek term 2" />
+        <br />
+        <input asp-for="Zoek3" placeholder="Zoek term 3"  />
+        <br />
+        <input asp-for="Zoek4" placeholder="Zoek term 4"  />
+        <br />
+
+        <select id="vak" placeholder="kies je vak" asp-for="VakID">
+
+            @foreach (var item in vakken)
+            {
+                <option value="@item.VakID"> @item.Naam</option>
+
+            }
+        </select>
+        <button id="btn1">Zoek</button>
+    </form>
+
+</body>

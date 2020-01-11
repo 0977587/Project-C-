@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace webapp.Models.Tests
+namespace UnitTest.Models   
 {
     [TestClass()]
     public class UserTests
@@ -137,26 +137,31 @@ namespace webapp.Models.Tests
             User u4 = new User(rol, klasID + 1, voornaam + "4", achternaam + "4", email + "4", wachtwoord + "4");
 
             List<string> strings = new List<string>();
+            List<User> a = new List<User>();
             List<User> users = new List<User>();
 
-            strings.Add("test");
-            strings.Add("test2");
-            strings.Add("test3");
+            a.Add(u1);
+            a.Add(u2);
+            a.Add(u3);
+            a.Add(u4);
+
+            u1 = new User(rol+1, klasID+1, voornaam+"3", achternaam+"4", email+"5", wachtwoord+"2");
+            u2 = new User(rol+1, klasID + 2, voornaam + "22", achternaam + "22", email + "22", wachtwoord + "22");
+            u3 = new User(rol+1, klasID + 2, voornaam + "32", achternaam + "32", email + "32", wachtwoord + "32");
+            u4 = new User(rol+1, klasID + 2, voornaam + "42", achternaam + "42", email + "42", wachtwoord + "42");
+
             users.Add(u1);
             users.Add(u2);
             users.Add(u3);
             users.Add(u4);
 
-            Assert.AreEqual(strings[1], "test2");
-            Assert.ReferenceEquals(users[2], u3);
-
-            users.Clear();
-            users.Add(u1);
-            users.Add(u2);
-            users.Add(u2);
-            users.Add(u4);
-
-            Assert.IsFalse(Assert.ReferenceEquals(users[2], u3));
+            for (int i = 0; i < 4; i++)
+            {
+                Assert.IsFalse(users[i].Rol == a[i].Rol);
+                Assert.IsFalse(users[i].KlasID == a[i].KlasID);
+                Assert.IsFalse(users[i].Voornaam == a[i].Voornaam);
+                Assert.IsFalse(users[i].Achternaam == a[i].Achternaam);
+            }
         }
     }
 }

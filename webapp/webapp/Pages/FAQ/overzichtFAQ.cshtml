@@ -6,28 +6,35 @@
     ViewData["Title"] = "FAQ";
     List<List<String>> Vakken = new List<List<String>>();
     DBConnection dbc = new DBConnection();
-    Vakken = dbc.Send("SELECT distinct vak,vraagid FROM projectcdb.faqvragen;");
+    Vakken = dbc.Send("SELECT distinct vak FROM projectcdb.faqvragen;");
+    foreach (var item in Vakken)
+    {
+        item.Add(item[0].Replace(" ", ""));
+    }
     List<List<List<String>>> Blokken = new List<List<List<String>>>();
     foreach (var vak in Vakken)
     {
         List<List<String>> blok = new DBConnection().Send("SELECT * FROM projectcdb.faqvragen WHERE vak = '" + vak[0] + "';");
+        blok[0].Add(vak[1]);
         Blokken.Add(blok);
     }
+
 }
-    <form method="post" style="display: inline">
-
-        <input id="SelectLocatie" placeholder="Zoek een vraag" asp-for="vraag" />
-
-        <br />
 
 
 
-        <button>Submit</button>
-    </form>
+<form method="post" style="display: inline">
+
+    <input id="inputvraag" placeholder="Zoek een vraag" asp-for="Vraag" />
+
+
+    <button onclick='show("Zoek");'>Submit</button>
+</form>
 <center>overzicht van de FAQ</center>
 <br />
 <br />
 <body>
+
     <center>
         @foreach (var item in Vakken)
         {
@@ -43,7 +50,7 @@
     {
         <td>
 
-            <Table id=@item2[0][3] class="table table-striped" style="display:none" title="@item2[0][1]">
+            <Table id=@item2[0][4] class="table table-striped" style="display:none" title="@item2[0][1]">
                 <thead>
                     <tr>
                         <th class="col-md-1">Vraag</th>
@@ -65,12 +72,37 @@
         </td>
     }
 
+    <td>
 
+        <Table id=Zoek class="table table-striped" style="display:block" title="Zoek">
+            <thead>
+                <tr>
+                    <th class="col-md-1">Vraag</th>
+                    <th class="col-md-1">Antwoord</th>
+                    <th class="col-md-1">Vak</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var z in @Model.Zoeklijst)
+                {
+
+                    <tr>
+                        <td>@z[0]</td>
+                        <td>@z[2]</td>
+                        <td>@z[1]</td>
+                    </tr>
+                }
+            </tbody>
+        </Table>
+    </td>
 
 
 </body>
 <script>
     var nrs = new Array();
+    nrs.push("Zoek");
     function show(nr) {
 
 
@@ -78,13 +110,25 @@
         nrs.push(nr)
 
         document.getElementById(nr).style.display = "block"
-        console.log(nr+" pushed")
+        console.log(nr + " pushed")
 
 
     }
-        function myFunction(item, index) {
-            document.getElementById(item).style.display = "none"
-            console.log(item)
+    function myFunction(item, index) {
+        document.getElementById(item).style.display = "none"
+        console.log(item)
+    }
+    function zoeky() {
+
+
+        var container = document.getElementById("zoek");
+        var content = container.innerHTML;
+        container.innerHTML = content;
+
+        //this line is to watch the result in console , you can remove it later
+        console.log("Refreshed");
+
+
     }
 </script>
 <style>

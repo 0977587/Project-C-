@@ -1,8 +1,8 @@
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.csprojAssemblyReference.cache
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\staticwebassets\webapp.StaticWebAssets.Manifest.cache
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\staticwebassets\webapp.StaticWebAssets.xml
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.RazorAssemblyInfo.cache
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.RazorAssemblyInfo.cs
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.AssemblyInfoInputs.cache
-C:\Users\laure\Documents\GitHub\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.AssemblyInfo.cs
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.csprojAssemblyReference.cache
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\staticwebassets\webapp.StaticWebAssets.Manifest.cache
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\staticwebassets\webapp.StaticWebAssets.xml
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.RazorAssemblyInfo.cache
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.RazorAssemblyInfo.cs
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.AssemblyInfoInputs.cache
+C:\Users\jurri\AndroidStudioProjects\OpenDagApp\app\Project-C-\webapp\webapp\obj\Debug\netcoreapp3.0\webapp.AssemblyInfo.cs

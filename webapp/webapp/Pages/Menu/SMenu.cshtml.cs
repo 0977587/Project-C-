@@ -21,18 +21,32 @@ namespace webapp.Pages.Menu
         public void OnPost()
         {
             string loguit = Request.Form[nameof(LU)];
-            if(loguit != null)
+
+            //Er wordt gekeken of de gebruiker wilt uitloggen of als er een vraag gedelete moet worden
+            if (loguit != null)
             {
-                Sessie.GetInstance.setLoginUserID(-1);
-                Response.Redirect("../Index");
+                Logout();
             }
             else
             {
-                string postit2 = Request.Form[nameof(postit)];
-                int id = Convert.ToInt32(postit2);
-                new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE(`vraagID` = '" + id + "');");
+                DeleteQuestion();
             }
 
+        }
+
+        //De user wordt uitgelogt
+        private void Logout()
+        {
+            Sessie.GetInstance.setLoginUserID(-1);
+            Response.Redirect("../Index");
+        }
+
+        //Een vraag wordt verwijdered
+        private void DeleteQuestion()
+        {
+            string postit2 = Request.Form[nameof(postit)];
+            int id = Convert.ToInt32(postit2);
+            new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE(`vraagID` = '" + id + "');");
         }
     }
 }

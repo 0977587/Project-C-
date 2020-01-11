@@ -13,13 +13,13 @@
 
     List<Vraag> vragen = new List<Vraag>();
     int UserID = Sessie.GetInstance.getLoginUserID();
-    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.vraag where UserID = " + UserID.ToString() + ";");
+    List<List<string>> connect = new DBConnection().Send("SELECT * FROM projectcdb.vraag where IsBehandeld = 0 AND UserID = " + UserID.ToString() + ";");
     foreach (List<string> temp in connect)
     {
         int Vraagid = Convert.ToInt32(temp[0]);
         Vraag v = new Vraag();
         v.SelectOne(Vraagid);
-        List<List<string>> connect2 = new DBConnection().Send("SELECT * FROM projectcdb.vraag where WachtrijID = " + temp[9] + " order by DateAdded;");
+        List<List<string>> connect2 = new DBConnection().Send("SELECT * FROM projectcdb.vraag where IsBehandeld = 0 AND WachtrijID = " + temp[9] + " order by DateAdded;");
         List<List<string>> connect3 = new DBConnection().Send("SELECT * FROM projectcdb.wachtrij WHERE WachtrijId = " + temp[9] + ";");
         v.WachtrijEndDate = Convert.ToDateTime(connect3[0][3]);
         v.wachtrijNaam = connect3[0][1];
@@ -40,6 +40,9 @@
         vragen.Add(v);
 
     }
+
+    //vragen2 is voor de al behandelde vragen
+    List<List<string>> vragen2 = new DBConnection().Send("SELECT * FROM projectcdb.vraag WHERE UserID = " + Sessie.GetInstance.getLoginUserID() + " AND IsBehandeld = 1;");
 }
 
 <!DOCTYPE html>
@@ -152,7 +155,7 @@
     <form id="vakkenbtn" action="../Vakken/SVakken" method="get">
         <button class="myButton">vakken</button>
     </form>
-    <form id="steleenvraagbtn" action="../Vragen/Steleenvraag/Create" method="get">
+    <form id="steleenvraagbtn" action="../Vragen/Steleenvraag/Zoek" method="get">
         <button class="myButton">Vragen</button>
     </form>
     <form id="faqbtn" action="../FAQ/SoverzichtFAQ" method="get">
@@ -178,42 +181,69 @@
     }
 
 
-    <div class="col-xs-6" id="table">
-        <h3 class="sub-header">Wachtrijen</h3>
+<div class="col-xs-6" id="table">
+    <h3 class="sub-header">Wachtrijen</h3>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-md-1">Vraag</th>
+                    <th class="col-md-2">Wachtrij</th>
+                    <th class="col-md-3">Positie</th>
+                    <th class="col-md-4">Eindtijd </th>
+                    <th align="right" class="col=md-3"></th>
+            </thead>
+            <tbody>
+                @{
+                    var cnt = 0;
+                }
+
+                @foreach (var item in vragen)
+                {
+                    cnt++;
+                    if (cnt > 5)
+                    {
+                        break;
+                    }
+
+                    <tr>
+                        <td class="col-md-1">@item.VraagText</td>
+                        <td nowrap class="col-md-2">@item.wachtrijNaam</td>
+                        <td class="col-md-3">@item.positie</td>
+                        <td nowrap class="col-md-3">@item.WachtrijEndDate</td>
+                        <td>
+                            <form method="post" style="display: inline">
+                                <input hidden="hidden" asp-for="postit" value="@item.VraagID" />
+                                <button class=" myButton2">Verwijder</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-6" id="table2">
+        <h3 class="sub-header">behandelde vragen</h3>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th class="col-md-1">Vraag</th>
-                        <th class="col-md-2">Wachtrij</th>
-                        <th class="col-md-3">Positie</th>
-                        <th class="col-md-4">Eindtijd </th>
-                        <th align="right" class="col=md-3"></th>
+                        <th class="col-md-2">Andwoord</th>
+
                 </thead>
                 <tbody>
-                    @{
-                        var cnt = 0;
-                    }
 
-                    @foreach (var item in vragen)
+
+                    @foreach (var item in vragen2)
                     {
-                        cnt++;
-                        if (cnt > 5)
-                        {
-                            break;
-                        }
+                
+                        
 
                         <tr>
-                            <td class="col-md-1">@item.VraagText</td>
-                            <td nowrap class="col-md-2">@item.wachtrijNaam</td>
-                            <td class="col-md-3">@item.positie</td>
-                            <td nowrap class="col-md-3">@item.WachtrijEndDate</td>
-                            <td>
-                                <form method="post" style="display: inline">
-                                    <input hidden="hidden" asp-for="postit" value="@item.VraagID" />
-                                    <button class=" myButton2">Verwijder</button>
-                                </form>
-                            </td>
+                            <td class="col-md-1">@item[3]</td>
+                            <td nowrap class="col-md-2">@item[4]</td>
 
                         </tr>
                     }
