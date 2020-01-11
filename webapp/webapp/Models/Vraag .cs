@@ -47,6 +47,7 @@ namespace webapp.Models
             Locatie = locatie;
             isInProgress = isinprogress; 
         }
+        //Constructor met wachtrijid
         public Vraag(int vraagID, int userID, int vakID, string vraagText, string andwoordText, bool isFAQ, DateTime dateAdded, DateTime endDate, string locatie,int wachtrijid, Boolean isinprogress)
         {
             VraagID = vraagID;
@@ -61,7 +62,8 @@ namespace webapp.Models
             WachtrijID = wachtrijid;
             isInProgress = isinprogress;
         }
-
+        
+        //Zoekt de lengte van de Vaag tabel in de database
         public int returnVraagLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(vraagId) FROM projectcdb.vraag");
@@ -89,11 +91,12 @@ namespace webapp.Models
         {
 
         }
-
+        //nog een legere constructor
         public Vraag()
         {
         }
 
+        //Zoekt een vraag uit de wachtrij
         public void SelectOne(int input)
         {
             //geef vraagID mee
@@ -140,6 +143,8 @@ namespace webapp.Models
             }
 
         }
+
+        //Pakt alle vragen van de database
         public List<Vraag> SelectAll()
         {
             //geef vraagID mee
@@ -191,11 +196,14 @@ namespace webapp.Models
             }
             return returnlist;
         }
+
+        //Delete een vraag van de database
         public void Delete()
         {
              //geef vraagID mee  
             List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`vraag` WHERE (`vraagID` = '"+ VraagID + "');");      
         }
+        //Updated een vraag van de database
         public void Update()
         {
             int IsFAQbool;
@@ -219,6 +227,8 @@ namespace webapp.Models
             }
             new DBConnection().Send("UPDATE `projectcdb`.`vraag` SET `UserID` = '"+UserID+"', `VakID` = '"+VakID+"', `VraagText` = '"+VraagText+"', `AndwoordText` = '"+AndwoordText+"', `IsFAQ` = '"+IsFAQbool+ "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `WachtrijID` = '" + WachtrijID + "', `Locatie` = '" + Locatie + "', `IsinProgress` = '" + isInProgressbool + "' WHERE (`vraagID` = '" + VraagID+"');");
         }
+
+        //Insert een vraag in de database
         public void Insert()
         {
             int IsFAQbool;

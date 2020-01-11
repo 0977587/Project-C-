@@ -20,6 +20,8 @@ namespace webapp.Models
         public string van;
         public string tot;
 
+
+        //Hoofd Constructor
         public Vak(int vakID, string docent, string locaal, string naam, string discriptie, Boolean isleeg)
         {
             VakID = vakID;
@@ -33,6 +35,8 @@ namespace webapp.Models
         {
         //lege constructor altijd handig
         }
+
+        //Zoekt de lengte van de Vak Tabel
         public int returnVaklength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(VakID) FROM projectcdb.vak");
@@ -44,6 +48,8 @@ namespace webapp.Models
             return length + 1;
         }
 
+
+        //Pakt een vak van de database
         public void SelectOne(int input)
         {
             //geef vakID mee
@@ -71,6 +77,8 @@ namespace webapp.Models
             }
         }
        
+
+        //Pakt alle vakken van de database
         public List<Vak> SelectAll()
         {
             //geef vraagID mee
@@ -103,11 +111,15 @@ namespace webapp.Models
             }
             return returnlist;
         }
+
+        //Delete een vak van de database
         public void Delete()
         {
             //geef vraagID mee  
             List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`vak` WHERE (`vakID` = '" + VakID + "');");
         }
+
+        //Updated de vak van de database
         public void Update()
         {
             int IsLeegbool;
@@ -121,6 +133,8 @@ namespace webapp.Models
             }
             new DBConnection().Send("UPDATE `projectcdb`.`vak` SET `Docent` = '" + Docent + "', `Locaal` = '" + Locaal + "', `Naam` = '" + Naam + "', `Discriptie` = '" + Discriptie + "', `Isleeg` = '" + IsLeegbool + "'WHERE (`VakID` = '" + VakID + "');");
         }
+
+        //Insert een vak in de database
         public void Insert()
         {
             int IsLeegbool;
@@ -134,6 +148,8 @@ namespace webapp.Models
             }
             new DBConnection().Send("INSERT `projectcdb`.`vak` SET `VakID` = '" + VakID + "',`Docent` = '" + Docent + "', `Locaal` = '" + Locaal + "', `Naam` = '" + Naam + "', `Discriptie` = '" + Discriptie + "', `Isleeg` = '" + IsLeegbool + "';");
         }
+
+        //zet de info van de vak
         public void setinfo()
         {
             DBConnection DBC = new DBConnection();

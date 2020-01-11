@@ -13,6 +13,8 @@ namespace webapp.Models
         public DateTime EndDate { get; set; }
         public String Name { get; set; }
 
+
+        //Hoofd Constructor
         public Wachtrij(int wachtrijID, DateTime dateAdded, DateTime endDate, string name)
         {
             WachtrijID = wachtrijID;
@@ -37,6 +39,7 @@ namespace webapp.Models
             Name = null;
         }
 
+        //Zoek de lengte van de peercoachwachtrij tabel
         public int returnWachtrijLength2()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.peercoachwachtrij");
@@ -47,6 +50,8 @@ namespace webapp.Models
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }
+
+        //Zoekt de lengte van de wijtrij tabel
         public int returnWachtrijLength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(WachtrijId) FROM projectcdb.wachtrij");
@@ -58,6 +63,7 @@ namespace webapp.Models
             return length+1;
         }
 
+        //Pakt een wachtrij
         public void SelectOne(int input)
         {
             // geef WachtrijID mee
@@ -71,6 +77,7 @@ namespace webapp.Models
                 EndDate  = Convert.ToDateTime(returnstatement[0][3]);
         }
 
+        //Pak alle vragen van de wachtrij
         public List<Vraag> getVragen(int choice)
         {
             List<Vraag> returnlist = new List<Vraag>();
@@ -111,6 +118,8 @@ namespace webapp.Models
 
         }
 
+
+        //Delete een wachtrij
         public void Delete()
         {
             //geef WachtrijID mee  
@@ -118,17 +127,22 @@ namespace webapp.Models
             List<List<string>> returnstatement2 = new DBConnection().Send("DELETE FROM `projectcdb`.`peercoachwachtrij` WHERE (`WachtrijID` = '" + WachtrijID + "');");
         }
 
+
+        //update de wachtrij
         public void Update()
         {
             new DBConnection().Send("UPDATE `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "';");
         }
 
+        //zoek het aantal vragen in de wachtrij
         public int getVragenAmount()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT COUNT(*) FROM projectcdb.vraag Where WachtrijID =" + WachtrijID.ToString() );
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length;
         }
+
+        //Insert een vraag in de database
         public void Insert()
         {
             new DBConnection().Send("INSERT `projectcdb`.`Wachtrij` SET `WachtrijID` = '" + WachtrijID + "', `DateAdded` = STR_TO_DATE('" + DateAdded + "','%d/%m/%Y %H:%i:%s'), `EndDate` = STR_TO_DATE('" + EndDate + "','%d/%m/%Y %H:%i:%s'), `Name` = '" + Name + "'; ");

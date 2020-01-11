@@ -18,6 +18,7 @@ namespace webapp.Models
         public string ActivatieCode { get; set; }
         public string ResetWachtwoordCode { get; set; }
 
+        //Hoofd constructor
         public User(string rol, int klasID, string voornaam, string achternaam, string email, string wachtwoord)
         {
             Rol = rol;
@@ -32,7 +33,7 @@ namespace webapp.Models
         {
 
         }
-
+        //Constructor zonder klasID
         public User(string rol, string voornaam, string achternaam, string email, string wachtwoord)
         {
             KlasID = 0;
@@ -56,6 +57,7 @@ namespace webapp.Models
             ActivatieCode = activatieCode;
         }
 
+        //Zoek de lengte van de User Tabel
         public int returnUserlength()
         {
             List<List<string>> returnstatement = new DBConnection().Send("SELECT MAX(UserID) FROM projectcdb.user");
@@ -66,6 +68,8 @@ namespace webapp.Models
             int length = Convert.ToInt32(returnstatement[0][0]);
             return length + 1;
         }
+
+        //Laad een user in
         public void SelectOne(int input)
         {
             //geef vraagID mee
@@ -86,6 +90,8 @@ namespace webapp.Models
                 Achternaam = returnstatement[0][6];
 
         }
+
+        //Pak alle users
         public List<User> SelectAll()
         {
             //geef vraagID mee
@@ -111,15 +117,21 @@ namespace webapp.Models
             }
             return returnlist;
         }
+
+        //Delete een User
         public void Delete()
         {
             //geef userID mee  
             List<List<string>> returnstatement = new DBConnection().Send("DELETE FROM `projectcdb`.`user` WHERE (`userID` = '" + UserID + "');");
         }
+
+        //Update een User
         public void Update()
         {
             new DBConnection().Send("UPDATE `projectcdb`.`user` SET `Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "' WHERE userID = '" + UserID + "';");
         }
+
+        //Insert een User
         public void Insert()
         {
             new DBConnection().Send("INSERT `projectcdb`.`user` SET `Rol` = '" + Rol + "', `KlasID` = '" + KlasID + "', `voornaam` = '" + Voornaam + "', `Email` = '" + Email + "', `Wachtwoord` = '" + Wachtwoord + "',`Achternaam` = '" + Achternaam + "';");
