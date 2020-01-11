@@ -140,7 +140,7 @@ namespace webapp.Models
             }
 
         }
-        public static List<Vraag> SelectAll()
+        public List<Vraag> SelectAll()
         {
             //geef vraagID mee
             List<Vraag> returnlist = new List<Vraag>();
@@ -172,13 +172,13 @@ namespace webapp.Models
                     v.DateAdded = Convert.ToDateTime(returnstatement2[6]);
                 if (returnstatement2[7] != "")
                     v.EndDate = Convert.ToDateTime(returnstatement2[7]);
-                if (returnstatement2[7] != "")
-                    v.Locatie = returnstatement2[7];
                 if (returnstatement2[8] != "")
-                    v.WachtrijID = Convert.ToInt32(returnstatement2[8]);
+                    v.Locatie = returnstatement2[7];
                 if (returnstatement2[9] != "")
+                    v.WachtrijID = Convert.ToInt32(returnstatement2[8]);
+                if (returnstatement2[10] != "")
                 {
-                    if (returnstatement2[9] == "0")
+                    if (returnstatement2[10] == "0")
                     {
                         v.isInProgress = false;
                     }
