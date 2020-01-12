@@ -1,0 +1,30 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model webapp.Pages.IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Peercoach app</h1>
+</div>
+
+<form method="post">
+    <input id="UName" asp-for="UName">Username</input>
+    <br />
+    <input id="PWord" type="password" asp-for="PWord">Password</input>
+    <br />
+    <button>Login</button>
+</form>
+
+
+<br />
+<br />
+<br />
+<br />
+
+<form style="display: inline" action="/Registratie/Create" method="get">
+    <button>Registreren</button>
+</form>
+
+

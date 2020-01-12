@@ -1,0 +1,224 @@
+﻿@page
+@model webapp.Pages.FAQ.SoverzichtFAQModel
+@using webapp.Models
+@using DatabaseController
+@{
+    ViewData["Title"] = "FAQ";
+    List<List<String>> Vakken = new List<List<String>>();
+    DBConnection dbc = new DBConnection();
+    Vakken = dbc.Send("SELECT distinct vak FROM projectcdb.faqvragen;");
+    foreach (var item in Vakken)
+    {
+        item.Add(item[0].Replace(" ", ""));
+    }
+    List<List<List<String>>> Blokken = new List<List<List<String>>>();
+    foreach (var vak in Vakken)
+    {
+        List<List<String>> blok = new DBConnection().Send("SELECT * FROM projectcdb.faqvragen WHERE vak = '" + vak[0] + "';");
+        blok[0].Add(vak[1]);
+        Blokken.Add(blok);
+    }
+
+}
+
+
+
+<form method="post" style="display: inline">
+
+    <input id="inputvraag" placeholder="Zoek een vraag" asp-for="Vraag" />
+
+
+    <button onclick='show("Zoek");'>Submit</button>
+</form>
+<center>overzicht van de FAQ</center>
+<br />
+<br />
+<body>
+
+    <center>
+        @foreach (var item in Vakken)
+        {
+            <a href="#" class="button" onclick='show("@item[1]");'>
+                <span>@item[0]</span>
+            </a>
+            <p>&nbsp;&nbsp;</p>
+        }
+    </center>
+
+
+    @foreach (var item2 in Blokken)
+    {
+        <td>
+
+            <Table id=@item2[0][4] class="table table-striped" style="display:none" title="@item2[0][1]">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">Vraag</th>
+                        <th class="col-md-1">Antwoord</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item3 in item2)
+                    {
+
+                        <tr>
+                            <td>@item3[0]</td>
+                            <td>@item3[2]</td>
+                        </tr>
+                    }
+                </tbody>
+            </Table>
+        </td>
+    }
+
+    <td>
+
+        <Table id=Zoek class="table table-striped" style="display:block" title="Zoek">
+            <thead>
+                <tr>
+                    <th class="col-md-1">Vraag</th>
+                    <th class="col-md-1">Antwoord</th>
+                    <th class="col-md-1">Vak</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var z in @Model.Zoeklijst)
+                {
+
+                    <tr>
+                        <td>@z[0]</td>
+                        <td>@z[2]</td>
+                        <td>@z[1]</td>
+                    </tr>
+                }
+            </tbody>
+        </Table>
+    </td>
+
+
+</body>
+<script>
+    var nrs = new Array();
+    nrs.push("Zoek");
+    function show(nr) {
+
+
+        nrs.forEach(myFunction);
+        nrs.push(nr)
+
+        document.getElementById(nr).style.display = "block"
+        console.log(nr + " pushed")
+
+
+    }
+    function myFunction(item, index) {
+        document.getElementById(item).style.display = "none"
+        console.log(item)
+    }
+    function zoeky() {
+
+
+        var container = document.getElementById("zoek");
+        var content = container.innerHTML;
+        container.innerHTML = content;
+
+        //this line is to watch the result in console , you can remove it later
+        console.log("Refreshed");
+
+
+    }
+</script>
+<style>
+    #table1, #table2, #table3, #table4 {
+        display: none;
+    }
+
+    body {
+        font-family: "Nunito", sans-serif;
+        font-size: 24px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    sup {
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 55px;
+    }
+
+    .button {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #0C5;
+        font-size: 24px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 300;
+        margin: 5em auto;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 20px 0;
+        width: 220px;
+        height: 30px;
+        background: #0D6;
+        border: 1px solid #0D6;
+        color: #FFF;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+        .button:hover, .button:active {
+            text-decoration: none;
+            color: #0C5;
+            border-color: #0C5;
+            background: #FFF;
+        }
+
+        .button span {
+            display: inline-block;
+            position: relative;
+            padding-right: 0;
+            transition: padding-right 0.5s;
+        }
+
+            .button span:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                right: -18px;
+                opacity: 0;
+                width: 10px;
+                height: 10px;
+                margin-top: -10px;
+                background: rgba(0, 0, 0, 0);
+                border: 3px solid #FFF;
+                border-top: none;
+                border-right: none;
+                transition: opacity 0.5s, top 0.5s, right 0.5s;
+                transform: rotate(-45deg);
+            }
+
+        .button:hover span, .button:active span {
+            padding-right: 30px;
+        }
+
+            .button:hover span:after, .button:active span:after {
+                transition: opacity 0.5s, top 0.5s, right 0.5s;
+                opacity: 1;
+                border-color: #0C5;
+                right: 0;
+                top: 50%;
+            }
+</style>
