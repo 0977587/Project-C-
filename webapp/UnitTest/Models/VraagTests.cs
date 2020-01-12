@@ -10,6 +10,7 @@ namespace UnitTest.Models
     [TestClass]
     public class VraagTests
     {
+        //creating variables that would otherwise be in the database
         private Vraag emptyVraag;
         private Vraag fullVraag;
         private Vraag vraag1;
@@ -19,7 +20,7 @@ namespace UnitTest.Models
         [TestInitialize]
         public void dothisbeforeEach()
         {
-            //create an empty vraag statement
+            //filling the variables with a simulation of database data
             fullVraag = new Vraag(1, 2, 20, "this is an question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 1, false);

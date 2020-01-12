@@ -9,11 +9,12 @@ namespace UnitTest.Models
     [TestClass()]
     public class IngeschrevenVakkenTests
     {
+        //creating variables simulating the database
         Vak v = new Vak(1, "x", "x", "x", "x", false);
         User u = new User("s", 1, "x", "x", "x", "x");
 
 
-
+        //testing the initiator
         [TestMethod()]
         public void IngeschrevenVakkenTest()
         {
@@ -25,7 +26,7 @@ namespace UnitTest.Models
 
             
         }
-
+        //ingeschreven vakken test
         [TestMethod()]
         public void TotaalingeschrevenVakkenTest()
         {

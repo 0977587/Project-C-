@@ -9497,11 +9497,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthijs\\Desktop\\New folder\\webapp\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\Matthijs\\Desktop\\New folder\\webapp\\UnitTest\\UnitTest.csproj",
+      "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\UnitTest.csproj",
       "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthijs\\Desktop\\New folder\\webapp\\UnitTest\\obj\\",
+      "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9520,8 +9520,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Matthijs\\Desktop\\New folder\\webapp\\webapp\\webapp.csproj": {
-              "projectPath": "C:\\Users\\Matthijs\\Desktop\\New folder\\webapp\\webapp\\webapp.csproj"
+            "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj": {
+              "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\Project-C-\\webapp\\webapp\\webapp.csproj"
             }
           }
         }

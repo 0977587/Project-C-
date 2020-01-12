@@ -10,6 +10,7 @@ namespace UnitTest.Models
     [TestClass()]
     public class UserTests
     {
+        //assigning variables to simulate database
         public string rol = "s";
         public int klasID = 0;
         public string voornaam = "voornaamtest";
@@ -28,6 +29,7 @@ namespace UnitTest.Models
             }
         }
 
+        //testing the setters
         [TestMethod()]
         public void testSetters()
         {
@@ -63,6 +65,7 @@ namespace UnitTest.Models
             Assert.AreEqual((SelectOne("voornaamtest2", userLijst)).Voornaam, "voornaamtest2");
         }
 
+        //simulating the selectOne method that would normally be used
         public User SelectOne(string input, List<User> userLijst)
         {
             {
@@ -76,6 +79,7 @@ namespace UnitTest.Models
 
         }
 
+        //insert tests
         [TestMethod()]
         public void InsertTest()
         {
@@ -99,6 +103,7 @@ namespace UnitTest.Models
             Assert.ReferenceEquals(users[2], u3);
         }
 
+        //delete tests
         [TestMethod()]
         public void DeleteTest()
         {
@@ -128,6 +133,7 @@ namespace UnitTest.Models
             Assert.IsFalse(Assert.ReferenceEquals(users[2], u3));
         }
 
+        //update tests
         [TestMethod()]
         public void UpdateTest()
         {

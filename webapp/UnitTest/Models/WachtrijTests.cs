@@ -12,6 +12,7 @@ namespace UnitTest.Models
     public class WachtrijTests
     {
 
+        //creating variables, similating database
         DateTime currentTime = DateTime.Now;
         int wachtrijid = 2;
         string name = "wachtrij";
@@ -23,10 +24,8 @@ namespace UnitTest.Models
         private Vraag vraag3;
 
 
-        /*
-         * 
-         * 
-         */
+
+        //initiator test
         [TestMethod()]
         public void WachtrijTest()
         {
@@ -37,6 +36,7 @@ namespace UnitTest.Models
             }
         }
 
+        //setters test
         [TestMethod()]
         public void testSetters()
         {
@@ -60,6 +60,7 @@ namespace UnitTest.Models
         [TestMethod]
         public void testreturnWachtrijLength()
         {
+            //assigning variables to simulate database
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);
             Wachtrij w2 = new Wachtrij(wachtrijid + 1, currentTime, currentTime, name + "2");
             Wachtrij w3 = new Wachtrij(wachtrijid + 2, currentTime, currentTime, name + "3");
@@ -91,6 +92,7 @@ namespace UnitTest.Models
         [TestMethod]
         public void testreturnWachtrijLength2()
         {
+            //assigning variables to simulate database
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);
             Wachtrij w2 = new Wachtrij(wachtrijid + 1, currentTime, currentTime, name + "2");
             Wachtrij w3 = new Wachtrij(wachtrijid + 2, currentTime, currentTime, name + "3");
@@ -124,6 +126,7 @@ namespace UnitTest.Models
         {
             List<Vraag> vragen = getVragen(2);
 
+            //assigning variables to simulate database
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
             vraag2 = new Vraag(2, 1, 21, "this is vraag2", "", false, DateTime.Today, DateTime.Today, "wd.1.2", 2, false);
 
@@ -131,6 +134,7 @@ namespace UnitTest.Models
             Assert.ReferenceEquals(vragen[2], vraag1);
 
         }
+        // start of functions to reproduce
 
         public List<Vraag> getVragen(int wachtrijID)
         {
@@ -138,6 +142,7 @@ namespace UnitTest.Models
 
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);
 
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 2, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
@@ -156,6 +161,7 @@ namespace UnitTest.Models
         [TestMethod()]
         public void SelectOneTest()
         {
+            //assigning variables to simulate database
             Wachtrij w1 = new Wachtrij(wachtrijid, currentTime, currentTime, name);
             Wachtrij w2 = new Wachtrij(wachtrijid + 1, currentTime, currentTime, name + "2");
             Wachtrij w3 = new Wachtrij(wachtrijid + 2, currentTime, currentTime, name + "3");
@@ -169,7 +175,7 @@ namespace UnitTest.Models
 
             Assert.AreEqual((SelectOne(2, wachtrijLijst)).WachtrijID, 2);
         }
-
+        // start of functions to reproduce
 
         public Wachtrij SelectOne(int input, List<Wachtrij> wachtrijLijst)
         {
@@ -190,11 +196,13 @@ namespace UnitTest.Models
             Assert.AreEqual(getVragenAmount(2), 3);
         }
 
+        // start of functions to reproduce
         public int getVragenAmount(int input)
         {
             List<Vraag> vragen = new List<Vraag>();
             int amount = 0;
 
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
@@ -218,9 +226,11 @@ namespace UnitTest.Models
             return amount;
         }
 
+        //insert method test
         [TestMethod()]
         public void InsertTest()
         {
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
@@ -243,10 +253,11 @@ namespace UnitTest.Models
             Assert.ReferenceEquals(vragen[2], vraag3);
         }
 
-
+        //delete method test
         [TestMethod()]
         public void DeleteTest()
         {
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
@@ -275,9 +286,11 @@ namespace UnitTest.Models
             Assert.IsFalse(Assert.ReferenceEquals(vragen[2], vraag3));
         }
 
+        //deleting fake test
         [TestMethod()]
         public void DeleteFakeTest()
         {
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
@@ -317,9 +330,11 @@ namespace UnitTest.Models
             Assert.IsFalse(Assert.ReferenceEquals(vragen[2], vraag3));
         }
 
+        //update test
         [TestMethod()]
         public void UpdateTest()
         {
+            //assigning variables to simulate database
             fullVraag = new Vraag(1, 2, 20, "this is a question", "", false, DateTime.Today, DateTime.Today, "wd.1.2.3", 1, false);
             emptyVraag = new Vraag();
             vraag1 = new Vraag(2, 1, 20, "this is vraag1", "", false, DateTime.Today, DateTime.Today, "wd.2.3", 2, false);
